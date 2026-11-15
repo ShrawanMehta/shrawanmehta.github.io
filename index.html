@@ -1,38 +1,336 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Shrawan Mehta</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shrawan Mehta | Educator & AI Enthusiast</title>
+
 <style>
-body{
-font-family:Arial;
-max-width:900px;
-margin:auto;
-padding:20px;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-h1{
-color:#0066cc;
+
+body{
+    background:#f5f7fa;
+    color:#333;
+    line-height:1.6;
+}
+
+/* Header */
+header{
+    background:linear-gradient(135deg,#0f172a,#2563eb);
+    color:white;
+    padding:80px 20px;
+    text-align:center;
+}
+
+header h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:1.2rem;
+    opacity:0.9;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 28px;
+    background:white;
+    color:#2563eb;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#e5e7eb;
+}
+
+/* Container */
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:60px 0;
+}
+
+/* Section */
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:2.2rem;
+    color:#1e3a8a;
+}
+
+.section-title p{
+    color:#666;
+}
+
+/* About */
+.about{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:40px;
+    align-items:center;
+}
+
+.profile-box{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.profile-box img{
+    width:180px;
+    border-radius:50%;
+    margin-bottom:15px;
+}
+
+.about-content{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* Expertise */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+/* Articles */
+.article-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.article-card h3{
+    color:#1e40af;
+    margin-bottom:10px;
+}
+
+/* Contact */
+.contact{
+    text-align:center;
+    background:linear-gradient(135deg,#2563eb,#1e3a8a);
+    color:white;
+    padding:60px 20px;
+    border-radius:20px;
+}
+
+.contact a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* Footer */
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
+
+@media(max-width:768px){
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    header h1{
+        font-size:2.2rem;
+    }
 }
 </style>
 </head>
+
 <body>
 
-<h1>Shrawan Mehta</h1>
+<!-- Hero Section -->
+<header>
+    <h1>Shrawan Mehta</h1>
+    <p>Educator | AI Enthusiast | Technology Professional</p>
 
-<h2>Educator | AI Enthusiast | Technology Professional</h2>
+    <a href="#contact" class="btn">Connect With Me</a>
+</header>
 
-<p>Welcome to my personal website where I share insights on Artificial Intelligence, Cloud Computing, Technology Trends, and Career Growth.</p>
+<!-- About -->
+<section class="container">
+    <div class="section-title">
+        <h2>About Me</h2>
+        <p>Passionate about empowering people through technology and education.</p>
+    </div>
 
-<h2>Latest Articles</h2>
+    <div class="about">
 
-<ul>
-<li>Getting Started with Artificial Intelligence</li>
-<li>Microsoft Copilot for Productivity</li>
-<li>Career Growth in the AI Era</li>
-</ul>
+        <div class="profile-box">
+            <img src="profile.jpg" alt="Shrawan Mehta">
+            <h3>Shrawan Mehta</h3>
+            <p>AI & Technology Evangelist</p>
+        </div>
 
-<h2>Contact</h2>
+        <div class="about-content">
+            <p>
+                Welcome to my personal website. I am an educator, technology professional,
+                and Artificial Intelligence enthusiast committed to helping students,
+                professionals, and organizations leverage modern technologies to
+                achieve greater productivity and innovation.
+            </p>
 
-<p>Email: theshrawanmehta@gmail.com</p>
+            <br>
+
+            <p>
+                With strong interests in Artificial Intelligence, Microsoft Cloud
+                Technologies, Digital Transformation, and Career Development, I regularly
+                share insights, practical guidance, and industry trends that help readers
+                stay ahead in a rapidly evolving technology landscape.
+            </p>
+
+            <br>
+
+            <p>
+                My mission is to bridge the gap between technology and people by making
+                complex concepts easy to understand and apply in real-world scenarios.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Expertise -->
+<section class="container">
+    <div class="section-title">
+        <h2>Areas of Expertise</h2>
+        <p>Key domains where I share knowledge and practical insights.</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Artificial Intelligence</h3>
+            <p>
+                Exploring AI fundamentals, machine learning concepts, generative AI,
+                prompt engineering, and real-world applications transforming industries.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Microsoft Copilot</h3>
+            <p>
+                Helping professionals maximize productivity through Microsoft Copilot,
+                AI-driven workflows, and smart workplace solutions.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Cloud Computing</h3>
+            <p>
+                Insights into Microsoft Azure, cloud architecture, digital transformation,
+                automation, and enterprise technology strategies.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Career Growth</h3>
+            <p>
+                Guidance for students and professionals on skill development,
+                certifications, personal branding, and future-ready careers.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Latest Articles -->
+<section class="container">
+    <div class="section-title">
+        <h2>Latest Articles</h2>
+        <p>Knowledge sharing for today's technology-driven world.</p>
+    </div>
+
+    <div class="article-card">
+        <h3>Getting Started with Artificial Intelligence</h3>
+        <p>
+            Learn the fundamentals of AI, machine learning, and generative technologies
+            that are shaping the future of innovation.
+        </p>
+    </div>
+
+    <div class="article-card">
+        <h3>Microsoft Copilot for Productivity</h3>
+        <p>
+            Discover how Microsoft Copilot can automate daily tasks, improve collaboration,
+            and increase workplace efficiency.
+        </p>
+    </div>
+
+    <div class="article-card">
+        <h3>Career Growth in the AI Era</h3>
+        <p>
+            Explore the essential skills, learning strategies, and certifications needed
+            to succeed in an AI-powered professional environment.
+        </p>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="container" id="contact">
+    <div class="contact">
+        <h2>Let's Connect</h2>
+        <p>
+            Interested in Artificial Intelligence, Cloud Technology, Digital Transformation,
+            or Career Development? Feel free to reach out.
+        </p>
+
+        <br>
+
+        <p>
+            📧 Email:
+            <a href="mailto:theshrawanmehta@gmail.com">
+                theshrawanmehta@gmail.com
+            </a>
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Shrawan Mehta | Educator • AI Enthusiast • Technology Professional</p>
+</footer>
 
 </body>
 </html>
