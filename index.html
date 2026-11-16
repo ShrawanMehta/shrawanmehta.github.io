@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shrawan Mehta | Educator, AI Enthusiast & Technology Professional</title>
 <meta name="description" content="Personal website of Shrawan Mehta: educator and AI enthusiast sharing practical guidance on Artificial Intelligence, Microsoft Copilot, Cloud Computing and career growth.">
 <meta name="author" content="Shrawan Mehta">
-<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#4f46e5">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Shrawan Mehta | Educator & AI Enthusiast">
 <meta property="og:description" content="Practical insights on AI, Microsoft Copilot, cloud technology and career growth.">
@@ -16,543 +16,733 @@
 
 <style>
 :root{
-  --primary:#2563eb; --primary-dark:#1e3a8a; --accent:#06b6d4;
-  --bg:#f5f7fa; --card:#ffffff; --text:#1f2937; --muted:#667085; --border:#e5e7eb;
-  --shadow:0 6px 24px rgba(15,23,42,.08);
-  --radius:16px;
+  --bg:#f6f7fb; --card:#ffffff; --card2:#f1f3fa; --text:#111827; --muted:#5b6475; --border:#e4e7f0;
+  --p1:#4f46e5; --p2:#06b6d4; --p3:#a855f7;
+  --grad:linear-gradient(135deg,var(--p1),var(--p2));
+  --shadow:0 10px 40px rgba(31,41,80,.08);
+  --r:22px;
 }
 body.dark{
-  --bg:#0b1220; --card:#131c2e; --text:#e5e7eb; --muted:#9aa4b2; --border:#25324a;
-  --shadow:0 6px 24px rgba(0,0,0,.45);
+  --bg:#070b16; --card:#0f1626; --card2:#141d33; --text:#e8ecf5; --muted:#97a1b6; --border:#1f2a44;
+  --shadow:0 10px 40px rgba(0,0,0,.5);
 }
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,-apple-system,Roboto,sans-serif;}
-html{scroll-behavior:smooth;scroll-padding-top:80px;}
-body{background:var(--bg);color:var(--text);line-height:1.7;transition:background .3s,color .3s;}
-a{color:var(--primary);}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:84px;}
+body{font-family:'Inter','Segoe UI',system-ui,-apple-system,'Noto Sans','Noto Sans Devanagari','Noto Sans SC','Noto Naskh Arabic',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:background .3s,color .3s;-webkit-font-smoothing:antialiased;}
+a{color:var(--p1);}
+body.dark a{color:#93a4ff;}
 img{max-width:100%;}
-.skip-link{position:absolute;left:-999px;top:0;background:#fff;color:#000;padding:10px 16px;z-index:3000;}
-.skip-link:focus{left:10px;top:10px;}
-#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--accent),var(--primary));z-index:3001;}
+.skip{position:absolute;inset-inline-start:-999px;top:0;background:#fff;color:#000;padding:10px 16px;z-index:3000;}
+.skip:focus{inset-inline-start:10px;top:10px;}
+#progress{position:fixed;top:0;inset-inline-start:0;height:3px;width:0;background:var(--grad);z-index:3001;}
 
 /* Nav */
-nav{position:sticky;top:0;z-index:1000;background:rgba(15,23,42,.92);backdrop-filter:blur(10px);
-  display:flex;justify-content:space-between;align-items:center;padding:14px 5%;}
-.logo{color:#fff;font-weight:700;font-size:1.25rem;text-decoration:none;}
-.logo span{color:#60a5fa;}
-.nav-links{display:flex;gap:24px;list-style:none;align-items:center;}
-.nav-links a{color:#e5e7eb;text-decoration:none;font-weight:500;padding:4px 0;border-bottom:2px solid transparent;transition:.2s;}
-.nav-links a:hover,.nav-links a.active{color:#fff;border-bottom-color:#60a5fa;}
-.nav-tools{display:flex;gap:10px;}
-.icon-btn{background:transparent;border:1px solid #475569;color:#fff;border-radius:8px;padding:6px 10px;cursor:pointer;font-size:1rem;}
-.icon-btn:hover{background:#1e293b;}
+nav{position:sticky;top:12px;z-index:1000;margin:12px auto 0;width:min(1240px,94%);
+  background:rgba(15,22,38,.78);backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%);
+  border:1px solid rgba(255,255,255,.12);border-radius:60px;display:flex;justify-content:space-between;align-items:center;padding:10px 14px 10px 24px;gap:12px;}
+.logo{color:#fff;font-weight:800;font-size:1.15rem;text-decoration:none;white-space:nowrap;letter-spacing:.3px;}
+.logo span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.nav-links{display:flex;gap:4px;list-style:none;align-items:center;}
+.nav-links a{color:#cbd5e1;text-decoration:none;font-weight:500;font-size:.9rem;padding:7px 12px;border-radius:30px;transition:.2s;white-space:nowrap;display:block;}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,.08);}
+.nav-links a.active{color:#fff;background:rgba(99,102,241,.55);}
+body.dark .nav-links a,body.dark .logo{color:#e2e8f0;}
+.nav-tools{display:flex;gap:8px;align-items:center;}
+.icon-btn,.lang-sel{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#fff;border-radius:30px;padding:7px 12px;cursor:pointer;font-size:.9rem;}
+.icon-btn:hover,.lang-sel:hover{background:rgba(255,255,255,.18);}
+.lang-sel option{color:#111;}
 .menu-btn{display:none;}
 
 /* Hero */
-header#home{position:relative;overflow:hidden;color:#fff;text-align:center;padding:110px 20px 130px;
-  background:linear-gradient(135deg,#0f172a,#1e40af 60%,#0891b2);}
-#bg{position:absolute;inset:0;width:100%;height:100%;opacity:.55;}
-.hero-inner{position:relative;z-index:2;}
-.hero-badge{display:inline-block;background:rgba(255,255,255,.15);padding:6px 18px;border-radius:30px;font-size:.9rem;margin-bottom:20px;}
-header#home h1{font-size:3.6rem;line-height:1.1;margin-bottom:10px;}
-.tagline{font-size:1.3rem;opacity:.93;margin-bottom:10px;}
-.typed{font-size:1.1rem;color:#bfdbfe;min-height:1.7em;}
-.typed::after{content:"|";margin-left:2px;animation:blink 1s steps(1) infinite;}
+header#home{position:relative;overflow:hidden;color:#fff;text-align:center;padding:150px 20px 150px;margin-top:-76px;
+  background:radial-gradient(1200px 600px at 20% -10%,#3730a3 0%,transparent 60%),radial-gradient(900px 500px at 90% 10%,#0e7490 0%,transparent 55%),#0b1020;}
+.orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;animation:float 14s ease-in-out infinite;}
+.orb.a{width:380px;height:380px;background:#6366f1;top:-80px;inset-inline-start:-80px;}
+.orb.b{width:320px;height:320px;background:#06b6d4;bottom:-90px;inset-inline-end:-60px;animation-delay:-5s;}
+.orb.c{width:240px;height:240px;background:#a855f7;top:40%;inset-inline-start:55%;animation-delay:-9s;opacity:.35;}
+@keyframes float{50%{transform:translate(30px,-30px) scale(1.08);}}
+.grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);}
+.hero-inner{position:relative;z-index:2;max-width:900px;margin:auto;}
+.hero-badge{display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:7px 20px;border-radius:30px;font-size:.9rem;margin-bottom:24px;backdrop-filter:blur(6px);}
+header#home h1{font-size:clamp(2.6rem,7vw,4.8rem);line-height:1.05;font-weight:800;margin-bottom:14px;letter-spacing:-1px;background:linear-gradient(90deg,#fff,#c7d2fe 50%,#67e8f9);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.tagline{font-size:1.25rem;opacity:.92;margin-bottom:12px;}
+.typed{font-size:1.1rem;color:#a5b4fc;min-height:1.8em;}
+.typed::after{content:"|";margin-inline-start:2px;animation:blink 1s steps(1) infinite;}
 @keyframes blink{50%{opacity:0}}
-.hero-actions{margin-top:30px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-.btn{display:inline-block;padding:12px 28px;background:#fff;color:var(--primary);text-decoration:none;border-radius:30px;font-weight:700;border:2px solid #fff;cursor:pointer;font-size:1rem;transition:.25s;}
-.btn:hover{transform:translateY(-2px);background:#eef2ff;}
-.btn.outline{background:transparent;color:#fff;}
-.btn.outline:hover{background:rgba(255,255,255,.15);}
-.btn.solid{background:var(--primary);color:#fff;border-color:var(--primary);}
-.btn.solid:hover{background:var(--primary-dark);}
-.hero-socials{margin-top:32px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
-.hero-socials a{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.15);color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;font-weight:700;font-size:.85rem;transition:.25s;}
-.hero-socials a:hover{background:#fff;color:var(--primary);transform:translateY(-3px);}
+.hero-actions{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn{display:inline-block;padding:13px 30px;background:#fff;color:#3730a3;text-decoration:none;border-radius:40px;font-weight:700;border:2px solid #fff;cursor:pointer;font-size:1rem;transition:.25s;font-family:inherit;}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(99,102,241,.45);}
+.btn.outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.5);}
+.btn.outline:hover{background:rgba(255,255,255,.12);}
+.btn.solid{background:var(--grad);color:#fff;border-color:transparent;}
+body.dark a.btn,body.dark .btn{color:#3730a3;}
+body.dark .btn.outline{color:#fff;}
+body.dark .btn.solid{color:#fff;}
 
 /* Layout */
-.container{width:90%;max-width:1200px;margin:auto;padding:70px 0;}
+.container{width:min(1200px,92%);margin:auto;padding:80px 0 0;}
 .section-title{text-align:center;margin-bottom:46px;}
-.section-title h2{font-size:2.1rem;color:var(--primary-dark);}
-body.dark .section-title h2{color:#93c5fd;}
-.section-title p{color:var(--muted);}
-.section-title::after{content:"";display:block;width:70px;height:4px;background:var(--primary);margin:14px auto 0;border-radius:4px;}
+.section-title h2{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;letter-spacing:-.5px;}
+.section-title h2 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.section-title p{color:var(--muted);margin-top:6px;}
 
 /* Stats */
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:20px;margin-top:-62px;position:relative;z-index:5;}
-.stat{background:var(--card);padding:24px;border-radius:var(--radius);text-align:center;box-shadow:var(--shadow);}
-.stat strong{display:block;font-size:2.1rem;color:var(--primary);}
-.stat span{color:var(--muted);font-size:.93rem;}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin-top:-70px;position:relative;z-index:5;}
+.stat{background:var(--card);padding:26px 20px;border-radius:var(--r);text-align:center;box-shadow:var(--shadow);border:1px solid var(--border);}
+.stat strong{display:block;font-size:2.3rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.2;}
+.stat span{color:var(--muted);font-size:.92rem;}
 
-/* About */
-.about{display:grid;grid-template-columns:1fr 2fr;gap:36px;align-items:start;}
-.profile-box,.about-content,.panel{background:var(--card);padding:30px;border-radius:var(--radius);box-shadow:var(--shadow);}
-.profile-box{text-align:center;position:sticky;top:90px;}
-.avatar{width:170px;height:170px;border-radius:50%;margin:0 auto 14px;background:linear-gradient(135deg,#2563eb,#1e3a8a);color:#fff;display:flex;align-items:center;justify-content:center;font-size:3rem;font-weight:700;overflow:hidden;border:4px solid var(--card);box-shadow:0 0 0 3px var(--primary);}
+/* Cards */
+.panel,.profile-box,.about-content{background:var(--card);padding:32px;border-radius:var(--r);box-shadow:var(--shadow);border:1px solid var(--border);}
+.about{display:grid;grid-template-columns:1fr 2fr;gap:28px;align-items:start;}
+.profile-box{text-align:center;position:sticky;top:96px;}
+.avatar{width:170px;height:170px;border-radius:50%;margin:0 auto 16px;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center;font-size:3rem;font-weight:800;overflow:hidden;box-shadow:0 0 0 4px var(--card),0 0 0 7px var(--p1);}
 .avatar img{width:100%;height:100%;object-fit:cover;}
 .role{color:var(--muted);margin-bottom:14px;}
 .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
-.chip{background:rgba(37,99,235,.1);color:var(--primary);padding:5px 14px;border-radius:20px;font-size:.85rem;font-weight:600;}
-body.dark .chip{background:rgba(96,165,250,.15);color:#93c5fd;}
-.facts{list-style:none;text-align:left;margin-top:18px;font-size:.92rem;}
-.facts li{padding:8px 0;border-top:1px solid var(--border);display:flex;justify-content:space-between;gap:10px;}
+.chip{background:rgba(79,70,229,.1);color:var(--p1);padding:5px 14px;border-radius:20px;font-size:.84rem;font-weight:600;}
+body.dark .chip{background:rgba(129,140,248,.15);color:#a5b4fc;}
+.facts{list-style:none;text-align:start;margin-top:18px;font-size:.92rem;}
+.facts li{padding:9px 0;border-top:1px solid var(--border);display:flex;justify-content:space-between;gap:10px;}
 .facts b{color:var(--muted);font-weight:600;}
-.about-content h3{color:var(--primary);margin:22px 0 8px;}
+.about-content h3{margin:22px 0 6px;font-size:1.15rem;}
 .about-content h3:first-child{margin-top:0;}
-.about-content p{margin-bottom:10px;}
-.about-content ul{margin:8px 0 0 22px;}
+.about-content h3::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--grad);margin-inline-end:10px;}
+.about-content p{color:var(--muted);}
+.about-content ul{margin-block:8px 0;margin-inline-start:22px;color:var(--muted);}
 
-/* Tabs / Timeline */
+/* Tabs / timeline */
 .tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:30px;}
-.tab{border:1px solid var(--border);background:var(--card);color:var(--text);padding:8px 20px;border-radius:30px;cursor:pointer;font-weight:600;transition:.2s;}
-.tab.on,.tab:hover{background:var(--primary);color:#fff;border-color:var(--primary);}
-.timeline{max-width:820px;margin:auto;border-left:3px solid var(--primary);padding-left:28px;}
-.t-item{position:relative;margin-bottom:24px;background:var(--card);padding:22px;border-radius:14px;box-shadow:var(--shadow);}
-.t-item::before{content:"";position:absolute;left:-39px;top:26px;width:16px;height:16px;border-radius:50%;background:var(--primary);border:3px solid var(--bg);}
-.t-item small{color:var(--primary);font-weight:700;}
-.t-item h4{margin:3px 0;}
-.t-item .org{color:var(--muted);font-size:.93rem;margin-bottom:6px;}
-.t-item ul{margin:6px 0 0 20px;color:var(--muted);}
+.tab{border:1px solid var(--border);background:var(--card);color:var(--text);padding:9px 22px;border-radius:30px;cursor:pointer;font-weight:600;transition:.2s;font-family:inherit;font-size:.95rem;}
+.tab.on,.tab:hover{background:var(--grad);color:#fff;border-color:transparent;}
+.timeline{max-width:820px;margin:auto;border-inline-start:2px solid var(--border);padding-inline-start:30px;}
+.t-item{position:relative;margin-bottom:22px;background:var(--card);padding:22px 24px;border-radius:18px;box-shadow:var(--shadow);border:1px solid var(--border);}
+.t-item::before{content:"";position:absolute;inset-inline-start:-40px;top:26px;width:16px;height:16px;border-radius:50%;background:var(--grad);border:3px solid var(--bg);}
+.t-item small{color:var(--p1);font-weight:700;}
+body.dark .t-item small{color:#a5b4fc;}
+.t-item h4{margin:3px 0;font-size:1.08rem;}
+.t-item .org{color:var(--muted);font-size:.93rem;}
+.t-item ul{margin:8px 0 0;margin-inline-start:20px;color:var(--muted);}
 
 /* Skills */
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px 40px;}
-.skill .row{display:flex;justify-content:space-between;font-weight:600;font-size:.95rem;margin-bottom:5px;}
-.bar{height:10px;background:var(--border);border-radius:10px;overflow:hidden;}
-.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--primary));border-radius:10px;transition:width 1.2s ease;}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px 44px;}
+.skill .row{display:flex;justify-content:space-between;font-weight:600;font-size:.95rem;margin-bottom:6px;}
+.bar{height:10px;background:var(--card2);border-radius:10px;overflow:hidden;}
+.bar i{display:block;height:100%;width:0;background:var(--grad);border-radius:10px;transition:width 1.2s ease;}
 
-/* Cards */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;}
-.card{background:var(--card);padding:28px;border-radius:var(--radius);box-shadow:var(--shadow);transition:.3s;}
-.card:hover{transform:translateY(-8px);}
-.card .ico{font-size:2rem;margin-bottom:8px;}
-.card h3{color:var(--primary);margin-bottom:10px;}
-.card a.more{display:inline-block;margin-top:10px;font-weight:600;text-decoration:none;}
+/* Expertise bento */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.card{background:var(--card);padding:30px;border-radius:var(--r);box-shadow:var(--shadow);border:1px solid var(--border);transition:.3s;position:relative;overflow:hidden;}
+.card::after{content:"";position:absolute;inset:0;background:radial-gradient(400px 160px at 0 0,rgba(99,102,241,.14),transparent 70%);opacity:0;transition:.3s;}
+.card:hover{transform:translateY(-8px);border-color:var(--p1);}
+.card:hover::after{opacity:1;}
+.card .ico{font-size:2rem;margin-bottom:10px;width:56px;height:56px;border-radius:16px;background:var(--card2);display:flex;align-items:center;justify-content:center;}
+.card h3{margin-bottom:8px;font-size:1.15rem;}
+.card p{color:var(--muted);font-size:.95rem;}
 
-/* Publications / articles */
-.item{background:var(--card);padding:24px;border-radius:var(--radius);margin-bottom:18px;box-shadow:var(--shadow);border-left:5px solid var(--primary);}
-.item h3{color:var(--primary-dark);margin-bottom:4px;font-size:1.1rem;}
-body.dark .item h3{color:#93c5fd;}
-.item .meta{font-size:.85rem;color:var(--muted);margin-bottom:8px;}
-.item .actions{margin-top:10px;display:flex;gap:10px;flex-wrap:wrap;}
-.mini{font-size:.85rem;padding:6px 14px;border-radius:20px;border:1px solid var(--primary);background:transparent;color:var(--primary);cursor:pointer;text-decoration:none;font-weight:600;}
-.mini:hover{background:var(--primary);color:#fff;}
-.placeholder{border:2px dashed var(--border);border-left:5px dashed var(--primary);background:transparent;box-shadow:none;}
-.badge-todo{display:inline-block;font-size:.72rem;background:#fef3c7;color:#92400e;padding:2px 10px;border-radius:12px;font-weight:700;margin-left:8px;vertical-align:middle;}
+/* List items */
+.item{background:var(--card);padding:24px 26px;border-radius:var(--r);margin-bottom:16px;box-shadow:var(--shadow);border:1px solid var(--border);border-inline-start:5px solid var(--p1);}
+.item h3{margin-bottom:4px;font-size:1.1rem;}
+.item .meta{font-size:.85rem;color:var(--muted);margin-bottom:6px;}
+.item p{color:var(--muted);}
+.actions{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;}
+.mini{font-size:.85rem;padding:7px 16px;border-radius:20px;border:1px solid var(--p1);background:transparent;color:var(--p1);cursor:pointer;text-decoration:none;font-weight:600;font-family:inherit;}
+.mini:hover{background:var(--p1);color:#fff;}
+body.dark .mini{color:#a5b4fc;border-color:#6366f1;}
+.placeholder{border:2px dashed var(--border);border-inline-start:5px dashed var(--p1);box-shadow:none;background:transparent;}
+.todo{display:inline-block;font-size:.72rem;background:#fef3c7;color:#92400e;padding:2px 10px;border-radius:12px;font-weight:700;margin-inline-start:8px;vertical-align:middle;}
 .toolbar{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px;}
-.toolbar input{flex:1;min-width:200px;padding:11px 14px;border:1px solid var(--border);border-radius:10px;background:var(--card);color:var(--text);font-size:1rem;}
-.toolbar select{padding:11px 14px;border:1px solid var(--border);border-radius:10px;background:var(--card);color:var(--text);}
+.toolbar input,.toolbar select{padding:12px 16px;border:1px solid var(--border);border-radius:14px;background:var(--card);color:var(--text);font-size:1rem;font-family:inherit;}
+.toolbar input{flex:1;min-width:200px;}
 .empty{text-align:center;color:var(--muted);padding:20px;}
+.viewer{width:100%;height:600px;border:1px solid var(--border);border-radius:12px;margin-top:14px;background:#fff;}
 
 /* Contact */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;}
-.contact-panel{background:linear-gradient(135deg,#2563eb,#1e3a8a);color:#fff;padding:38px;border-radius:20px;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start;}
+.contact-panel{background:linear-gradient(135deg,#3730a3,#0e7490);color:#fff;padding:38px;border-radius:26px;}
 .contact-panel h3{font-size:1.5rem;margin-bottom:8px;}
 .contact-panel p{opacity:.92;margin-bottom:20px;}
 .contact-list{list-style:none;}
 .contact-list li{margin-bottom:12px;}
-.contact-list a{display:flex;align-items:center;gap:14px;color:#fff;text-decoration:none;background:rgba(255,255,255,.12);padding:12px 16px;border-radius:12px;transition:.25s;}
-.contact-list a:hover{background:rgba(255,255,255,.25);transform:translateX(5px);}
-.contact-list .badge{min-width:40px;height:40px;border-radius:10px;background:#fff;color:var(--primary);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;}
+.contact-list a{display:flex;align-items:center;gap:14px;color:#fff;text-decoration:none;background:rgba(255,255,255,.12);padding:12px 16px;border-radius:16px;transition:.25s;}
+.contact-list a:hover{background:rgba(255,255,255,.24);transform:translateX(5px);}
+[dir=rtl] .contact-list a:hover{transform:translateX(-5px);}
+.contact-list .badge{min-width:42px;height:42px;border-radius:12px;background:#fff;color:#3730a3;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;}
 .contact-list .label{font-weight:700;display:block;line-height:1.2;}
-.contact-list .sub{font-size:.85rem;opacity:.85;word-break:break-all;}
-.form-box{background:var(--card);padding:34px;border-radius:20px;box-shadow:var(--shadow);}
-.form-box h3{color:var(--primary);margin-bottom:16px;}
+.contact-list .sub{font-size:.85rem;opacity:.85;word-break:break-all;direction:ltr;display:inline-block;}
+.form-box{background:var(--card);padding:34px;border-radius:26px;box-shadow:var(--shadow);border:1px solid var(--border);}
+.form-box h3{margin-bottom:16px;font-size:1.3rem;}
 .field{margin-bottom:15px;}
 .field label{display:block;font-weight:600;margin-bottom:6px;font-size:.95rem;}
-.field input,.field select,.field textarea{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:10px;background:var(--bg);color:var(--text);font-size:1rem;}
-.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--primary);border-color:transparent;}
+.field input,.field select,.field textarea{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:14px;background:var(--bg);color:var(--text);font-size:1rem;font-family:inherit;}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--p1);border-color:transparent;}
 .field textarea{min-height:130px;resize:vertical;}
 .form-box .btn{width:100%;}
 .form-note{font-size:.82rem;color:var(--muted);margin-top:10px;}
 
-footer{background:#111827;color:#d1d5db;text-align:center;padding:40px 20px 28px;}
-.footer-links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:14px;}
-.footer-links a{color:#9ca3af;text-decoration:none;}
+footer{margin-top:90px;background:#0b1020;color:#cbd5e1;text-align:center;padding:36px 20px;}
+.footer-links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:12px;}
+.footer-links a{color:#94a3b8;text-decoration:none;}
 .footer-links a:hover{color:#fff;}
-footer small{color:#9ca3af;}
-.to-top{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;background:var(--primary);color:#fff;border:none;font-size:1.3rem;cursor:pointer;box-shadow:var(--shadow);display:none;z-index:900;}
+footer small{color:#94a3b8;}
+.to-top{position:fixed;inset-inline-end:22px;bottom:22px;width:48px;height:48px;border-radius:50%;background:var(--grad);color:#fff;border:none;font-size:1.3rem;cursor:pointer;box-shadow:var(--shadow);display:none;z-index:900;}
 .to-top.show{display:block;}
-.wa-float{position:fixed;left:22px;bottom:22px;background:#25d366;color:#fff;text-decoration:none;padding:12px 18px;border-radius:30px;font-weight:700;box-shadow:var(--shadow);z-index:900;display:none;}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s;}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s,transform .6s;}
 .reveal.visible{opacity:1;transform:none;}
 
-@media(max-width:900px){.about,.contact-grid{grid-template-columns:1fr;}.profile-box{position:static;}}
-@media(max-width:768px){
-  header#home h1{font-size:2.3rem;}
+@media(max-width:1100px){
   .menu-btn{display:inline-block;}
-  .nav-links{position:absolute;top:100%;left:0;right:0;background:#0f172a;flex-direction:column;padding:18px 5%;gap:14px;display:none;align-items:flex-start;}
+  .nav-links{position:absolute;top:calc(100% + 8px);inset-inline:0;background:rgba(15,22,38,.97);border-radius:24px;flex-direction:column;padding:14px;gap:4px;display:none;align-items:stretch;border:1px solid rgba(255,255,255,.12);}
   .nav-links.open{display:flex;}
+  nav{position:sticky;}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}.reveal{transition:none;opacity:1;transform:none;}.bar i{transition:none;}}
+@media(max-width:900px){.about,.contact-grid{grid-template-columns:1fr;}.profile-box{position:static;}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}.reveal{transition:none;opacity:1;transform:none;}.bar i{transition:none;}.orb{animation:none;}}
 @media print{
-  nav,#progress,.hero-actions,.hero-socials,.to-top,.wa-float,.toolbar,.contact-grid,.tabs,#bg,.actions{display:none!important;}
+  nav,#progress,.hero-actions,.to-top,.toolbar,.contact-grid,.tabs,.orb,.grid-bg,.actions,.viewer{display:none!important;}
   body{background:#fff;color:#000;}
-  header#home{background:#fff;color:#000;padding:20px;}
+  header#home{background:#fff;color:#000;padding:20px;margin:0;}
+  header#home h1{color:#000;-webkit-text-fill-color:#000;}
   .reveal{opacity:1!important;transform:none!important;}
-  .card,.item,.t-item,.panel{box-shadow:none;border:1px solid #ccc;}
+  .card,.item,.t-item,.panel,.stat{box-shadow:none;border:1px solid #ccc;}
 }
 </style>
 </head>
 
 <body>
-<a class="skip-link" href="#about">Skip to content</a>
 <div id="progress"></div>
-
-<nav aria-label="Main navigation">
-  <a href="#home" class="logo">Shrawan<span>Mehta</span></a>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#home" class="active">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#journey">Journey</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#expertise">Expertise</a></li>
-    <li><a href="#publications">Publications</a></li>
-    <li><a href="#articles">Articles</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <div class="nav-tools">
-    <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode">🌙</button>
-    <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
-  </div>
-</nav>
-
-<header id="home">
-  <canvas id="bg" aria-hidden="true"></canvas>
-  <div class="hero-inner">
-    <span class="hero-badge">👋 Welcome to my personal website</span>
-    <h1 id="hName">Shrawan Mehta</h1>
-    <p class="tagline" id="hTagline"></p>
-    <p class="typed" id="typed" aria-live="polite"></p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn">Connect With Me</a>
-      <a href="#about" class="btn outline">Learn More</a>
-      <button class="btn outline" onclick="window.print()">⬇ Save as CV (PDF)</button>
-    </div>
-    <div class="hero-socials" id="heroSocials" aria-label="Social media links"></div>
-  </div>
-</header>
-
-<div class="container" style="padding-bottom:0;padding-top:0;">
-  <div class="stats" id="stats"></div>
-</div>
-
-<!-- ABOUT -->
-<section class="container" id="about">
-  <div class="section-title reveal"><h2>About Me</h2><p id="aboutSub"></p></div>
-  <div class="about">
-    <div class="profile-box reveal">
-      <div class="avatar"><img src="profile.jpg" alt="Portrait of Shrawan Mehta" onerror="this.remove();document.querySelector('.avatar').textContent='SM';"></div>
-      <h3 id="pName"></h3>
-      <p class="role" id="pRole"></p>
-      <div class="chips" id="pChips"></div>
-      <ul class="facts" id="pFacts"></ul>
-    </div>
-    <div class="about-content reveal" id="aboutContent"></div>
-  </div>
-</section>
-
-<!-- JOURNEY -->
-<section class="container" id="journey" style="padding-top:0;">
-  <div class="section-title reveal"><h2>My Journey</h2><p>Experience, education and certifications.</p></div>
-  <div class="tabs" id="tabs" role="tablist"></div>
-  <div class="timeline" id="timeline"></div>
-</section>
-
-<!-- SKILLS -->
-<section class="container" id="skills" style="padding-top:0;">
-  <div class="section-title reveal"><h2>Skills</h2><p>Strengths I use every day.</p></div>
-  <div class="panel reveal"><div class="skills" id="skillList"></div></div>
-</section>
-
-<!-- EXPERTISE -->
-<section class="container" id="expertise" style="padding-top:0;">
-  <div class="section-title reveal"><h2>Areas of Expertise</h2><p>Key domains where I share knowledge and practical insights.</p></div>
-  <div class="cards" id="expertiseCards"></div>
-</section>
-
-<!-- PUBLICATIONS -->
-<section class="container" id="publications" style="padding-top:0;">
-  <div class="section-title reveal"><h2>Published Work</h2><p>Research papers and formal publications.</p></div>
-  <div id="pubList"></div>
-</section>
-
-<!-- ARTICLES -->
-<section class="container" id="articles" style="padding-top:0;">
-  <div class="section-title reveal"><h2>Articles &amp; Resources</h2><p>Knowledge sharing for today's technology-driven world.</p></div>
-  <div class="toolbar reveal">
-    <input type="search" id="artSearch" placeholder="Search articles…" aria-label="Search articles">
-    <select id="artCat" aria-label="Filter by category"></select>
-  </div>
-  <div id="artList"></div>
-</section>
-
-<!-- CONTACT -->
-<section class="container" id="contact" style="padding-top:0;">
-  <div class="section-title reveal"><h2>Let's Connect</h2><p>Collaborations, training, speaking or simple questions are all welcome.</p></div>
-  <div class="contact-grid">
-    <div class="contact-panel reveal">
-      <h3>Get in Touch</h3>
-      <p>Choose whichever channel suits you best.</p>
-      <ul class="contact-list" id="contactList"></ul>
-    </div>
-    <div class="form-box reveal">
-      <h3>Send Me a Message</h3>
-      <form id="contactForm" novalidate>
-        <div class="field"><label for="name">Your Name</label><input type="text" id="name" required autocomplete="name" placeholder="Jane Doe"></div>
-        <div class="field"><label for="email">Your Email</label><input type="email" id="email" required autocomplete="email" placeholder="jane@example.com"></div>
-        <div class="field"><label for="topic">Topic</label>
-          <select id="topic"><option>General question</option><option>Training / workshop</option><option>Collaboration</option><option>Career guidance</option><option>Speaking invitation</option></select></div>
-        <div class="field"><label for="message">Message</label><textarea id="message" required placeholder="How can I help you?"></textarea></div>
-        <button type="submit" class="btn solid">Send Message</button>
-        <p class="form-note" id="formNote">This opens your email app with the message ready to send.</p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-links" id="footLinks"></div>
-  <small>© <span id="year"></span> Shrawan Mehta | Educator • AI Enthusiast • Technology Professional</small>
-</footer>
-
-<a class="wa-float" id="waFloat" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">💬 WhatsApp</a>
-<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+<div id="root"></div>
+<button class="to-top" id="toTop">↑</button>
 
 <script>
 /* =====================================================================
-   YOUR CONTENT: edit only this block. Everything on the page is built from it.
-   Entries with  todo:true  show as dashed "to be completed" cards.
-   Set SHOW_TODO = false once you have filled everything in.
+   1) YOUR PERSONAL DATA: edit only this block (language-independent facts).
+      Any text field may be a plain string, or an object with one string
+      per language, e.g.  { en:"Teacher", de:"Lehrer", fr:"Enseignant" }
    ===================================================================== */
-const SHOW_TODO = true;
+const SHOW_TODO = true;   // set to false once every section is filled in
 
-const SITE = {
+const PROFILE = {
   name: "Shrawan Mehta",
-  tagline: "Educator | AI Enthusiast | Technology Professional",
-  typed: [
-    "Making AI simple and practical",
-    "Helping professionals master Microsoft Copilot",
-    "Guiding careers in the age of cloud and AI"
-  ],
-  role: "AI & Technology Evangelist",
   email: "theshrawanmehta@gmail.com",
-  whatsapp: "",   // e.g. "491701234567" (country code + number, digits only). Leave empty to hide the button.
-  links: {
+  links: {                       // shown ONCE, in the Contact section
     linkedin:  "https://www.linkedin.com/in/shrawanmehta",
     youtube:   "https://www.youtube.com/@shrawanmehta",
     facebook:  "https://www.facebook.com/drshrawanmehta",
     instagram: "https://www.instagram.com/theshrawanmehta/",
     website:   "https://www.shrawanmehta.com"
   },
-  aboutSub: "Passionate about empowering people through technology and education.",
-  chips: ["AI", "Copilot", "Azure", "Careers", "Education"],
-  facts: [                       // quick facts card; add e.g. Location, Languages, Current role
-    ["Focus", "AI, Cloud, Careers"],
-    ["Languages", "Add your languages"],
-    ["Location", "Add your location"]
+  location: "",                  // e.g. "Karlsruhe, Germany"; hidden when empty
+  languages: "",                 // e.g. "English, German, Nepali, Hindi"; hidden when empty
+  stats: [                       // numbers only; labels are translated automatically
+    { n: 10,   suffix: "+" },
+    { n: 1000, suffix: "+" },
+    { n: 50,   suffix: "+" },
+    { n: 4,    suffix: ""  }
   ],
-  stats: [                       // edit to your real numbers
-    { n: 10,   suffix: "+", label: "Years of Experience" },
-    { n: 1000, suffix: "+", label: "People Trained" },
-    { n: 50,   suffix: "+", label: "Articles & Tutorials" },
-    { n: 4,    suffix: "",  label: "Core Focus Areas" }
+  skillLevels: [90, 90, 80, 90, 80, 75],   // % for the 6 skills, in order
+
+  /* ---- From your LinkedIn: paste your real entries here ---- */
+  experience: [
+    // { when:"2021 – present", title:"Your job title", org:"Company, City", points:["Achievement 1","Achievement 2"] }
   ],
-  about: [
-    ["Who I Am", "Welcome to my personal website. I am an educator, technology professional, and Artificial Intelligence enthusiast committed to helping students, professionals, and organizations leverage modern technologies to achieve greater productivity and innovation."],
-    ["What I Do", "With strong interests in Artificial Intelligence, Microsoft Cloud Technologies, Digital Transformation, and Career Development, I regularly share insights, practical guidance, and industry trends that help readers stay ahead in a rapidly evolving technology landscape."],
-    ["My Mission", "My mission is to bridge the gap between technology and people by making complex concepts easy to understand and apply in real-world scenarios."]
+  education: [
+    // { when:"2012 – 2016", title:"Degree / programme", org:"University, Country", points:[] }
   ],
-  expect: [
-    "Clear, jargon-free explanations of AI and cloud topics",
-    "Hands-on guidance for Microsoft Copilot and productivity workflows",
-    "Career advice on skills, certifications and personal branding",
-    "Regular updates on technology trends"
+  certifications: [
+    // { when:"2024", title:"Microsoft Azure AI Fundamentals", org:"Microsoft", points:[] }
   ],
 
-  /* From your LinkedIn / biodata. Replace the todo entries. */
-  journey: {
-    Experience: [
-      { when: "Add dates", title: "Add your role", org: "Add organisation, location", points: ["Key responsibility or achievement"], todo: true }
-    ],
-    Education: [
-      { when: "Add years", title: "Add your degree", org: "Add institution", points: [], todo: true }
-    ],
-    Certifications: [
-      { when: "Add year", title: "Add certification (e.g. Microsoft Azure, AI)", org: "Issuing body", points: [], todo: true }
-    ]
-  },
-
-  skills: [                      // level 0-100: your own honest self-rating
-    { name: "Artificial Intelligence", level: 90 },
-    { name: "Microsoft Copilot", level: 90 },
-    { name: "Cloud Computing / Azure", level: 80 },
-    { name: "Teaching & Training", level: 90 },
-    { name: "Career Coaching", level: 80 },
-    { name: "Digital Transformation", level: 75 }
-  ],
-
-  expertise: [
-    { ico: "🤖", title: "Artificial Intelligence", text: "Exploring AI fundamentals, machine learning concepts, generative AI, prompt engineering, and real-world applications transforming industries." },
-    { ico: "💼", title: "Microsoft Copilot", text: "Helping professionals maximize productivity through Microsoft Copilot, AI-driven workflows, and smart workplace solutions." },
-    { ico: "☁️", title: "Cloud Computing", text: "Insights into Microsoft Azure, cloud architecture, digital transformation, automation, and enterprise technology strategies." },
-    { ico: "🚀", title: "Career Growth", text: "Guidance for students and professionals on skill development, certifications, personal branding, and future-ready careers." }
-  ],
-
-  /* Your published paper(s). Fill in the real details. */
+  /* ---- Your published paper(s) ---- */
   publications: [
-    { title: "Add the title of your published paper", authors: "Your name, co-authors", venue: "Journal / conference", year: "Year", doi: "", url: "", abstract: "Short abstract or one-line summary.", todo: true }
+    // { title:"Paper title", authors:"S. Mehta, A. Author", venue:"Journal name", year:"2024",
+    //   doi:"10.xxxx/xxxxx", url:"", abstract:"Short summary.", file:"files/paper.pdf" }
   ],
 
-  /* Articles & resources. Add url when you have it. */
-  articles: [
-    { cat: "Artificial Intelligence", title: "Getting Started with Artificial Intelligence", text: "Learn the fundamentals of AI, machine learning, and generative technologies that are shaping the future of innovation.", url: "" },
-    { cat: "Productivity", title: "Microsoft Copilot for Productivity", text: "Discover how Microsoft Copilot can automate daily tasks, improve collaboration, and increase workplace efficiency.", url: "" },
-    { cat: "Careers", title: "Career Growth in the AI Era", text: "Explore the essential skills, learning strategies, and certifications needed to succeed in an AI-powered professional environment.", url: "" }
+  /* ---- PDF files shown in the Documents section ----
+     HOW TO ADD A PDF: create a folder called  files  next to this index.html,
+     copy your PDF into it (for example files/Shrawan_Mehta_CV.pdf) and put the
+     path below. Upload the whole folder (index.html + files + profile.jpg) to your hosting. */
+  docs: [
+    { key: "cv",    file: "" },     // e.g. "files/Shrawan_Mehta_CV.pdf"
+    { key: "paper", file: "" }      // e.g. "files/Published_Paper.pdf"
   ]
 };
-/* ===================== END OF CONTENT BLOCK ===================== */
 
+/* =====================================================================
+   2) TRANSLATIONS (10 languages). Positional arrays; see English first.
+   ===================================================================== */
+const T = {
+en:{n:"English",
+ nav:["Home","About","Journey","Skills","Expertise","Publications","Articles","Documents","Contact"],
+ badge:"👋 Welcome to my personal website",
+ tag:"Educator | AI Enthusiast | Technology Professional",
+ typed:["Making AI simple and practical","Helping professionals master Microsoft Copilot","Guiding careers in the age of cloud and AI"],
+ btn:["Connect With Me","Learn More","Save as CV (PDF)"],
+ stats:["Years of Experience","People Trained","Articles & Tutorials","Core Focus Areas"],
+ role:"AI & Technology Evangelist", chips2:["Careers","Education"],
+ lbl:["Focus","Languages","Location"], focus:"AI, Cloud, Careers",
+ sec:[["About Me","Passionate about empowering people through technology and education."],["My Journey","Experience, education and certifications."],["Skills","Strengths I use every day."],["Areas of Expertise","Key domains where I share knowledge and practical insights."],["Published Work","Research papers and formal publications."],["Articles","Knowledge sharing for today's technology-driven world."],["Documents","Download my CV, paper and other PDF files."],["Let's Connect","Collaborations, training, speaking or simple questions are all welcome."]],
+ about:[["Who I Am","Welcome to my personal website. I am an educator, technology professional, and Artificial Intelligence enthusiast committed to helping students, professionals, and organizations leverage modern technologies to achieve greater productivity and innovation."],["What I Do","With strong interests in Artificial Intelligence, Microsoft Cloud Technologies, Digital Transformation, and Career Development, I regularly share insights, practical guidance, and industry trends that help readers stay ahead in a rapidly evolving technology landscape."],["My Mission","My mission is to bridge the gap between technology and people by making complex concepts easy to understand and apply in real-world scenarios."]],
+ expectT:"What You Can Expect",
+ expect:["Clear, jargon-free explanations of AI and cloud topics","Hands-on guidance for Microsoft Copilot and productivity workflows","Career advice on skills, certifications and personal branding","Regular updates on technology trends"],
+ tabs:["Experience","Education","Certifications"],
+ todo:["to be completed","Add your entry here","Organisation, location","Dates"],
+ skills:["Artificial Intelligence","Microsoft Copilot","Cloud Computing / Azure","Teaching & Training","Career Coaching","Digital Transformation"],
+ exp:[["Artificial Intelligence","Exploring AI fundamentals, machine learning concepts, generative AI, prompt engineering, and real-world applications transforming industries."],["Microsoft Copilot","Helping professionals maximize productivity through Microsoft Copilot, AI-driven workflows, and smart workplace solutions."],["Cloud Computing","Insights into Microsoft Azure, cloud architecture, digital transformation, automation, and enterprise technology strategies."],["Career Growth","Guidance for students and professionals on skill development, certifications, personal branding, and future-ready careers."]],
+ pub:["No publications listed yet.","DOI","Read paper","Copy citation","Copied ✓","Title of your published paper","Authors, journal, year and a short abstract will appear here."],
+ art:["Search articles…","All","No articles match your search.","Read more","Artificial Intelligence","Productivity","Careers"],
+ arts:[["Getting Started with Artificial Intelligence","Learn the fundamentals of AI, machine learning, and generative technologies that are shaping the future of innovation."],["Microsoft Copilot for Productivity","Discover how Microsoft Copilot can automate daily tasks, improve collaboration, and increase workplace efficiency."],["Career Growth in the AI Era","Explore the essential skills, learning strategies, and certifications needed to succeed in an AI-powered professional environment."]],
+ docs:["Download PDF","View","Close","Curriculum Vitae (CV)","Published Paper","PDF coming soon"],
+ ct:["Get in Touch","Choose whichever channel suits you best.","Send Me a Message","Your Name","Your Email","Topic","Message","Send Message","This opens your email app with the message ready to send.","Please fill in your name, a valid email and a message.","Opening your email app...","How can I help you?"],
+ topics:["General question","Training / workshop","Collaboration","Career guidance","Speaking invitation"],
+ ui:["Toggle dark mode","Open menu","Language","Back to top","Skip to content"]},
+
+de:{n:"Deutsch",
+ nav:["Start","Über mich","Werdegang","Fähigkeiten","Expertise","Publikationen","Artikel","Dokumente","Kontakt"],
+ badge:"👋 Willkommen auf meiner persönlichen Website",
+ tag:"Pädagoge | KI-Enthusiast | Technologieprofi",
+ typed:["KI einfach und praxisnah machen","Fachkräften helfen, Microsoft Copilot zu meistern","Karrieren im Zeitalter von Cloud und KI begleiten"],
+ btn:["Kontakt aufnehmen","Mehr erfahren","Als Lebenslauf speichern (PDF)"],
+ stats:["Jahre Erfahrung","Geschulte Personen","Artikel & Tutorials","Kernthemen"],
+ role:"KI- & Technologie-Evangelist", chips2:["Karriere","Bildung"],
+ lbl:["Schwerpunkt","Sprachen","Standort"], focus:"KI, Cloud, Karriere",
+ sec:[["Über mich","Leidenschaftlich dabei, Menschen durch Technologie und Bildung zu stärken."],["Mein Werdegang","Erfahrung, Ausbildung und Zertifizierungen."],["Fähigkeiten","Stärken, die ich täglich einsetze."],["Fachgebiete","Kernbereiche, in denen ich Wissen und praktische Einblicke teile."],["Publikationen","Forschungsarbeiten und offizielle Veröffentlichungen."],["Artikel","Wissensaustausch für die heutige technologiegetriebene Welt."],["Dokumente","Lebenslauf, Publikation und weitere PDF-Dateien herunterladen."],["Lassen Sie uns vernetzen","Kooperationen, Schulungen, Vorträge oder einfache Fragen sind willkommen."]],
+ about:[["Wer ich bin","Willkommen auf meiner persönlichen Website. Ich bin Pädagoge, Technologieprofi und KI-Enthusiast und möchte Studierenden, Fachkräften und Organisationen helfen, moderne Technologien für mehr Produktivität und Innovation zu nutzen."],["Was ich tue","Mit großem Interesse an Künstlicher Intelligenz, Microsoft-Cloud-Technologien, digitaler Transformation und Karriereentwicklung teile ich regelmäßig Erkenntnisse, praktische Tipps und Branchentrends, damit Leserinnen und Leser in einer sich schnell wandelnden Technologiewelt die Nase vorn behalten."],["Meine Mission","Meine Mission ist es, die Lücke zwischen Technologie und Menschen zu schließen, indem ich komplexe Konzepte verständlich mache und im Alltag anwendbar vermittle."]],
+ expectT:"Was Sie erwartet",
+ expect:["Klare Erklärungen zu KI- und Cloud-Themen ohne Fachjargon","Praxisnahe Anleitungen zu Microsoft Copilot und produktiven Arbeitsabläufen","Karrieretipps zu Fähigkeiten, Zertifizierungen und Personal Branding","Regelmäßige Updates zu Technologietrends"],
+ tabs:["Berufserfahrung","Ausbildung","Zertifizierungen"],
+ todo:["noch auszufüllen","Eintrag hier ergänzen","Organisation, Ort","Zeitraum"],
+ skills:["Künstliche Intelligenz","Microsoft Copilot","Cloud Computing / Azure","Lehre & Schulung","Karrierecoaching","Digitale Transformation"],
+ exp:[["Künstliche Intelligenz","Grundlagen der KI, Konzepte des maschinellen Lernens, generative KI, Prompt Engineering und reale Anwendungen, die Branchen verändern."],["Microsoft Copilot","Fachkräften helfen, mit Microsoft Copilot, KI-gestützten Arbeitsabläufen und smarten Lösungen produktiver zu arbeiten."],["Cloud Computing","Einblicke in Microsoft Azure, Cloud-Architektur, digitale Transformation, Automatisierung und Unternehmensstrategien."],["Karriereentwicklung","Orientierung für Studierende und Berufstätige zu Kompetenzaufbau, Zertifizierungen, Personal Branding und zukunftsfähigen Karrieren."]],
+ pub:["Noch keine Publikationen aufgeführt.","DOI","Publikation lesen","Zitat kopieren","Kopiert ✓","Titel Ihrer veröffentlichten Arbeit","Autoren, Zeitschrift, Jahr und eine kurze Zusammenfassung erscheinen hier."],
+ art:["Artikel durchsuchen…","Alle","Keine Artikel gefunden.","Weiterlesen","Künstliche Intelligenz","Produktivität","Karriere"],
+ arts:[["Erste Schritte mit Künstlicher Intelligenz","Lernen Sie die Grundlagen von KI, maschinellem Lernen und generativen Technologien kennen, die die Zukunft der Innovation prägen."],["Microsoft Copilot für mehr Produktivität","Entdecken Sie, wie Microsoft Copilot tägliche Aufgaben automatisiert, die Zusammenarbeit verbessert und die Effizienz am Arbeitsplatz steigert."],["Karriereentwicklung im KI-Zeitalter","Erfahren Sie, welche Fähigkeiten, Lernstrategien und Zertifizierungen für den Erfolg in einem KI-geprägten Berufsumfeld wichtig sind."]],
+ docs:["PDF herunterladen","Ansehen","Schließen","Lebenslauf","Veröffentlichte Arbeit","PDF folgt in Kürze"],
+ ct:["Kontakt aufnehmen","Wählen Sie den Kanal, der Ihnen am besten passt.","Nachricht senden","Ihr Name","Ihre E-Mail","Thema","Nachricht","Nachricht senden","Dies öffnet Ihre E-Mail-App mit der vorbereiteten Nachricht.","Bitte geben Sie Ihren Namen, eine gültige E-Mail-Adresse und eine Nachricht ein.","E-Mail-App wird geöffnet...","Wie kann ich helfen?"],
+ topics:["Allgemeine Frage","Schulung / Workshop","Zusammenarbeit","Karriereberatung","Vortragseinladung"],
+ ui:["Dunkelmodus umschalten","Menü öffnen","Sprache","Nach oben","Zum Inhalt springen"]},
+
+fr:{n:"Français",
+ nav:["Accueil","À propos","Parcours","Compétences","Expertise","Publications","Articles","Documents","Contact"],
+ badge:"👋 Bienvenue sur mon site personnel",
+ tag:"Formateur | Passionné d'IA | Professionnel de la technologie",
+ typed:["Rendre l'IA simple et pratique","Aider les professionnels à maîtriser Microsoft Copilot","Accompagner les carrières à l'ère du cloud et de l'IA"],
+ btn:["Me contacter","En savoir plus","Enregistrer en CV (PDF)"],
+ stats:["Années d'expérience","Personnes formées","Articles et tutoriels","Domaines clés"],
+ role:"Évangéliste IA et technologie", chips2:["Carrières","Éducation"],
+ lbl:["Focus","Langues","Lieu"], focus:"IA, Cloud, Carrières",
+ sec:[["À propos de moi","Passionné par l'autonomisation des personnes grâce à la technologie et à l'éducation."],["Mon parcours","Expérience, formation et certifications."],["Compétences","Les atouts que j'utilise au quotidien."],["Domaines d'expertise","Les domaines clés où je partage connaissances et conseils pratiques."],["Publications","Articles de recherche et publications officielles."],["Articles","Partage de connaissances pour le monde technologique d'aujourd'hui."],["Documents","Téléchargez mon CV, mon article et d'autres fichiers PDF."],["Restons en contact","Collaborations, formations, interventions ou simples questions : tout est le bienvenu."]],
+ about:[["Qui suis-je","Bienvenue sur mon site personnel. Je suis formateur, professionnel de la technologie et passionné d'intelligence artificielle, et j'aide étudiants, professionnels et organisations à tirer parti des technologies modernes pour gagner en productivité et en innovation."],["Ce que je fais","Très intéressé par l'intelligence artificielle, les technologies cloud de Microsoft, la transformation numérique et le développement de carrière, je partage régulièrement des analyses, des conseils pratiques et des tendances du secteur pour garder une longueur d'avance dans un paysage technologique en évolution rapide."],["Ma mission","Ma mission est de rapprocher la technologie et les personnes en rendant les concepts complexes faciles à comprendre et à appliquer concrètement."]],
+ expectT:"À quoi vous attendre",
+ expect:["Des explications claires de l'IA et du cloud, sans jargon","Des conseils pratiques sur Microsoft Copilot et la productivité","Des conseils de carrière : compétences, certifications et personal branding","Des actualités régulières sur les tendances technologiques"],
+ tabs:["Expérience","Formation","Certifications"],
+ todo:["à compléter","Ajoutez votre entrée ici","Organisation, lieu","Dates"],
+ skills:["Intelligence artificielle","Microsoft Copilot","Cloud computing / Azure","Enseignement et formation","Coaching de carrière","Transformation numérique"],
+ exp:[["Intelligence artificielle","Fondamentaux de l'IA, apprentissage automatique, IA générative, ingénierie des prompts et applications concrètes qui transforment les secteurs."],["Microsoft Copilot","Aider les professionnels à gagner en productivité avec Microsoft Copilot, les flux de travail pilotés par l'IA et les solutions intelligentes."],["Cloud computing","Éclairages sur Microsoft Azure, l'architecture cloud, la transformation numérique, l'automatisation et les stratégies technologiques d'entreprise."],["Évolution de carrière","Conseils aux étudiants et professionnels sur le développement des compétences, les certifications, la marque personnelle et les carrières d'avenir."]],
+ pub:["Aucune publication pour l'instant.","DOI","Lire l'article","Copier la citation","Copié ✓","Titre de votre article publié","Les auteurs, la revue, l'année et un bref résumé apparaîtront ici."],
+ art:["Rechercher des articles…","Tous","Aucun article ne correspond.","Lire la suite","Intelligence artificielle","Productivité","Carrières"],
+ arts:[["Débuter avec l'intelligence artificielle","Découvrez les fondamentaux de l'IA, de l'apprentissage automatique et des technologies génératives qui façonnent l'avenir de l'innovation."],["Microsoft Copilot pour la productivité","Découvrez comment Microsoft Copilot peut automatiser les tâches quotidiennes, améliorer la collaboration et accroître l'efficacité au travail."],["Évoluer professionnellement à l'ère de l'IA","Explorez les compétences, stratégies d'apprentissage et certifications essentielles pour réussir dans un environnement professionnel porté par l'IA."]],
+ docs:["Télécharger le PDF","Voir","Fermer","Curriculum vitae (CV)","Article publié","PDF bientôt disponible"],
+ ct:["Me contacter","Choisissez le canal qui vous convient le mieux.","Envoyez-moi un message","Votre nom","Votre e-mail","Sujet","Message","Envoyer le message","Cela ouvre votre application de messagerie avec le message prêt à envoyer.","Veuillez renseigner votre nom, un e-mail valide et un message.","Ouverture de votre application de messagerie...","Comment puis-je vous aider ?"],
+ topics:["Question générale","Formation / atelier","Collaboration","Conseils de carrière","Invitation à intervenir"],
+ ui:["Basculer le mode sombre","Ouvrir le menu","Langue","Haut de page","Aller au contenu"]},
+
+es:{n:"Español",
+ nav:["Inicio","Sobre mí","Trayectoria","Habilidades","Experiencia","Publicaciones","Artículos","Documentos","Contacto"],
+ badge:"👋 Bienvenido a mi sitio web personal",
+ tag:"Educador | Entusiasta de la IA | Profesional de la tecnología",
+ typed:["Hacer la IA sencilla y práctica","Ayudar a los profesionales a dominar Microsoft Copilot","Guiar carreras en la era de la nube y la IA"],
+ btn:["Contáctame","Saber más","Guardar como CV (PDF)"],
+ stats:["Años de experiencia","Personas formadas","Artículos y tutoriales","Áreas clave"],
+ role:"Evangelista de IA y tecnología", chips2:["Carreras","Educación"],
+ lbl:["Enfoque","Idiomas","Ubicación"], focus:"IA, Nube, Carreras",
+ sec:[["Sobre mí","Apasionado por empoderar a las personas mediante la tecnología y la educación."],["Mi trayectoria","Experiencia, educación y certificaciones."],["Habilidades","Fortalezas que uso cada día."],["Áreas de experiencia","Ámbitos clave en los que comparto conocimiento y perspectivas prácticas."],["Publicaciones","Artículos de investigación y publicaciones formales."],["Artículos","Intercambio de conocimiento para el mundo tecnológico actual."],["Documentos","Descarga mi CV, mi artículo y otros archivos PDF."],["Conectemos","Colaboraciones, formación, charlas o simples preguntas son bienvenidas."]],
+ about:[["Quién soy","Bienvenido a mi sitio web personal. Soy educador, profesional de la tecnología y entusiasta de la inteligencia artificial, y ayudo a estudiantes, profesionales y organizaciones a aprovechar las tecnologías modernas para ser más productivos e innovadores."],["Qué hago","Con un gran interés en la inteligencia artificial, las tecnologías en la nube de Microsoft, la transformación digital y el desarrollo profesional, comparto con regularidad ideas, orientación práctica y tendencias del sector para mantenerse al día en un panorama tecnológico en constante cambio."],["Mi misión","Mi misión es acercar la tecnología a las personas, haciendo que los conceptos complejos sean fáciles de entender y de aplicar en situaciones reales."]],
+ expectT:"Qué puedes esperar",
+ expect:["Explicaciones claras y sin jerga sobre IA y la nube","Guías prácticas sobre Microsoft Copilot y flujos de trabajo","Consejos de carrera sobre habilidades, certificaciones y marca personal","Novedades periódicas sobre tendencias tecnológicas"],
+ tabs:["Experiencia","Educación","Certificaciones"],
+ todo:["pendiente de completar","Añade tu entrada aquí","Organización, ubicación","Fechas"],
+ skills:["Inteligencia artificial","Microsoft Copilot","Computación en la nube / Azure","Enseñanza y formación","Coaching profesional","Transformación digital"],
+ exp:[["Inteligencia artificial","Fundamentos de la IA, aprendizaje automático, IA generativa, ingeniería de prompts y aplicaciones reales que transforman industrias."],["Microsoft Copilot","Ayudar a los profesionales a maximizar su productividad con Microsoft Copilot, flujos de trabajo con IA y soluciones inteligentes."],["Computación en la nube","Perspectivas sobre Microsoft Azure, arquitectura en la nube, transformación digital, automatización y estrategias tecnológicas empresariales."],["Crecimiento profesional","Orientación para estudiantes y profesionales sobre desarrollo de habilidades, certificaciones, marca personal y carreras con futuro."]],
+ pub:["Aún no hay publicaciones.","DOI","Leer artículo","Copiar cita","Copiado ✓","Título de tu artículo publicado","Aquí aparecerán los autores, la revista, el año y un breve resumen."],
+ art:["Buscar artículos…","Todos","Ningún artículo coincide con la búsqueda.","Leer más","Inteligencia artificial","Productividad","Carreras"],
+ arts:[["Primeros pasos con la inteligencia artificial","Aprende los fundamentos de la IA, el aprendizaje automático y las tecnologías generativas que están moldeando el futuro de la innovación."],["Microsoft Copilot para la productividad","Descubre cómo Microsoft Copilot puede automatizar tareas diarias, mejorar la colaboración y aumentar la eficiencia laboral."],["Crecimiento profesional en la era de la IA","Explora las habilidades, estrategias de aprendizaje y certificaciones esenciales para tener éxito en un entorno profesional impulsado por la IA."]],
+ docs:["Descargar PDF","Ver","Cerrar","Curriculum vitae (CV)","Artículo publicado","PDF próximamente"],
+ ct:["Ponte en contacto","Elige el canal que mejor te convenga.","Envíame un mensaje","Tu nombre","Tu correo electrónico","Asunto","Mensaje","Enviar mensaje","Se abrirá tu aplicación de correo con el mensaje listo para enviar.","Introduce tu nombre, un correo válido y un mensaje.","Abriendo tu aplicación de correo...","¿En qué puedo ayudarte?"],
+ topics:["Pregunta general","Formación / taller","Colaboración","Orientación profesional","Invitación como ponente"],
+ ui:["Alternar modo oscuro","Abrir menú","Idioma","Volver arriba","Saltar al contenido"]},
+
+it:{n:"Italiano",
+ nav:["Home","Chi sono","Percorso","Competenze","Expertise","Pubblicazioni","Articoli","Documenti","Contatti"],
+ badge:"👋 Benvenuto nel mio sito personale",
+ tag:"Formatore | Appassionato di IA | Professionista della tecnologia",
+ typed:["Rendere l'IA semplice e pratica","Aiutare i professionisti a padroneggiare Microsoft Copilot","Guidare le carriere nell'era del cloud e dell'IA"],
+ btn:["Contattami","Scopri di più","Salva come CV (PDF)"],
+ stats:["Anni di esperienza","Persone formate","Articoli e tutorial","Aree principali"],
+ role:"Evangelista di IA e tecnologia", chips2:["Carriere","Formazione"],
+ lbl:["Focus","Lingue","Sede"], focus:"IA, Cloud, Carriere",
+ sec:[["Chi sono","Appassionato di valorizzare le persone attraverso tecnologia e formazione."],["Il mio percorso","Esperienza, formazione e certificazioni."],["Competenze","I punti di forza che uso ogni giorno."],["Aree di competenza","Ambiti chiave in cui condivido conoscenze e spunti pratici."],["Pubblicazioni","Articoli di ricerca e pubblicazioni formali."],["Articoli","Condivisione di conoscenze per il mondo tecnologico di oggi."],["Documenti","Scarica il mio CV, il mio articolo e altri file PDF."],["Mettiamoci in contatto","Collaborazioni, formazione, interventi o semplici domande sono tutti benvenuti."]],
+ about:[["Chi sono","Benvenuto nel mio sito personale. Sono un formatore, professionista della tecnologia e appassionato di intelligenza artificiale, e aiuto studenti, professionisti e organizzazioni a sfruttare le tecnologie moderne per aumentare produttività e innovazione."],["Cosa faccio","Con un forte interesse per l'intelligenza artificiale, le tecnologie cloud di Microsoft, la trasformazione digitale e lo sviluppo di carriera, condivido regolarmente approfondimenti, consigli pratici e tendenze del settore per restare al passo in un panorama tecnologico in rapida evoluzione."],["La mia missione","La mia missione è colmare il divario tra tecnologia e persone, rendendo i concetti complessi facili da capire e da applicare nella realtà."]],
+ expectT:"Cosa puoi aspettarti",
+ expect:["Spiegazioni chiare e senza gergo su IA e cloud","Guide pratiche su Microsoft Copilot e flussi di lavoro","Consigli di carriera su competenze, certificazioni e personal branding","Aggiornamenti regolari sulle tendenze tecnologiche"],
+ tabs:["Esperienza","Formazione","Certificazioni"],
+ todo:["da completare","Aggiungi qui la tua voce","Organizzazione, sede","Date"],
+ skills:["Intelligenza artificiale","Microsoft Copilot","Cloud computing / Azure","Insegnamento e formazione","Career coaching","Trasformazione digitale"],
+ exp:[["Intelligenza artificiale","Fondamenti di IA, machine learning, IA generativa, prompt engineering e applicazioni reali che trasformano i settori."],["Microsoft Copilot","Aiutare i professionisti a massimizzare la produttività con Microsoft Copilot, flussi di lavoro basati su IA e soluzioni smart."],["Cloud computing","Approfondimenti su Microsoft Azure, architettura cloud, trasformazione digitale, automazione e strategie tecnologiche aziendali."],["Crescita professionale","Consigli per studenti e professionisti su sviluppo delle competenze, certificazioni, personal branding e carriere orientate al futuro."]],
+ pub:["Nessuna pubblicazione al momento.","DOI","Leggi l'articolo","Copia citazione","Copiato ✓","Titolo del tuo articolo pubblicato","Qui compariranno autori, rivista, anno e un breve riassunto."],
+ art:["Cerca articoli…","Tutti","Nessun articolo corrisponde alla ricerca.","Leggi di più","Intelligenza artificiale","Produttività","Carriere"],
+ arts:[["Iniziare con l'intelligenza artificiale","Scopri i fondamenti di IA, machine learning e tecnologie generative che stanno plasmando il futuro dell'innovazione."],["Microsoft Copilot per la produttività","Scopri come Microsoft Copilot può automatizzare le attività quotidiane, migliorare la collaborazione e aumentare l'efficienza sul lavoro."],["Crescita professionale nell'era dell'IA","Esplora le competenze, le strategie di apprendimento e le certificazioni essenziali per avere successo in un ambiente professionale guidato dall'IA."]],
+ docs:["Scarica PDF","Visualizza","Chiudi","Curriculum vitae (CV)","Articolo pubblicato","PDF in arrivo"],
+ ct:["Contattami","Scegli il canale che preferisci.","Inviami un messaggio","Il tuo nome","La tua e-mail","Argomento","Messaggio","Invia messaggio","Si aprirà la tua app di posta con il messaggio pronto da inviare.","Inserisci nome, un'e-mail valida e un messaggio.","Apertura dell'app di posta...","Come posso aiutarti?"],
+ topics:["Domanda generale","Formazione / workshop","Collaborazione","Orientamento professionale","Invito come relatore"],
+ ui:["Attiva/disattiva modalità scura","Apri menu","Lingua","Torna su","Vai al contenuto"]},
+
+ne:{n:"नेपाली",
+ nav:["गृहपृष्ठ","मेरो बारेमा","यात्रा","सीप","विशेषज्ञता","प्रकाशन","लेखहरू","कागजातहरू","सम्पर्क"],
+ badge:"👋 मेरो व्यक्तिगत वेबसाइटमा स्वागत छ",
+ tag:"शिक्षक | एआई उत्साही | प्रविधि पेशेवर",
+ typed:["एआईलाई सरल र व्यावहारिक बनाउँदै","पेशेवरहरूलाई Microsoft Copilot मा दक्ष बनाउँदै","क्लाउड र एआईको युगमा करियरको मार्गदर्शन"],
+ btn:["मसँग जोडिनुहोस्","थप जान्नुहोस्","सीभी (PDF) बचत गर्नुहोस्"],
+ stats:["वर्षको अनुभव","तालिम पाएका व्यक्ति","लेख र ट्युटोरियल","मुख्य क्षेत्र"],
+ role:"एआई तथा प्रविधि प्रवर्द्धक", chips2:["करियर","शिक्षा"],
+ lbl:["केन्द्र","भाषाहरू","स्थान"], focus:"एआई, क्लाउड, करियर",
+ sec:[["मेरो बारेमा","प्रविधि र शिक्षामार्फत मानिसहरूलाई सशक्त बनाउन समर्पित।"],["मेरो यात्रा","अनुभव, शिक्षा र प्रमाणपत्रहरू।"],["सीपहरू","म दैनिक रूपमा प्रयोग गर्ने क्षमताहरू।"],["विशेषज्ञताका क्षेत्र","ज्ञान र व्यावहारिक अन्तर्दृष्टि साझा गर्ने मुख्य क्षेत्रहरू।"],["प्रकाशित कार्य","अनुसन्धान पत्र र औपचारिक प्रकाशनहरू।"],["लेखहरू","आजको प्रविधि-संचालित संसारका लागि ज्ञान साझेदारी।"],["कागजातहरू","मेरो सीभी, प्रकाशित पत्र र अन्य PDF फाइलहरू डाउनलोड गर्नुहोस्।"],["जोडिऔं","सहकार्य, तालिम, वक्तव्य वा साधारण प्रश्न सबै स्वागतयोग्य छन्।"]],
+ about:[["म को हुँ","मेरो व्यक्तिगत वेबसाइटमा स्वागत छ। म एक शिक्षक, प्रविधि पेशेवर र कृत्रिम बुद्धिमत्ताप्रति उत्साही व्यक्ति हुँ, जसले विद्यार्थी, पेशेवर र संस्थाहरूलाई आधुनिक प्रविधिको उपयोग गरेर उत्पादकता र नवप्रवर्तन बढाउन सहयोग गर्छु।"],["म के गर्छु","कृत्रिम बुद्धिमत्ता, Microsoft क्लाउड प्रविधि, डिजिटल रूपान्तरण र करियर विकासमा गहिरो रुचि राखेर म नियमित रूपमा जानकारी, व्यावहारिक मार्गदर्शन र उद्योगका प्रवृत्तिहरू साझा गर्छु, जसले पाठकहरूलाई छिटो परिवर्तन भइरहेको प्रविधिको संसारमा अगाडि रहन मद्दत गर्छ।"],["मेरो ध्येय","मेरो ध्येय जटिल अवधारणाहरूलाई सजिलै बुझ्न र वास्तविक जीवनमा लागू गर्न सकिने बनाएर प्रविधि र मानिसबीचको दूरी घटाउनु हो।"]],
+ expectT:"तपाईंले के अपेक्षा गर्न सक्नुहुन्छ",
+ expect:["एआई र क्लाउडबारे सरल, जटिल शब्दरहित व्याख्या","Microsoft Copilot र उत्पादकताका लागि व्यावहारिक मार्गदर्शन","सीप, प्रमाणपत्र र व्यक्तिगत ब्रान्डिङबारे करियर सल्लाह","प्रविधिका प्रवृत्तिबारे नियमित अद्यावधिक"],
+ tabs:["अनुभव","शिक्षा","प्रमाणपत्र"],
+ todo:["पूरा गर्न बाँकी","यहाँ आफ्नो विवरण थप्नुहोस्","संस्था, स्थान","मिति"],
+ skills:["कृत्रिम बुद्धिमत्ता","Microsoft Copilot","क्लाउड कम्प्युटिङ / Azure","शिक्षण तथा तालिम","करियर कोचिङ","डिजिटल रूपान्तरण"],
+ exp:[["कृत्रिम बुद्धिमत्ता","एआईका आधारभूत कुरा, मेसिन लर्निङ, जेनेरेटिभ एआई, प्रम्प्ट इन्जिनियरिङ र उद्योग बदल्ने वास्तविक प्रयोगहरूको अन्वेषण।"],["Microsoft Copilot","Microsoft Copilot, एआई-आधारित कार्यप्रवाह र स्मार्ट कार्यस्थल समाधानमार्फत पेशेवरहरूको उत्पादकता बढाउन सहयोग।"],["क्लाउड कम्प्युटिङ","Microsoft Azure, क्लाउड आर्किटेक्चर, डिजिटल रूपान्तरण, स्वचालन र उद्यम प्रविधि रणनीतिबारे अन्तर्दृष्टि।"],["करियर विकास","विद्यार्थी र पेशेवरहरूका लागि सीप विकास, प्रमाणपत्र, व्यक्तिगत ब्रान्डिङ र भविष्यउन्मुख करियरबारे मार्गदर्शन।"]],
+ pub:["अहिलेसम्म कुनै प्रकाशन सूचीबद्ध छैन।","DOI","पत्र पढ्नुहोस्","उद्धरण प्रतिलिपि गर्नुहोस्","प्रतिलिपि भयो ✓","तपाईंको प्रकाशित पत्रको शीर्षक","लेखक, पत्रिका, वर्ष र छोटो सारांश यहाँ देखिनेछ।"],
+ art:["लेख खोज्नुहोस्…","सबै","खोजसँग मेल खाने लेख भेटिएन।","थप पढ्नुहोस्","कृत्रिम बुद्धिमत्ता","उत्पादकता","करियर"],
+ arts:[["कृत्रिम बुद्धिमत्ताबाट सुरु गर्ने तरिका","नवप्रवर्तनको भविष्य निर्माण गरिरहेका एआई, मेसिन लर्निङ र जेनेरेटिभ प्रविधिका आधारभूत कुरा सिक्नुहोस्।"],["उत्पादकताका लागि Microsoft Copilot","Microsoft Copilot ले दैनिक कामहरू कसरी स्वचालित गर्छ, सहकार्य सुधार्छ र कार्यस्थलको कार्यक्षमता बढाउँछ भन्ने थाहा पाउनुहोस्।"],["एआई युगमा करियर विकास","एआई-सञ्चालित पेशागत वातावरणमा सफल हुन आवश्यक सीप, सिकाइका रणनीति र प्रमाणपत्रहरू अन्वेषण गर्नुहोस्।"]],
+ docs:["PDF डाउनलोड गर्नुहोस्","हेर्नुहोस्","बन्द गर्नुहोस्","सीभी (बायोडाटा)","प्रकाशित पत्र","PDF छिट्टै आउँदैछ"],
+ ct:["सम्पर्कमा रहनुहोस्","तपाईंलाई उपयुक्त लाग्ने माध्यम छान्नुहोस्।","मलाई सन्देश पठाउनुहोस्","तपाईंको नाम","तपाईंको इमेल","विषय","सन्देश","सन्देश पठाउनुहोस्","यसले पठाउन तयार सन्देशसहित तपाईंको इमेल एप खोल्नेछ।","कृपया आफ्नो नाम, मान्य इमेल र सन्देश भर्नुहोस्।","तपाईंको इमेल एप खोलिँदैछ...","म कसरी सहयोग गर्न सक्छु?"],
+ topics:["सामान्य प्रश्न","तालिम / कार्यशाला","सहकार्य","करियर मार्गदर्शन","वक्ताको रूपमा निमन्त्रणा"],
+ ui:["डार्क मोड बदल्नुहोस्","मेनु खोल्नुहोस्","भाषा","माथि जानुहोस्","सामग्रीमा जानुहोस्"]},
+
+hi:{n:"हिन्दी",
+ nav:["होम","परिचय","यात्रा","कौशल","विशेषज्ञता","प्रकाशन","लेख","दस्तावेज़","संपर्क"],
+ badge:"👋 मेरी व्यक्तिगत वेबसाइट में आपका स्वागत है",
+ tag:"शिक्षक | एआई उत्साही | प्रौद्योगिकी पेशेवर",
+ typed:["एआई को सरल और व्यावहारिक बनाना","पेशेवरों को Microsoft Copilot में दक्ष बनाना","क्लाउड और एआई के युग में करियर का मार्गदर्शन"],
+ btn:["मुझसे जुड़ें","और जानें","सीवी (PDF) के रूप में सहेजें"],
+ stats:["वर्षों का अनुभव","प्रशिक्षित लोग","लेख और ट्यूटोरियल","मुख्य क्षेत्र"],
+ role:"एआई और प्रौद्योगिकी प्रचारक", chips2:["करियर","शिक्षा"],
+ lbl:["फोकस","भाषाएँ","स्थान"], focus:"एआई, क्लाउड, करियर",
+ sec:[["मेरे बारे में","प्रौद्योगिकी और शिक्षा के माध्यम से लोगों को सशक्त बनाने के लिए समर्पित।"],["मेरी यात्रा","अनुभव, शिक्षा और प्रमाणपत्र।"],["कौशल","वे क्षमताएँ जिनका मैं रोज़ उपयोग करता हूँ।"],["विशेषज्ञता के क्षेत्र","मुख्य क्षेत्र जहाँ मैं ज्ञान और व्यावहारिक सुझाव साझा करता हूँ।"],["प्रकाशित कार्य","शोध पत्र और औपचारिक प्रकाशन।"],["लेख","आज की प्रौद्योगिकी-संचालित दुनिया के लिए ज्ञान साझा करना।"],["दस्तावेज़","मेरा सीवी, शोध पत्र और अन्य PDF फ़ाइलें डाउनलोड करें।"],["जुड़ें","सहयोग, प्रशिक्षण, व्याख्यान या साधारण प्रश्न, सभी का स्वागत है।"]],
+ about:[["मैं कौन हूँ","मेरी व्यक्तिगत वेबसाइट में आपका स्वागत है। मैं एक शिक्षक, प्रौद्योगिकी पेशेवर और कृत्रिम बुद्धिमत्ता का उत्साही हूँ, जो विद्यार्थियों, पेशेवरों और संगठनों को आधुनिक तकनीकों का उपयोग करके अधिक उत्पादकता और नवाचार हासिल करने में मदद करता है।"],["मैं क्या करता हूँ","कृत्रिम बुद्धिमत्ता, Microsoft क्लाउड तकनीकों, डिजिटल परिवर्तन और करियर विकास में गहरी रुचि के साथ, मैं नियमित रूप से जानकारी, व्यावहारिक मार्गदर्शन और उद्योग के रुझान साझा करता हूँ, ताकि पाठक तेज़ी से बदलती तकनीकी दुनिया में आगे रह सकें।"],["मेरा मिशन","मेरा मिशन जटिल अवधारणाओं को आसानी से समझने और वास्तविक जीवन में लागू करने योग्य बनाकर तकनीक और लोगों के बीच की दूरी को कम करना है।"]],
+ expectT:"आप क्या उम्मीद कर सकते हैं",
+ expect:["एआई और क्लाउड की सरल, कठिन शब्दों से मुक्त व्याख्याएँ","Microsoft Copilot और उत्पादकता के लिए व्यावहारिक मार्गदर्शन","कौशल, प्रमाणपत्र और पर्सनल ब्रांडिंग पर करियर सलाह","तकनीकी रुझानों पर नियमित अपडेट"],
+ tabs:["अनुभव","शिक्षा","प्रमाणपत्र"],
+ todo:["पूरा किया जाना बाकी","यहाँ अपनी प्रविष्टि जोड़ें","संस्था, स्थान","तिथियाँ"],
+ skills:["कृत्रिम बुद्धिमत्ता","Microsoft Copilot","क्लाउड कंप्यूटिंग / Azure","शिक्षण और प्रशिक्षण","करियर कोचिंग","डिजिटल परिवर्तन"],
+ exp:[["कृत्रिम बुद्धिमत्ता","एआई की बुनियादी बातें, मशीन लर्निंग, जेनरेटिव एआई, प्रॉम्प्ट इंजीनियरिंग और उद्योगों को बदलते वास्तविक अनुप्रयोगों की पड़ताल।"],["Microsoft Copilot","Microsoft Copilot, एआई-संचालित कार्यप्रवाह और स्मार्ट कार्यस्थल समाधानों के ज़रिए पेशेवरों की उत्पादकता बढ़ाने में मदद।"],["क्लाउड कंप्यूटिंग","Microsoft Azure, क्लाउड आर्किटेक्चर, डिजिटल परिवर्तन, ऑटोमेशन और एंटरप्राइज़ तकनीकी रणनीतियों पर अंतर्दृष्टि।"],["करियर विकास","विद्यार्थियों और पेशेवरों के लिए कौशल विकास, प्रमाणपत्र, पर्सनल ब्रांडिंग और भविष्य के लिए तैयार करियर पर मार्गदर्शन।"]],
+ pub:["अभी तक कोई प्रकाशन सूचीबद्ध नहीं है।","DOI","शोध पत्र पढ़ें","उद्धरण कॉपी करें","कॉपी हो गया ✓","आपके प्रकाशित शोध पत्र का शीर्षक","लेखक, पत्रिका, वर्ष और संक्षिप्त सारांश यहाँ दिखाई देंगे।"],
+ art:["लेख खोजें…","सभी","आपकी खोज से कोई लेख मेल नहीं खाता।","और पढ़ें","कृत्रिम बुद्धिमत्ता","उत्पादकता","करियर"],
+ arts:[["कृत्रिम बुद्धिमत्ता के साथ शुरुआत","नवाचार का भविष्य गढ़ रहे एआई, मशीन लर्निंग और जेनरेटिव तकनीकों की बुनियादी बातें सीखें।"],["उत्पादकता के लिए Microsoft Copilot","जानें कि Microsoft Copilot रोज़मर्रा के काम कैसे स्वचालित करता है, सहयोग बेहतर बनाता है और कार्यस्थल की दक्षता बढ़ाता है।"],["एआई युग में करियर विकास","एआई-संचालित पेशेवर माहौल में सफल होने के लिए ज़रूरी कौशल, सीखने की रणनीतियाँ और प्रमाणपत्र जानें।"]],
+ docs:["PDF डाउनलोड करें","देखें","बंद करें","बायोडाटा (सीवी)","प्रकाशित शोध पत्र","PDF जल्द उपलब्ध होगा"],
+ ct:["संपर्क करें","अपनी सुविधा का माध्यम चुनें।","मुझे संदेश भेजें","आपका नाम","आपका ईमेल","विषय","संदेश","संदेश भेजें","यह भेजने के लिए तैयार संदेश के साथ आपका ईमेल ऐप खोलेगा।","कृपया अपना नाम, मान्य ईमेल और संदेश भरें।","आपका ईमेल ऐप खुल रहा है...","मैं आपकी कैसे मदद कर सकता हूँ?"],
+ topics:["सामान्य प्रश्न","प्रशिक्षण / कार्यशाला","सहयोग","करियर मार्गदर्शन","वक्ता के रूप में आमंत्रण"],
+ ui:["डार्क मोड बदलें","मेनू खोलें","भाषा","ऊपर जाएँ","सामग्री पर जाएँ"]},
+
+zh:{n:"中文",
+ nav:["首页","关于我","经历","技能","专长","出版物","文章","文档","联系"],
+ badge:"👋 欢迎来到我的个人网站",
+ tag:"教育者 | 人工智能爱好者 | 技术专业人士",
+ typed:["让人工智能简单实用","帮助专业人士精通 Microsoft Copilot","在云与人工智能时代指导职业发展"],
+ btn:["联系我","了解更多","保存为简历（PDF）"],
+ stats:["年经验","受训人数","文章与教程","核心领域"],
+ role:"人工智能与技术布道者", chips2:["职业发展","教育"],
+ lbl:["重点","语言","所在地"], focus:"人工智能、云、职业发展",
+ sec:[["关于我","热衷于通过技术与教育赋能他人。"],["我的经历","工作经验、教育背景与资质认证。"],["技能","我每天运用的优势。"],["专长领域","我分享知识与实用见解的核心领域。"],["已发表成果","研究论文与正式出版物。"],["文章","为当今技术驱动的世界分享知识。"],["文档","下载我的简历、论文及其他 PDF 文件。"],["保持联系","欢迎合作、培训、演讲邀请或任何简单的问题。"]],
+ about:[["我是谁","欢迎来到我的个人网站。我是一名教育者、技术专业人士和人工智能爱好者，致力于帮助学生、职场人士和企业利用现代技术提高效率、推动创新。"],["我的工作","我对人工智能、微软云技术、数字化转型和职业发展有着浓厚兴趣，定期分享见解、实用指导和行业趋势，帮助读者在快速变化的技术环境中保持领先。"],["我的使命","我的使命是让复杂的概念通俗易懂并能应用于实际场景，从而拉近技术与人的距离。"]],
+ expectT:"您可以期待",
+ expect:["通俗易懂、没有术语堆砌的人工智能与云技术讲解","Microsoft Copilot 与高效工作流程的实操指南","关于技能、认证和个人品牌的职业建议","技术趋势的定期更新"],
+ tabs:["工作经历","教育背景","资质认证"],
+ todo:["待补充","在此添加您的内容","机构，地点","时间"],
+ skills:["人工智能","Microsoft Copilot","云计算 / Azure","教学与培训","职业辅导","数字化转型"],
+ exp:[["人工智能","探索人工智能基础、机器学习概念、生成式人工智能、提示工程，以及正在改变各行各业的实际应用。"],["Microsoft Copilot","借助 Microsoft Copilot、AI 驱动的工作流程和智能办公方案，帮助专业人士提升效率。"],["云计算","深入解读 Microsoft Azure、云架构、数字化转型、自动化和企业技术战略。"],["职业发展","为学生和职场人士提供技能提升、认证、个人品牌和面向未来的职业发展指导。"]],
+ pub:["暂无出版物。","DOI","阅读论文","复制引用","已复制 ✓","您已发表论文的标题","作者、期刊、年份和简要摘要将显示在此处。"],
+ art:["搜索文章…","全部","没有符合搜索条件的文章。","阅读更多","人工智能","生产力","职业发展"],
+ arts:[["人工智能入门","了解人工智能、机器学习和生成式技术的基础知识，它们正在塑造创新的未来。"],["借助 Microsoft Copilot 提升效率","了解 Microsoft Copilot 如何自动化日常任务、改善协作并提高工作效率。"],["人工智能时代的职业发展","探索在 AI 驱动的职场中取得成功所需的核心技能、学习方法和认证。"]],
+ docs:["下载 PDF","查看","关闭","个人简历（CV）","已发表论文","PDF 即将上线"],
+ ct:["联系方式","请选择最适合您的联系渠道。","给我留言","您的姓名","您的邮箱","主题","留言","发送留言","点击后将打开您的邮件应用，并填好留言内容。","请填写姓名、有效邮箱和留言。","正在打开您的邮件应用...","我能为您做些什么？"],
+ topics:["一般问题","培训 / 工作坊","合作","职业指导","演讲邀请"],
+ ui:["切换深色模式","打开菜单","语言","回到顶部","跳到内容"]},
+
+ar:{n:"العربية", rtl:true,
+ nav:["الرئيسية","نبذة عني","المسيرة","المهارات","الخبرات","المنشورات","المقالات","المستندات","تواصل"],
+ badge:"👋 مرحبًا بك في موقعي الشخصي",
+ tag:"معلّم | شغوف بالذكاء الاصطناعي | محترف في التكنولوجيا",
+ typed:["جعل الذكاء الاصطناعي بسيطًا وعمليًا","مساعدة المهنيين على إتقان Microsoft Copilot","توجيه المسارات المهنية في عصر السحابة والذكاء الاصطناعي"],
+ btn:["تواصل معي","اعرف المزيد","حفظ كسيرة ذاتية (PDF)"],
+ stats:["سنوات الخبرة","أشخاص تم تدريبهم","مقالات ودروس","مجالات التركيز"],
+ role:"داعية للذكاء الاصطناعي والتكنولوجيا", chips2:["المسارات المهنية","التعليم"],
+ lbl:["التركيز","اللغات","الموقع"], focus:"الذكاء الاصطناعي، السحابة، المسارات المهنية",
+ sec:[["نبذة عني","شغوف بتمكين الناس من خلال التكنولوجيا والتعليم."],["مسيرتي","الخبرة والتعليم والشهادات."],["المهارات","نقاط القوة التي أستخدمها يوميًا."],["مجالات الخبرة","المجالات الرئيسية التي أشارك فيها المعرفة والرؤى العملية."],["الأعمال المنشورة","أوراق بحثية ومنشورات رسمية."],["المقالات","مشاركة المعرفة لعالم اليوم المدفوع بالتكنولوجيا."],["المستندات","قم بتنزيل سيرتي الذاتية وبحثي وملفات PDF الأخرى."],["لنتواصل","نرحب بالتعاون والتدريب والمحاضرات أو الأسئلة البسيطة."]],
+ about:[["من أنا","مرحبًا بكم في موقعي الشخصي. أنا معلّم ومحترف في التكنولوجيا وشغوف بالذكاء الاصطناعي، وأسعى إلى مساعدة الطلاب والمهنيين والمؤسسات على الاستفادة من التقنيات الحديثة لتحقيق إنتاجية وابتكار أكبر."],["ماذا أفعل","باهتمام كبير بالذكاء الاصطناعي وتقنيات مايكروسوفت السحابية والتحول الرقمي وتطوير المسار المهني، أشارك بانتظام رؤى وإرشادات عملية واتجاهات القطاع لمساعدة القراء على البقاء في المقدمة في عالم تقني سريع التغير."],["مهمتي","مهمتي هي سد الفجوة بين التكنولوجيا والناس من خلال تبسيط المفاهيم المعقدة وجعلها قابلة للتطبيق في الواقع."]],
+ expectT:"ماذا تتوقع",
+ expect:["شروحات واضحة للذكاء الاصطناعي والسحابة بلا مصطلحات معقدة","إرشادات عملية حول Microsoft Copilot وسير العمل الإنتاجي","نصائح مهنية حول المهارات والشهادات والعلامة الشخصية","تحديثات منتظمة حول اتجاهات التكنولوجيا"],
+ tabs:["الخبرة","التعليم","الشهادات"],
+ todo:["قيد الإكمال","أضف إدخالك هنا","المؤسسة، الموقع","التواريخ"],
+ skills:["الذكاء الاصطناعي","Microsoft Copilot","الحوسبة السحابية / Azure","التعليم والتدريب","الإرشاد المهني","التحول الرقمي"],
+ exp:[["الذكاء الاصطناعي","استكشاف أساسيات الذكاء الاصطناعي وتعلّم الآلة والذكاء الاصطناعي التوليدي وهندسة الأوامر والتطبيقات الواقعية التي تغيّر الصناعات."],["Microsoft Copilot","مساعدة المهنيين على رفع إنتاجيتهم عبر Microsoft Copilot وسير العمل المدعوم بالذكاء الاصطناعي وحلول بيئة العمل الذكية."],["الحوسبة السحابية","رؤى حول Microsoft Azure والبنية السحابية والتحول الرقمي والأتمتة واستراتيجيات التكنولوجيا للمؤسسات."],["التطور المهني","إرشادات للطلاب والمهنيين حول تطوير المهارات والشهادات والعلامة الشخصية والمسارات المهنية الجاهزة للمستقبل."]],
+ pub:["لا توجد منشورات بعد.","DOI","قراءة البحث","نسخ الاستشهاد","تم النسخ ✓","عنوان بحثك المنشور","سيظهر هنا المؤلفون والمجلة والسنة وملخص قصير."],
+ art:["ابحث في المقالات…","الكل","لا توجد مقالات مطابقة لبحثك.","اقرأ المزيد","الذكاء الاصطناعي","الإنتاجية","المسارات المهنية"],
+ arts:[["البدء مع الذكاء الاصطناعي","تعرّف على أساسيات الذكاء الاصطناعي وتعلّم الآلة والتقنيات التوليدية التي تشكّل مستقبل الابتكار."],["Microsoft Copilot لرفع الإنتاجية","اكتشف كيف يمكن لـ Microsoft Copilot أتمتة المهام اليومية وتحسين التعاون ورفع كفاءة العمل."],["التطور المهني في عصر الذكاء الاصطناعي","استكشف المهارات واستراتيجيات التعلّم والشهادات اللازمة للنجاح في بيئة مهنية تعمل بالذكاء الاصطناعي."]],
+ docs:["تنزيل PDF","عرض","إغلاق","السيرة الذاتية (CV)","البحث المنشور","ملف PDF قريبًا"],
+ ct:["تواصل معي","اختر القناة التي تناسبك.","أرسل لي رسالة","اسمك","بريدك الإلكتروني","الموضوع","الرسالة","إرسال الرسالة","سيفتح هذا تطبيق البريد لديك مع الرسالة جاهزة للإرسال.","يرجى إدخال اسمك وبريد إلكتروني صالح ورسالة.","جارٍ فتح تطبيق البريد...","كيف يمكنني مساعدتك؟"],
+ topics:["سؤال عام","تدريب / ورشة عمل","تعاون","إرشاد مهني","دعوة للتحدث"],
+ ui:["تبديل الوضع الداكن","فتح القائمة","اللغة","العودة للأعلى","انتقل إلى المحتوى"]},
+
+pt:{n:"Português",
+ nav:["Início","Sobre mim","Percurso","Competências","Especialização","Publicações","Artigos","Documentos","Contacto"],
+ badge:"👋 Bem-vindo ao meu site pessoal",
+ tag:"Educador | Entusiasta de IA | Profissional de tecnologia",
+ typed:["Tornar a IA simples e prática","Ajudar profissionais a dominar o Microsoft Copilot","Orientar carreiras na era da nuvem e da IA"],
+ btn:["Fale comigo","Saiba mais","Guardar como CV (PDF)"],
+ stats:["Anos de experiência","Pessoas formadas","Artigos e tutoriais","Áreas principais"],
+ role:"Evangelista de IA e tecnologia", chips2:["Carreiras","Educação"],
+ lbl:["Foco","Idiomas","Localização"], focus:"IA, Nuvem, Carreiras",
+ sec:[["Sobre mim","Apaixonado por capacitar pessoas através da tecnologia e da educação."],["O meu percurso","Experiência, formação e certificações."],["Competências","Pontos fortes que uso todos os dias."],["Áreas de especialização","Domínios-chave onde partilho conhecimento e ideias práticas."],["Trabalhos publicados","Artigos de investigação e publicações formais."],["Artigos","Partilha de conhecimento para o mundo tecnológico de hoje."],["Documentos","Descarregue o meu CV, o meu artigo e outros ficheiros PDF."],["Vamos ligar-nos","Colaborações, formação, palestras ou simples perguntas são bem-vindas."]],
+ about:[["Quem sou","Bem-vindo ao meu site pessoal. Sou educador, profissional de tecnologia e entusiasta de inteligência artificial, e ajudo estudantes, profissionais e organizações a aproveitar as tecnologias modernas para alcançar mais produtividade e inovação."],["O que faço","Com grande interesse em inteligência artificial, tecnologias cloud da Microsoft, transformação digital e desenvolvimento de carreira, partilho regularmente ideias, orientações práticas e tendências do setor para manter os leitores à frente num cenário tecnológico em rápida mudança."],["A minha missão","A minha missão é aproximar a tecnologia das pessoas, tornando conceitos complexos fáceis de compreender e de aplicar na vida real."]],
+ expectT:"O que pode esperar",
+ expect:["Explicações claras e sem jargão sobre IA e cloud","Orientações práticas sobre Microsoft Copilot e fluxos de trabalho","Conselhos de carreira sobre competências, certificações e marca pessoal","Atualizações regulares sobre tendências tecnológicas"],
+ tabs:["Experiência","Formação","Certificações"],
+ todo:["por completar","Adicione aqui a sua entrada","Organização, localização","Datas"],
+ skills:["Inteligência artificial","Microsoft Copilot","Computação em nuvem / Azure","Ensino e formação","Coaching de carreira","Transformação digital"],
+ exp:[["Inteligência artificial","Fundamentos de IA, aprendizagem automática, IA generativa, engenharia de prompts e aplicações reais que transformam setores."],["Microsoft Copilot","Ajudar profissionais a maximizar a produtividade com o Microsoft Copilot, fluxos de trabalho com IA e soluções inteligentes."],["Computação em nuvem","Perspetivas sobre Microsoft Azure, arquitetura cloud, transformação digital, automatização e estratégias tecnológicas empresariais."],["Crescimento na carreira","Orientação para estudantes e profissionais sobre desenvolvimento de competências, certificações, marca pessoal e carreiras preparadas para o futuro."]],
+ pub:["Ainda não há publicações.","DOI","Ler artigo","Copiar citação","Copiado ✓","Título do seu artigo publicado","Autores, revista, ano e um breve resumo aparecerão aqui."],
+ art:["Pesquisar artigos…","Todos","Nenhum artigo corresponde à pesquisa.","Ler mais","Inteligência artificial","Produtividade","Carreiras"],
+ arts:[["Primeiros passos na inteligência artificial","Conheça os fundamentos da IA, da aprendizagem automática e das tecnologias generativas que estão a moldar o futuro da inovação."],["Microsoft Copilot para a produtividade","Descubra como o Microsoft Copilot pode automatizar tarefas diárias, melhorar a colaboração e aumentar a eficiência no trabalho."],["Crescimento na carreira na era da IA","Explore as competências, estratégias de aprendizagem e certificações essenciais para ter sucesso num ambiente profissional movido a IA."]],
+ docs:["Descarregar PDF","Ver","Fechar","Curriculum vitae (CV)","Artigo publicado","PDF em breve"],
+ ct:["Entre em contacto","Escolha o canal que lhe for mais conveniente.","Envie-me uma mensagem","O seu nome","O seu e-mail","Assunto","Mensagem","Enviar mensagem","Isto abre a sua aplicação de e-mail com a mensagem pronta a enviar.","Indique o seu nome, um e-mail válido e uma mensagem.","A abrir a sua aplicação de e-mail...","Como posso ajudar?"],
+ topics:["Pergunta geral","Formação / workshop","Colaboração","Orientação de carreira","Convite para palestra"],
+ ui:["Alternar modo escuro","Abrir menu","Idioma","Voltar ao topo","Saltar para o conteúdo"]}
+};
+
+/* =====================================================================
+   3) ENGINE (no need to edit below)
+   ===================================================================== */
 const $ = s => document.querySelector(s);
-const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const todoBadge = '<span class="badge-todo">to be completed</span>';
-const L = SITE.links;
-
-/* Structured data */
-$('#ldjson').textContent = JSON.stringify({
-  "@context":"https://schema.org","@type":"Person",name:SITE.name,
-  jobTitle:"Educator and AI Enthusiast",email:"mailto:"+SITE.email,url:L.website,
-  sameAs:[L.linkedin,L.youtube,L.facebook,L.instagram]
-});
-
-/* Hero */
-$('#hTagline').textContent = SITE.tagline;
-$('#year').textContent = new Date().getFullYear();
-const socials = [
-  ['in','LinkedIn',L.linkedin],['▶','YouTube',L.youtube],['f','Facebook',L.facebook],['IG','Instagram',L.instagram],['@','Email','mailto:'+SITE.email]
-];
-$('#heroSocials').innerHTML = socials.map(([t,n,u]) =>
-  `<a href="${u}" ${u.startsWith('http')?'target="_blank" rel="noopener noreferrer"':''} title="${n}" aria-label="${n}">${t}</a>`).join('');
-if (SITE.whatsapp){
-  const w = $('#waFloat'); w.href = 'https://wa.me/' + SITE.whatsapp.replace(/\D/g,''); w.style.display = 'block';
-}
-
-/* Stats with counters */
-$('#stats').innerHTML = SITE.stats.map(s =>
-  `<div class="stat"><strong data-n="${s.n}" data-s="${esc(s.suffix)}">0${esc(s.suffix)}</strong><span>${esc(s.label)}</span></div>`).join('');
-
-/* About */
-$('#aboutSub').textContent = SITE.aboutSub;
-$('#pName').textContent = SITE.name;
-$('#pRole').textContent = SITE.role;
-$('#pChips').innerHTML = SITE.chips.map(c => `<span class="chip">${esc(c)}</span>`).join('');
-$('#pFacts').innerHTML = SITE.facts.map(([k,v]) => `<li><b>${esc(k)}</b><span>${esc(v)}</span></li>`).join('');
-$('#aboutContent').innerHTML =
-  SITE.about.map(([h,p]) => `<h3>${esc(h)}</h3><p>${esc(p)}</p>`).join('') +
-  `<h3>What You Can Expect</h3><ul>${SITE.expect.map(e => `<li>${esc(e)}</li>`).join('')}</ul>`;
-
-/* Journey tabs */
-const tabNames = Object.keys(SITE.journey);
-let tabOn = tabNames[0];
-function renderJourney(){
-  $('#tabs').innerHTML = tabNames.map(t => `<button class="tab ${t===tabOn?'on':''}" role="tab" aria-selected="${t===tabOn}" data-t="${esc(t)}">${esc(t)}</button>`).join('');
-  const items = SITE.journey[tabOn].filter(i => SHOW_TODO || !i.todo);
-  $('#timeline').innerHTML = items.length ? items.map(i => `
-    <div class="t-item ${i.todo?'placeholder':''}">
-      <small>${esc(i.when)}</small>${i.todo?todoBadge:''}
-      <h4>${esc(i.title)}</h4><div class="org">${esc(i.org)}</div>
-      ${i.points && i.points.length ? `<ul>${i.points.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>`:''}
-    </div>`).join('') : '<p class="empty">Nothing to show yet.</p>';
-}
-$('#tabs').addEventListener('click', e => { const b = e.target.closest('.tab'); if(b){ tabOn = b.dataset.t; renderJourney(); } });
-renderJourney();
-
-/* Skills */
-$('#skillList').innerHTML = SITE.skills.map(s =>
-  `<div class="skill"><div class="row"><span>${esc(s.name)}</span><span>${s.level}%</span></div><div class="bar" role="progressbar" aria-valuenow="${s.level}" aria-valuemin="0" aria-valuemax="100"><i data-w="${s.level}"></i></div></div>`).join('');
-
-/* Expertise */
-$('#expertiseCards').innerHTML = SITE.expertise.map(c =>
-  `<div class="card reveal"><div class="ico">${c.ico}</div><h3>${esc(c.title)}</h3><p>${esc(c.text)}</p></div>`).join('');
-
-/* Publications */
-function citation(p){ return `${p.authors}. ${p.title}. ${p.venue}${p.year?', '+p.year:''}.${p.doi?' https://doi.org/'+p.doi:''}`; }
-const pubs = SITE.publications.filter(p => SHOW_TODO || !p.todo);
-$('#pubList').innerHTML = pubs.length ? pubs.map((p,i) => `
-  <div class="item reveal ${p.todo?'placeholder':''}">
-    <div class="meta">${esc(p.venue)} · ${esc(p.year)}${p.todo?todoBadge:''}</div>
-    <h3>${esc(p.title)}</h3>
-    <div class="meta">${esc(p.authors)}</div>
-    <p>${esc(p.abstract||'')}</p>
-    <div class="actions">
-      ${p.doi?`<a class="mini" target="_blank" rel="noopener noreferrer" href="https://doi.org/${esc(p.doi)}">DOI</a>`:''}
-      ${p.url?`<a class="mini" target="_blank" rel="noopener noreferrer" href="${esc(p.url)}">Read paper</a>`:''}
-      ${p.todo?'':`<button class="mini" data-cite="${i}">Copy citation</button>`}
-    </div>
-  </div>`).join('') : '<p class="empty">No publications listed yet.</p>';
-$('#pubList').addEventListener('click', e => {
-  const b = e.target.closest('[data-cite]'); if(!b) return;
-  navigator.clipboard.writeText(citation(pubs[b.dataset.cite])).then(()=>{ b.textContent='Copied ✓'; setTimeout(()=>b.textContent='Copy citation',1500); }).catch(()=>{});
-});
-
-/* Articles with search + filter */
-const cats = ['All', ...new Set(SITE.articles.map(a => a.cat))];
-$('#artCat').innerHTML = cats.map(c => `<option>${esc(c)}</option>`).join('');
-function renderArticles(){
-  const q = $('#artSearch').value.toLowerCase(), c = $('#artCat').value;
-  const list = SITE.articles.filter(a => (c==='All'||a.cat===c) && (a.title+a.text).toLowerCase().includes(q));
-  $('#artList').innerHTML = list.length ? list.map(a => `
-    <div class="item visible-now">
-      <div class="meta">${esc(a.cat)}</div><h3>${esc(a.title)}</h3><p>${esc(a.text)}</p>
-      ${a.url?`<div class="actions"><a class="mini" href="${esc(a.url)}" target="_blank" rel="noopener noreferrer">Read more</a></div>`:''}
-    </div>`).join('') : '<p class="empty">No articles match your search.</p>';
-}
-$('#artSearch').addEventListener('input', renderArticles);
-$('#artCat').addEventListener('change', renderArticles);
-renderArticles();
-
-/* Contact + footer */
-const contacts = [
-  ['@','Email',SITE.email,'mailto:'+SITE.email],
-  ['in','LinkedIn','linkedin.com/in/shrawanmehta',L.linkedin],
-  ['▶','YouTube','youtube.com/@shrawanmehta',L.youtube],
-  ['f','Facebook','facebook.com/drshrawanmehta',L.facebook],
-  ['IG','Instagram','instagram.com/theshrawanmehta',L.instagram],
-  ['🌐','Website','www.shrawanmehta.com',L.website]
-];
-$('#contactList').innerHTML = contacts.map(([b,l,s,u]) =>
-  `<li><a href="${u}" ${u.startsWith('http')?'target="_blank" rel="noopener noreferrer"':''}><span class="badge">${b}</span><span><span class="label">${l}</span><span class="sub">${esc(s)}</span></span></a></li>`).join('');
-$('#footLinks').innerHTML = ['home','about','journey','skills','publications','articles','contact'].map(id => `<a href="#${id}">${id[0].toUpperCase()+id.slice(1)}</a>`).join('') +
-  [['LinkedIn',L.linkedin],['YouTube',L.youtube],['Instagram',L.instagram],['Facebook',L.facebook]].map(([n,u]) => `<a href="${u}" target="_blank" rel="noopener noreferrer">${n}</a>`).join('');
-
-/* Mobile menu */
-const menuBtn = $('#menuBtn'), navLinks = $('#navLinks');
-menuBtn.addEventListener('click', () => { const o = navLinks.classList.toggle('open'); menuBtn.setAttribute('aria-expanded', o); });
-navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { navLinks.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); }));
-
-/* Dark mode */
-const themeBtn = $('#themeBtn');
-function setTheme(d){ document.body.classList.toggle('dark', d); themeBtn.textContent = d ? '☀️' : '🌙'; try{ localStorage.setItem('theme', d?'dark':'light'); }catch(e){} }
-let saved = null; try{ saved = localStorage.getItem('theme'); }catch(e){}
-setTheme(saved ? saved==='dark' : (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches));
-themeBtn.addEventListener('click', () => setTheme(!document.body.classList.contains('dark')));
-
-/* Typing effect */
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let lang = 'en';
+try { const s = localStorage.getItem('lang'); if (s && T[s]) lang = s; } catch(e){}
+const tr = x => (x && typeof x === 'object' && !Array.isArray(x)) ? (x[lang] || x.en || '') : (x || '');
+const ids = ['home','about','journey','skills','expertise','publications','articles','documents','contact'];
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-let p = 0, c = 0, del = false;
-(function type(){
-  const t = SITE.typed[p], el = $('#typed');
-  if (reduce){ el.textContent = t; return; }
-  el.textContent = t.slice(0, c);
-  if (!del && c < t.length){ c++; setTimeout(type, 55); }
-  else if (!del){ del = true; setTimeout(type, 1500); }
-  else if (c > 0){ c--; setTimeout(type, 25); }
-  else { del = false; p = (p+1) % SITE.typed.length; setTimeout(type, 300); }
+let tabIdx = 0, artQ = '', artC = 0, firstRender = true, typeToken = 0;
+const L = PROFILE.links;
+
+$('#ldjson').textContent = JSON.stringify({"@context":"https://schema.org","@type":"Person",name:PROFILE.name,email:"mailto:"+PROFILE.email,url:L.website,sameAs:[L.linkedin,L.youtube,L.facebook,L.instagram]});
+
+function secHead(i, t){ return `<div class="section-title reveal"><h2>${esc(t.sec[i][0])}</h2><p>${esc(t.sec[i][1])}</p></div>`; }
+
+function journeyHTML(t){
+  const keys = ['experience','education','certifications'];
+  const list = PROFILE[keys[tabIdx]] || [];
+  const items = list.length ? list.map(i => `
+    <div class="t-item"><small>${esc(tr(i.when))}</small><h4>${esc(tr(i.title))}</h4><div class="org">${esc(tr(i.org))}</div>
+    ${(i.points||[]).length ? `<ul>${i.points.map(p=>`<li>${esc(tr(p))}</li>`).join('')}</ul>` : ''}</div>`).join('')
+    : (SHOW_TODO ? `<div class="t-item placeholder"><small>${esc(t.todo[3])}</small><span class="todo">${esc(t.todo[0])}</span><h4>${esc(t.todo[1])}</h4><div class="org">${esc(t.todo[2])}</div></div>` : '');
+  return `<div class="tabs" role="tablist">${t.tabs.map((n,i)=>`<button class="tab ${i===tabIdx?'on':''}" role="tab" aria-selected="${i===tabIdx}" data-tab="${i}">${esc(n)}</button>`).join('')}</div><div class="timeline">${items}</div>`;
+}
+
+function pubsHTML(t){
+  const list = PROFILE.publications;
+  if (!list.length) return SHOW_TODO ? `<div class="item placeholder"><h3>${esc(t.pub[5])}<span class="todo">${esc(t.todo[0])}</span></h3><p>${esc(t.pub[6])}</p></div>` : `<p class="empty">${esc(t.pub[0])}</p>`;
+  return list.map((p,i) => `<div class="item reveal"><div class="meta">${esc(tr(p.venue))} · ${esc(tr(p.year))}</div><h3>${esc(tr(p.title))}</h3><div class="meta">${esc(tr(p.authors))}</div><p>${esc(tr(p.abstract))}</p>
+    <div class="actions">${p.doi?`<a class="mini" target="_blank" rel="noopener noreferrer" href="https://doi.org/${esc(p.doi)}">${esc(t.pub[1])}</a>`:''}
+    ${p.url?`<a class="mini" target="_blank" rel="noopener noreferrer" href="${esc(p.url)}">${esc(t.pub[2])}</a>`:''}
+    ${p.file?`<a class="mini" href="${esc(p.file)}" download>${esc(t.docs[0])}</a>`:''}
+    <button class="mini" data-cite="${i}">${esc(t.pub[3])}</button></div></div>`).join('');
+}
+
+function docsHTML(t){
+  return `<div class="cards">${PROFILE.docs.map((d,i) => {
+    const name = d.key === 'cv' ? t.docs[3] : t.docs[4];
+    return d.file
+      ? `<div class="card reveal"><div class="ico">📄</div><h3>${esc(name)}</h3><div class="actions"><a class="mini" href="${esc(d.file)}" download>⬇ ${esc(t.docs[0])}</a><button class="mini" data-view="${i}">${esc(t.docs[1])}</button></div><div id="view${i}"></div></div>`
+      : (SHOW_TODO ? `<div class="card placeholder reveal"><div class="ico">📄</div><h3>${esc(name)}<span class="todo">${esc(t.todo[0])}</span></h3><p>${esc(t.docs[5])}</p></div>` : '');
+  }).join('')}</div>`;
+}
+
+function artList(t){
+  const catKeys = [4,5,6];
+  const out = t.arts.map((a,i)=>({c:i,t:a[0],x:a[1]})).filter(a => (artC===0 || a.c===artC-1) && (a.t+a.x).toLowerCase().includes(artQ.toLowerCase()));
+  return out.length ? out.map(a=>`<div class="item"><div class="meta">${esc(t.art[4+a.c])}</div><h3>${esc(a.t)}</h3><p>${esc(a.x)}</p></div>`).join('') : `<p class="empty">${esc(t.art[2])}</p>`;
+}
+
+function contactCards(){
+  const c = [['@','Email',PROFILE.email,'mailto:'+PROFILE.email],['in','LinkedIn','linkedin.com/in/shrawanmehta',L.linkedin],['▶','YouTube','youtube.com/@shrawanmehta',L.youtube],['f','Facebook','facebook.com/drshrawanmehta',L.facebook],['IG','Instagram','instagram.com/theshrawanmehta',L.instagram],['🌐','Website','www.shrawanmehta.com',L.website]];
+  return c.map(([b,l,s,u])=>`<li><a href="${u}" ${u.startsWith('http')?'target="_blank" rel="noopener noreferrer"':''}><span class="badge">${b}</span><span><span class="label">${l}</span><span class="sub">${esc(s)}</span></span></a></li>`).join('');
+}
+
+function render(){
+  const t = T[lang];
+  document.documentElement.lang = lang;
+  document.documentElement.dir = t.rtl ? 'rtl' : 'ltr';
+  document.title = PROFILE.name + ' | ' + t.tag.replace(/ \| /g,', ');
+  const facts = [[t.lbl[0], t.focus]];
+  if (PROFILE.languages) facts.push([t.lbl[1], PROFILE.languages]);
+  if (PROFILE.location) facts.push([t.lbl[2], PROFILE.location]);
+  const cats = [t.art[1], t.art[4], t.art[5], t.art[6]];
+
+  $('#root').innerHTML = `
+  <a class="skip" href="#about">${esc(t.ui[4])}</a>
+  <nav aria-label="Main">
+    <a href="#home" class="logo">Shrawan<span>Mehta</span></a>
+    <ul class="nav-links" id="navLinks">${ids.map((id,i)=>`<li><a href="#${id}" data-id="${id}" class="${i===0?'active':''}">${esc(t.nav[i])}</a></li>`).join('')}</ul>
+    <div class="nav-tools">
+      <select class="lang-sel" id="langSel" aria-label="${esc(t.ui[2])}">${Object.keys(T).map(k=>`<option value="${k}" ${k===lang?'selected':''}>${esc(T[k].n)}</option>`).join('')}</select>
+      <button class="icon-btn" id="themeBtn" aria-label="${esc(t.ui[0])}"></button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="${esc(t.ui[1])}" aria-expanded="false">☰</button>
+    </div>
+  </nav>
+
+  <header id="home">
+    <div class="orb a"></div><div class="orb b"></div><div class="orb c"></div><div class="grid-bg"></div>
+    <div class="hero-inner">
+      <span class="hero-badge">${esc(t.badge)}</span>
+      <h1>${esc(PROFILE.name)}</h1>
+      <p class="tagline">${esc(t.tag)}</p>
+      <p class="typed" id="typed" aria-live="polite"></p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn">${esc(t.btn[0])}</a>
+        <a href="#about" class="btn outline">${esc(t.btn[1])}</a>
+        <button class="btn outline" onclick="window.print()">⬇ ${esc(t.btn[2])}</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container" style="padding-top:0">
+    <div class="stats">${PROFILE.stats.map((s,i)=>`<div class="stat"><strong data-n="${s.n}" data-s="${esc(s.suffix)}">0${esc(s.suffix)}</strong><span>${esc(t.stats[i])}</span></div>`).join('')}</div>
+  </div>
+
+  <section class="container" id="about">
+    ${secHead(0,t)}
+    <div class="about">
+      <div class="profile-box reveal">
+        <div class="avatar"><img src="profile.jpg" alt="${esc(PROFILE.name)}" onerror="this.remove();document.querySelector('.avatar').textContent='SM';"></div>
+        <h3>${esc(PROFILE.name)}</h3><p class="role">${esc(t.role)}</p>
+        <div class="chips">${['AI','Copilot','Azure',...t.chips2].map(c=>`<span class="chip">${esc(c)}</span>`).join('')}</div>
+        <ul class="facts">${facts.map(([k,v])=>`<li><b>${esc(k)}</b><span>${esc(v)}</span></li>`).join('')}</ul>
+      </div>
+      <div class="about-content reveal">
+        ${t.about.map(([h,p])=>`<h3>${esc(h)}</h3><p>${esc(p)}</p>`).join('')}
+        <h3>${esc(t.expectT)}</h3><ul>${t.expect.map(e=>`<li>${esc(e)}</li>`).join('')}</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="journey">${secHead(1,t)}<div id="journeyBody">${journeyHTML(t)}</div></section>
+
+  <section class="container" id="skills">${secHead(2,t)}
+    <div class="panel reveal"><div class="skills">${t.skills.map((s,i)=>`<div class="skill"><div class="row"><span>${esc(s)}</span><span>${PROFILE.skillLevels[i]}%</span></div><div class="bar" role="progressbar" aria-valuenow="${PROFILE.skillLevels[i]}" aria-valuemin="0" aria-valuemax="100"><i data-w="${PROFILE.skillLevels[i]}"></i></div></div>`).join('')}</div></div>
+  </section>
+
+  <section class="container" id="expertise">${secHead(3,t)}
+    <div class="cards">${t.exp.map(([h,p],i)=>`<div class="card reveal"><div class="ico">${['🤖','💼','☁️','🚀'][i]}</div><h3>${esc(h)}</h3><p>${esc(p)}</p></div>`).join('')}</div>
+  </section>
+
+  <section class="container" id="publications">${secHead(4,t)}<div id="pubBody">${pubsHTML(t)}</div></section>
+
+  <section class="container" id="articles">${secHead(5,t)}
+    <div class="toolbar reveal"><input type="search" id="artSearch" placeholder="${esc(t.art[0])}" aria-label="${esc(t.art[0])}" value="${esc(artQ)}">
+    <select id="artCat" aria-label="Category">${cats.map((c,i)=>`<option value="${i}" ${i===artC?'selected':''}>${esc(c)}</option>`).join('')}</select></div>
+    <div id="artBody">${artList(t)}</div>
+  </section>
+
+  <section class="container" id="documents">${secHead(6,t)}${docsHTML(t)}</section>
+
+  <section class="container" id="contact">${secHead(7,t)}
+    <div class="contact-grid">
+      <div class="contact-panel reveal"><h3>${esc(t.ct[0])}</h3><p>${esc(t.ct[1])}</p><ul class="contact-list">${contactCards()}</ul></div>
+      <div class="form-box reveal"><h3>${esc(t.ct[2])}</h3>
+        <form id="contactForm" novalidate>
+          <div class="field"><label for="fname">${esc(t.ct[3])}</label><input type="text" id="fname" autocomplete="name"></div>
+          <div class="field"><label for="femail">${esc(t.ct[4])}</label><input type="email" id="femail" autocomplete="email" dir="ltr"></div>
+          <div class="field"><label for="ftopic">${esc(t.ct[5])}</label><select id="ftopic">${t.topics.map(x=>`<option>${esc(x)}</option>`).join('')}</select></div>
+          <div class="field"><label for="fmsg">${esc(t.ct[6])}</label><textarea id="fmsg" placeholder="${esc(t.ct[11])}"></textarea></div>
+          <button type="submit" class="btn solid">${esc(t.ct[7])}</button>
+          <p class="form-note" id="formNote">${esc(t.ct[8])}</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">${ids.map((id,i)=>`<a href="#${id}">${esc(t.nav[i])}</a>`).join('')}</div>
+    <small>© ${new Date().getFullYear()} ${esc(PROFILE.name)} | ${esc(t.tag.replace(/ \| /g,' • '))}</small>
+  </footer>`;
+
+  bind(t);
+  setTheme(document.body.classList.contains('dark'));
+  startTyping(t);
+  reveal();
+  firstRender = false;
+}
+
+function bind(t){
+  $('#langSel').addEventListener('change', e => { lang = e.target.value; try{localStorage.setItem('lang',lang);}catch(_){} render(); window.scrollTo(0, scrollY); });
+  $('#themeBtn').addEventListener('click', () => setTheme(!document.body.classList.contains('dark')));
+  const nl = $('#navLinks'), mb = $('#menuBtn');
+  mb.addEventListener('click', () => { const o = nl.classList.toggle('open'); mb.setAttribute('aria-expanded', o); });
+  nl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nl.classList.remove('open'); mb.setAttribute('aria-expanded','false'); }));
+  $('#journeyBody').addEventListener('click', e => { const b = e.target.closest('[data-tab]'); if(!b) return; tabIdx = +b.dataset.tab; $('#journeyBody').innerHTML = journeyHTML(T[lang]); });
+  $('#pubBody').addEventListener('click', e => {
+    const b = e.target.closest('[data-cite]'); if(!b) return; const p = PROFILE.publications[b.dataset.cite];
+    const c = `${tr(p.authors)}. ${tr(p.title)}. ${tr(p.venue)}${p.year?', '+tr(p.year):''}.${p.doi?' https://doi.org/'+p.doi:''}`;
+    navigator.clipboard.writeText(c).then(()=>{ b.textContent = T[lang].pub[4]; setTimeout(()=>b.textContent=T[lang].pub[3],1500); }).catch(()=>{});
+  });
+  $('#documents').addEventListener('click', e => {
+    const b = e.target.closest('[data-view]'); if(!b) return; const i = b.dataset.view, box = $('#view'+i);
+    if (box.innerHTML){ box.innerHTML=''; b.textContent = T[lang].docs[1]; }
+    else { box.innerHTML = `<iframe class="viewer" src="${esc(PROFILE.docs[i].file)}" title="PDF"></iframe>`; b.textContent = T[lang].docs[2]; }
+  });
+  $('#artSearch').addEventListener('input', e => { artQ = e.target.value; $('#artBody').innerHTML = artList(T[lang]); });
+  $('#artCat').addEventListener('change', e => { artC = +e.target.value; $('#artBody').innerHTML = artList(T[lang]); });
+  $('#contactForm').addEventListener('submit', e => {
+    e.preventDefault(); const t = T[lang];
+    const n = $('#fname').value.trim(), m = $('#femail').value.trim(), tp = $('#ftopic').value, g = $('#fmsg').value.trim(), note = $('#formNote');
+    if (!n || !/^\S+@\S+\.\S+$/.test(m) || !g){ note.textContent = t.ct[9]; note.style.color = '#dc2626'; return; }
+    note.style.color = ''; note.textContent = t.ct[10];
+    location.href = 'mailto:' + PROFILE.email + '?subject=' + encodeURIComponent('Website: ' + tp) + '&body=' + encodeURIComponent(n + ' <' + m + '>\n\n' + g);
+  });
+}
+
+function setTheme(d){
+  document.body.classList.toggle('dark', d);
+  const b = $('#themeBtn'); if (b) b.textContent = d ? '☀️' : '🌙';
+  try{ localStorage.setItem('theme', d?'dark':'light'); }catch(e){}
+}
+(function initTheme(){
+  let s = null; try{ s = localStorage.getItem('theme'); }catch(e){}
+  document.body.classList.toggle('dark', s ? s === 'dark' : (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches));
 })();
 
-/* Reveal, counters, skill bars */
+function startTyping(t){
+  const token = ++typeToken, el = $('#typed'); let p = 0, c = 0, del = false;
+  (function step(){
+    if (token !== typeToken) return;
+    const s = t.typed[p];
+    if (reduce){ el.textContent = s; return; }
+    el.textContent = s.slice(0, c);
+    if (!del && c < s.length){ c++; setTimeout(step, 55); }
+    else if (!del){ del = true; setTimeout(step, 1600); }
+    else if (c > 0){ c--; setTimeout(step, 25); }
+    else { del = false; p = (p+1) % t.typed.length; setTimeout(step, 300); }
+  })();
+}
+
 function countUp(el){
-  const target = +el.dataset.n, suf = el.dataset.s; if (reduce){ el.textContent = target + suf; return; }
-  const t0 = performance.now(), dur = 1400;
-  (function step(t){ const k = Math.min((t-t0)/dur,1); el.textContent = Math.round(target*(1-Math.pow(1-k,3))) + suf; if(k<1) requestAnimationFrame(step); })(t0);
+  const target = +el.dataset.n, suf = el.dataset.s;
+  if (reduce){ el.textContent = target + suf; return; }
+  const t0 = performance.now();
+  (function f(t){ const k = Math.min((t-t0)/1400,1); el.textContent = Math.round(target*(1-Math.pow(1-k,3))) + suf; if (k<1) requestAnimationFrame(f); })(t0);
 }
 const io = new IntersectionObserver(es => es.forEach(e => {
   if (!e.isIntersecting) return;
@@ -561,48 +751,25 @@ const io = new IntersectionObserver(es => es.forEach(e => {
   e.target.querySelectorAll('[data-w]').forEach(b => b.style.width = b.dataset.w + '%');
   io.unobserve(e.target);
 }), { threshold: .12 });
-document.querySelectorAll('.reveal,.stats,.skills').forEach(el => io.observe(el));
+function reveal(){
+  document.querySelectorAll('.reveal,.stats').forEach(el => {
+    if (firstRender) io.observe(el);
+    else { el.classList.add('visible'); el.querySelectorAll('[data-n]').forEach(n => n.textContent = n.dataset.n + n.dataset.s); el.querySelectorAll('[data-w]').forEach(b => b.style.width = b.dataset.w + '%'); }
+  });
+  if (firstRender) document.querySelectorAll('.skills').forEach(el => io.observe(el));
+}
 
-/* Scroll: progress, active link, back to top */
-const ids = ['home','about','journey','skills','expertise','publications','articles','contact'];
-const secs = ids.map(i => document.getElementById(i));
-const links = [...navLinks.querySelectorAll('a')];
 addEventListener('scroll', () => {
   const h = document.documentElement;
-  $('#progress').style.width = (scrollY / (h.scrollHeight - h.clientHeight) * 100) + '%';
-  const y = scrollY + 140; let cur = 'home';
-  secs.forEach(s => { if (s && s.offsetTop <= y) cur = s.id; });
-  links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+  $('#progress').style.width = (scrollY / Math.max(1, h.scrollHeight - h.clientHeight) * 100) + '%';
+  const y = scrollY + 160; let cur = 'home';
+  ids.forEach(id => { const s = document.getElementById(id); if (s && s.offsetTop <= y) cur = id; });
+  document.querySelectorAll('#navLinks a').forEach(a => a.classList.toggle('active', a.dataset.id === cur));
   $('#toTop').classList.toggle('show', scrollY > 500);
 }, { passive: true });
 $('#toTop').addEventListener('click', () => scrollTo({ top: 0, behavior: 'smooth' }));
 
-/* Hero particle network */
-(function(){
-  const cv = $('#bg'); if (!cv || reduce) return;
-  const ctx = cv.getContext('2d'); let w, h, pts = [];
-  function size(){ w = cv.width = cv.offsetWidth; h = cv.height = cv.offsetHeight; pts = Array.from({length: Math.min(70, Math.floor(w/18))}, () => ({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4})); }
-  size(); addEventListener('resize', size);
-  (function draw(){
-    ctx.clearRect(0,0,w,h);
-    pts.forEach((a,i) => {
-      a.x += a.vx; a.y += a.vy; if (a.x<0||a.x>w) a.vx*=-1; if (a.y<0||a.y>h) a.vy*=-1;
-      ctx.fillStyle = 'rgba(255,255,255,.8)'; ctx.beginPath(); ctx.arc(a.x,a.y,1.6,0,6.283); ctx.fill();
-      for (let j=i+1;j<pts.length;j++){ const b=pts[j], d=Math.hypot(a.x-b.x,a.y-b.y);
-        if (d<120){ ctx.strokeStyle = 'rgba(255,255,255,'+(0.18*(1-d/120))+')'; ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); } }
-    });
-    requestAnimationFrame(draw);
-  })();
-})();
-
-/* Contact form (mailto) */
-$('#contactForm').addEventListener('submit', e => {
-  e.preventDefault();
-  const name = $('#name').value.trim(), email = $('#email').value.trim(), topic = $('#topic').value, msg = $('#message').value.trim(), note = $('#formNote');
-  if (!name || !/^\S+@\S+\.\S+$/.test(email) || !msg){ note.textContent = 'Please fill in your name, a valid email and a message.'; note.style.color = '#dc2626'; return; }
-  note.style.color = ''; note.textContent = 'Opening your email app...';
-  location.href = 'mailto:' + SITE.email + '?subject=' + encodeURIComponent('Website enquiry: ' + topic) + '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + msg);
-});
+render();
 </script>
 </body>
 </html>
