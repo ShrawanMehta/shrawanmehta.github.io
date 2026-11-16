@@ -25,3 +25,11 @@ h2{font-size:2rem;margin-bottom:6px}h2 span{background:var(--g);-webkit-backgrou
 footer{margin-top:90px;text-align:center;padding:30px;color:var(--mu);border-top:1px solid var(--bd)}
 .rv{opacity:0;transform:translateY(24px);transition:.6s}.rv.v{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.hero::before{animation:none}.rv{opacity:1;transform:none}}
+.soc{position:fixed;left:14px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:14px;z-index:40}
+.soc a,.socf a{width:46px;height:46px;border-radius:50%;border:1.5px solid currentColor;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:.25s}
+.soc a{color:#fff!important;background:rgba(10,14,28,.55);backdrop-filter:blur(8px)}
+.socf a{color:var(--tx)!important}
+.soc a:hover,.socf a:hover{background:var(--g);border-color:transparent;color:#fff!important;transform:translateY(-3px) scale(1.08)}
+.socf{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:18px}
+select.ib option{color:#000}
+@media(max-width:760px){.soc{display:none}}
