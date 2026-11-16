@@ -1,774 +1,242 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shrawan Mehta | Educator, AI Enthusiast & Technology Professional</title>
-<meta name="description" content="Personal website of Shrawan Mehta: educator and AI enthusiast sharing practical guidance on Artificial Intelligence, Microsoft Copilot, Cloud Computing and career growth.">
-<meta name="author" content="Shrawan Mehta">
-<meta name="theme-color" content="#4f46e5">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Shrawan Mehta | Educator & AI Enthusiast">
-<meta property="og:description" content="Practical insights on AI, Microsoft Copilot, cloud technology and career growth.">
-<meta property="og:image" content="profile.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json" id="ldjson"></script>
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shrawan Mehta | PLM & SC Quality Manager, Educator & AI Enthusiast</title>
+<meta name="description" content="Shrawan Mehta: PLM & SC Quality Manager at Medentika, biomedical engineer, educator and AI enthusiast sharing practical guidance on AI, Microsoft Copilot, cloud and careers.">
+<meta name="theme-color" content="#0b1020">
 <style>
-:root{
-  --bg:#f6f7fb; --card:#ffffff; --card2:#f1f3fa; --text:#111827; --muted:#5b6475; --border:#e4e7f0;
-  --p1:#4f46e5; --p2:#06b6d4; --p3:#a855f7;
-  --grad:linear-gradient(135deg,var(--p1),var(--p2));
-  --shadow:0 10px 40px rgba(31,41,80,.08);
-  --r:22px;
-}
-body.dark{
-  --bg:#070b16; --card:#0f1626; --card2:#141d33; --text:#e8ecf5; --muted:#97a1b6; --border:#1f2a44;
-  --shadow:0 10px 40px rgba(0,0,0,.5);
-}
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;scroll-padding-top:84px;}
-body{font-family:'Inter','Segoe UI',system-ui,-apple-system,'Noto Sans','Noto Sans Devanagari','Noto Sans SC','Noto Naskh Arabic',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:background .3s,color .3s;-webkit-font-smoothing:antialiased;}
-a{color:var(--p1);}
-body.dark a{color:#93a4ff;}
-img{max-width:100%;}
-.skip{position:absolute;inset-inline-start:-999px;top:0;background:#fff;color:#000;padding:10px 16px;z-index:3000;}
-.skip:focus{inset-inline-start:10px;top:10px;}
-#progress{position:fixed;top:0;inset-inline-start:0;height:3px;width:0;background:var(--grad);z-index:3001;}
-
-/* Nav */
-nav{position:sticky;top:12px;z-index:1000;margin:12px auto 0;width:min(1240px,94%);
-  background:rgba(15,22,38,.78);backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%);
-  border:1px solid rgba(255,255,255,.12);border-radius:60px;display:flex;justify-content:space-between;align-items:center;padding:10px 14px 10px 24px;gap:12px;}
-.logo{color:#fff;font-weight:800;font-size:1.15rem;text-decoration:none;white-space:nowrap;letter-spacing:.3px;}
-.logo span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;}
-.nav-links{display:flex;gap:4px;list-style:none;align-items:center;}
-.nav-links a{color:#cbd5e1;text-decoration:none;font-weight:500;font-size:.9rem;padding:7px 12px;border-radius:30px;transition:.2s;white-space:nowrap;display:block;}
-.nav-links a:hover{color:#fff;background:rgba(255,255,255,.08);}
-.nav-links a.active{color:#fff;background:rgba(99,102,241,.55);}
-body.dark .nav-links a,body.dark .logo{color:#e2e8f0;}
-.nav-tools{display:flex;gap:8px;align-items:center;}
-.icon-btn,.lang-sel{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#fff;border-radius:30px;padding:7px 12px;cursor:pointer;font-size:.9rem;}
-.icon-btn:hover,.lang-sel:hover{background:rgba(255,255,255,.18);}
-.lang-sel option{color:#111;}
-.menu-btn{display:none;}
-
-/* Hero */
-header#home{position:relative;overflow:hidden;color:#fff;text-align:center;padding:150px 20px 150px;margin-top:-76px;
-  background:radial-gradient(1200px 600px at 20% -10%,#3730a3 0%,transparent 60%),radial-gradient(900px 500px at 90% 10%,#0e7490 0%,transparent 55%),#0b1020;}
-.orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;animation:float 14s ease-in-out infinite;}
-.orb.a{width:380px;height:380px;background:#6366f1;top:-80px;inset-inline-start:-80px;}
-.orb.b{width:320px;height:320px;background:#06b6d4;bottom:-90px;inset-inline-end:-60px;animation-delay:-5s;}
-.orb.c{width:240px;height:240px;background:#a855f7;top:40%;inset-inline-start:55%;animation-delay:-9s;opacity:.35;}
-@keyframes float{50%{transform:translate(30px,-30px) scale(1.08);}}
-.grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);}
-.hero-inner{position:relative;z-index:2;max-width:900px;margin:auto;}
-.hero-badge{display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:7px 20px;border-radius:30px;font-size:.9rem;margin-bottom:24px;backdrop-filter:blur(6px);}
-header#home h1{font-size:clamp(2.6rem,7vw,4.8rem);line-height:1.05;font-weight:800;margin-bottom:14px;letter-spacing:-1px;background:linear-gradient(90deg,#fff,#c7d2fe 50%,#67e8f9);-webkit-background-clip:text;background-clip:text;color:transparent;}
-.tagline{font-size:1.25rem;opacity:.92;margin-bottom:12px;}
-.typed{font-size:1.1rem;color:#a5b4fc;min-height:1.8em;}
-.typed::after{content:"|";margin-inline-start:2px;animation:blink 1s steps(1) infinite;}
-@keyframes blink{50%{opacity:0}}
-.hero-actions{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-.btn{display:inline-block;padding:13px 30px;background:#fff;color:#3730a3;text-decoration:none;border-radius:40px;font-weight:700;border:2px solid #fff;cursor:pointer;font-size:1rem;transition:.25s;font-family:inherit;}
-.btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(99,102,241,.45);}
-.btn.outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.5);}
-.btn.outline:hover{background:rgba(255,255,255,.12);}
-.btn.solid{background:var(--grad);color:#fff;border-color:transparent;}
-body.dark a.btn,body.dark .btn{color:#3730a3;}
-body.dark .btn.outline{color:#fff;}
-body.dark .btn.solid{color:#fff;}
-
-/* Layout */
-.container{width:min(1200px,92%);margin:auto;padding:80px 0 0;}
-.section-title{text-align:center;margin-bottom:46px;}
-.section-title h2{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;letter-spacing:-.5px;}
-.section-title h2 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;}
-.section-title p{color:var(--muted);margin-top:6px;}
-
-/* Stats */
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin-top:-70px;position:relative;z-index:5;}
-.stat{background:var(--card);padding:26px 20px;border-radius:var(--r);text-align:center;box-shadow:var(--shadow);border:1px solid var(--border);}
-.stat strong{display:block;font-size:2.3rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.2;}
-.stat span{color:var(--muted);font-size:.92rem;}
-
-/* Cards */
-.panel,.profile-box,.about-content{background:var(--card);padding:32px;border-radius:var(--r);box-shadow:var(--shadow);border:1px solid var(--border);}
-.about{display:grid;grid-template-columns:1fr 2fr;gap:28px;align-items:start;}
-.profile-box{text-align:center;position:sticky;top:96px;}
-.avatar{width:170px;height:170px;border-radius:50%;margin:0 auto 16px;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center;font-size:3rem;font-weight:800;overflow:hidden;box-shadow:0 0 0 4px var(--card),0 0 0 7px var(--p1);}
-.avatar img{width:100%;height:100%;object-fit:cover;}
-.role{color:var(--muted);margin-bottom:14px;}
-.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
-.chip{background:rgba(79,70,229,.1);color:var(--p1);padding:5px 14px;border-radius:20px;font-size:.84rem;font-weight:600;}
-body.dark .chip{background:rgba(129,140,248,.15);color:#a5b4fc;}
-.facts{list-style:none;text-align:start;margin-top:18px;font-size:.92rem;}
-.facts li{padding:9px 0;border-top:1px solid var(--border);display:flex;justify-content:space-between;gap:10px;}
-.facts b{color:var(--muted);font-weight:600;}
-.about-content h3{margin:22px 0 6px;font-size:1.15rem;}
-.about-content h3:first-child{margin-top:0;}
-.about-content h3::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--grad);margin-inline-end:10px;}
-.about-content p{color:var(--muted);}
-.about-content ul{margin-block:8px 0;margin-inline-start:22px;color:var(--muted);}
-
-/* Tabs / timeline */
-.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:30px;}
-.tab{border:1px solid var(--border);background:var(--card);color:var(--text);padding:9px 22px;border-radius:30px;cursor:pointer;font-weight:600;transition:.2s;font-family:inherit;font-size:.95rem;}
-.tab.on,.tab:hover{background:var(--grad);color:#fff;border-color:transparent;}
-.timeline{max-width:820px;margin:auto;border-inline-start:2px solid var(--border);padding-inline-start:30px;}
-.t-item{position:relative;margin-bottom:22px;background:var(--card);padding:22px 24px;border-radius:18px;box-shadow:var(--shadow);border:1px solid var(--border);}
-.t-item::before{content:"";position:absolute;inset-inline-start:-40px;top:26px;width:16px;height:16px;border-radius:50%;background:var(--grad);border:3px solid var(--bg);}
-.t-item small{color:var(--p1);font-weight:700;}
-body.dark .t-item small{color:#a5b4fc;}
-.t-item h4{margin:3px 0;font-size:1.08rem;}
-.t-item .org{color:var(--muted);font-size:.93rem;}
-.t-item ul{margin:8px 0 0;margin-inline-start:20px;color:var(--muted);}
-
-/* Skills */
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px 44px;}
-.skill .row{display:flex;justify-content:space-between;font-weight:600;font-size:.95rem;margin-bottom:6px;}
-.bar{height:10px;background:var(--card2);border-radius:10px;overflow:hidden;}
-.bar i{display:block;height:100%;width:0;background:var(--grad);border-radius:10px;transition:width 1.2s ease;}
-
-/* Expertise bento */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
-.card{background:var(--card);padding:30px;border-radius:var(--r);box-shadow:var(--shadow);border:1px solid var(--border);transition:.3s;position:relative;overflow:hidden;}
-.card::after{content:"";position:absolute;inset:0;background:radial-gradient(400px 160px at 0 0,rgba(99,102,241,.14),transparent 70%);opacity:0;transition:.3s;}
-.card:hover{transform:translateY(-8px);border-color:var(--p1);}
-.card:hover::after{opacity:1;}
-.card .ico{font-size:2rem;margin-bottom:10px;width:56px;height:56px;border-radius:16px;background:var(--card2);display:flex;align-items:center;justify-content:center;}
-.card h3{margin-bottom:8px;font-size:1.15rem;}
-.card p{color:var(--muted);font-size:.95rem;}
-
-/* List items */
-.item{background:var(--card);padding:24px 26px;border-radius:var(--r);margin-bottom:16px;box-shadow:var(--shadow);border:1px solid var(--border);border-inline-start:5px solid var(--p1);}
-.item h3{margin-bottom:4px;font-size:1.1rem;}
-.item .meta{font-size:.85rem;color:var(--muted);margin-bottom:6px;}
-.item p{color:var(--muted);}
-.actions{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;}
-.mini{font-size:.85rem;padding:7px 16px;border-radius:20px;border:1px solid var(--p1);background:transparent;color:var(--p1);cursor:pointer;text-decoration:none;font-weight:600;font-family:inherit;}
-.mini:hover{background:var(--p1);color:#fff;}
-body.dark .mini{color:#a5b4fc;border-color:#6366f1;}
-.placeholder{border:2px dashed var(--border);border-inline-start:5px dashed var(--p1);box-shadow:none;background:transparent;}
-.todo{display:inline-block;font-size:.72rem;background:#fef3c7;color:#92400e;padding:2px 10px;border-radius:12px;font-weight:700;margin-inline-start:8px;vertical-align:middle;}
-.toolbar{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px;}
-.toolbar input,.toolbar select{padding:12px 16px;border:1px solid var(--border);border-radius:14px;background:var(--card);color:var(--text);font-size:1rem;font-family:inherit;}
-.toolbar input{flex:1;min-width:200px;}
-.empty{text-align:center;color:var(--muted);padding:20px;}
-.viewer{width:100%;height:600px;border:1px solid var(--border);border-radius:12px;margin-top:14px;background:#fff;}
-
-/* Contact */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start;}
-.contact-panel{background:linear-gradient(135deg,#3730a3,#0e7490);color:#fff;padding:38px;border-radius:26px;}
-.contact-panel h3{font-size:1.5rem;margin-bottom:8px;}
-.contact-panel p{opacity:.92;margin-bottom:20px;}
-.contact-list{list-style:none;}
-.contact-list li{margin-bottom:12px;}
-.contact-list a{display:flex;align-items:center;gap:14px;color:#fff;text-decoration:none;background:rgba(255,255,255,.12);padding:12px 16px;border-radius:16px;transition:.25s;}
-.contact-list a:hover{background:rgba(255,255,255,.24);transform:translateX(5px);}
-[dir=rtl] .contact-list a:hover{transform:translateX(-5px);}
-.contact-list .badge{min-width:42px;height:42px;border-radius:12px;background:#fff;color:#3730a3;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;}
-.contact-list .label{font-weight:700;display:block;line-height:1.2;}
-.contact-list .sub{font-size:.85rem;opacity:.85;word-break:break-all;direction:ltr;display:inline-block;}
-.form-box{background:var(--card);padding:34px;border-radius:26px;box-shadow:var(--shadow);border:1px solid var(--border);}
-.form-box h3{margin-bottom:16px;font-size:1.3rem;}
-.field{margin-bottom:15px;}
-.field label{display:block;font-weight:600;margin-bottom:6px;font-size:.95rem;}
-.field input,.field select,.field textarea{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:14px;background:var(--bg);color:var(--text);font-size:1rem;font-family:inherit;}
-.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--p1);border-color:transparent;}
-.field textarea{min-height:130px;resize:vertical;}
-.form-box .btn{width:100%;}
-.form-note{font-size:.82rem;color:var(--muted);margin-top:10px;}
-
-footer{margin-top:90px;background:#0b1020;color:#cbd5e1;text-align:center;padding:36px 20px;}
-.footer-links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:12px;}
-.footer-links a{color:#94a3b8;text-decoration:none;}
-.footer-links a:hover{color:#fff;}
-footer small{color:#94a3b8;}
-.to-top{position:fixed;inset-inline-end:22px;bottom:22px;width:48px;height:48px;border-radius:50%;background:var(--grad);color:#fff;border:none;font-size:1.3rem;cursor:pointer;box-shadow:var(--shadow);display:none;z-index:900;}
-.to-top.show{display:block;}
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s,transform .6s;}
-.reveal.visible{opacity:1;transform:none;}
-
-@media(max-width:1100px){
-  .menu-btn{display:inline-block;}
-  .nav-links{position:absolute;top:calc(100% + 8px);inset-inline:0;background:rgba(15,22,38,.97);border-radius:24px;flex-direction:column;padding:14px;gap:4px;display:none;align-items:stretch;border:1px solid rgba(255,255,255,.12);}
-  .nav-links.open{display:flex;}
-  nav{position:sticky;}
-}
-@media(max-width:900px){.about,.contact-grid{grid-template-columns:1fr;}.profile-box{position:static;}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}.reveal{transition:none;opacity:1;transform:none;}.bar i{transition:none;}.orb{animation:none;}}
-@media print{
-  nav,#progress,.hero-actions,.to-top,.toolbar,.contact-grid,.tabs,.orb,.grid-bg,.actions,.viewer{display:none!important;}
-  body{background:#fff;color:#000;}
-  header#home{background:#fff;color:#000;padding:20px;margin:0;}
-  header#home h1{color:#000;-webkit-text-fill-color:#000;}
-  .reveal{opacity:1!important;transform:none!important;}
-  .card,.item,.t-item,.panel,.stat{box-shadow:none;border:1px solid #ccc;}
-}
+:root{--bg:#f5f6fb;--card:rgba(255,255,255,.85);--text:#0f172a;--muted:#5b6475;--bd:#e2e6f0;--p1:#6366f1;--p2:#06b6d4;--p3:#a855f7;--g:linear-gradient(135deg,var(--p1),var(--p2) 60%,var(--p3));--sh:0 20px 60px rgba(30,41,90,.10)}
+body.dark{--bg:#060914;--card:rgba(18,25,45,.72);--text:#e8ecf7;--muted:#9aa5bd;--bd:rgba(255,255,255,.09);--sh:0 20px 60px rgba(0,0,0,.5)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:Inter,'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;transition:background .3s}
+a{color:var(--p1)}body.dark a{color:#a5b4fc}
+#glow{position:fixed;width:520px;height:520px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,rgba(99,102,241,.16),transparent 65%);transform:translate(-50%,-50%);z-index:0;left:50%;top:30%}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--g);z-index:3000}
+nav{position:sticky;top:12px;z-index:1000;margin:12px auto 0;width:min(1240px,94%);background:rgba(10,14,28,.72);backdrop-filter:blur(16px) saturate(160%);border:1px solid rgba(255,255,255,.12);border-radius:60px;display:flex;justify-content:space-between;align-items:center;padding:9px 12px 9px 22px;gap:10px}
+.logo{color:#fff;font-weight:800;text-decoration:none;font-size:1.1rem}.logo span{background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+.links{display:flex;list-style:none;gap:2px}
+.links a{color:#cbd5e1;text-decoration:none;font-size:.88rem;padding:7px 11px;border-radius:30px;display:block;white-space:nowrap}
+.links a:hover{background:rgba(255,255,255,.09);color:#fff}.links a.on{background:rgba(99,102,241,.55);color:#fff}
+.tools{display:flex;gap:7px}
+.ib{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.17);color:#fff;border-radius:30px;padding:7px 12px;cursor:pointer;font-size:.88rem}
+.ib:hover{background:rgba(255,255,255,.2)}.ib.live{background:var(--g);border-color:transparent}.ib option{color:#000}
+#mb{display:none}
+header{position:relative;overflow:hidden;color:#fff;text-align:center;padding:170px 20px 150px;margin-top:-76px;background:#070b18}
+.aur{position:absolute;inset:-20%;background:conic-gradient(from 0deg at 50% 50%,#4338ca,#0891b2,#a855f7,#4338ca);filter:blur(110px);opacity:.5;animation:sp 28s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:48px 48px;-webkit-mask-image:radial-gradient(ellipse,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse,#000 30%,transparent 75%)}
+.hi{position:relative;z-index:2;max-width:880px;margin:auto}
+.ph{width:150px;height:150px;border-radius:50%;margin:0 auto 22px;border:3px solid rgba(255,255,255,.7);box-shadow:0 0 0 8px rgba(99,102,241,.3),0 20px 60px rgba(0,0,0,.5);overflow:hidden;background:var(--g);display:flex;align-items:center;justify-content:center;font-size:2.6rem;font-weight:800}
+.ph img{width:100%;height:100%;object-fit:cover}
+.badge{display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);padding:6px 18px;border-radius:30px;font-size:.88rem;margin-bottom:18px}
+h1{font-size:clamp(2.6rem,7vw,4.8rem);line-height:1.05;font-weight:800;letter-spacing:-1px;background:linear-gradient(90deg,#fff,#c7d2fe 50%,#67e8f9);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:12px}
+.tag{font-size:1.2rem;opacity:.93;margin-bottom:8px}.typed{color:#a5b4fc;min-height:1.8em}.typed::after{content:"|";animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}
+.acts{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 28px;background:#fff;color:#3730a3!important;text-decoration:none;border-radius:40px;font-weight:700;border:2px solid #fff;cursor:pointer;font-size:1rem;font-family:inherit;transition:.25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(99,102,241,.5)}
+.btn.o{background:transparent;color:#fff!important;border-color:rgba(255,255,255,.5)}
+.btn.s{background:var(--g);color:#fff!important;border-color:transparent}
+.wrap{width:min(1200px,92%);margin:auto;padding:84px 0 0;position:relative;z-index:1}
+.st{text-align:center;margin-bottom:44px}.st h2{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;letter-spacing:-.5px}
+.st h2 span{background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}.st p{color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin-top:-72px;position:relative;z-index:5}
+.stat,.panel,.card,.item,.pb,.ac,.fb{background:var(--card);backdrop-filter:blur(12px);border:1px solid var(--bd);box-shadow:var(--sh);border-radius:22px}
+.stat{padding:24px;text-align:center}.stat b{display:block;font-size:2.3rem;font-weight:800;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}.stat span{color:var(--muted);font-size:.92rem}
+.about{display:grid;grid-template-columns:1fr 2fr;gap:26px;align-items:start}
+.pb{padding:30px;text-align:center;position:sticky;top:96px}.pb .ph{width:160px;height:160px;border-color:var(--card);box-shadow:0 0 0 5px var(--p1);color:#fff}
+.role{color:var(--muted);margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:7px;justify-content:center}.chip{background:rgba(99,102,241,.12);color:var(--p1);padding:4px 13px;border-radius:20px;font-size:.82rem;font-weight:600}body.dark .chip{color:#a5b4fc}
+.facts{list-style:none;text-align:start;margin-top:16px;font-size:.9rem}.facts li{padding:8px 0;border-top:1px solid var(--bd);display:flex;justify-content:space-between;gap:10px}.facts b{color:var(--muted)}
+.ac{padding:32px}.ac h3{margin:20px 0 4px;font-size:1.12rem}.ac h3:first-child{margin-top:0}.ac h3::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--g);margin-inline-end:10px}.ac p,.ac ul{color:var(--muted)}.ac ul{margin-left:22px}
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+.tab{border:1px solid var(--bd);background:var(--card);color:var(--text);padding:9px 22px;border-radius:30px;cursor:pointer;font-weight:600;font-family:inherit}.tab.on,.tab:hover{background:var(--g);color:#fff;border-color:transparent}
+.tl{max-width:820px;margin:auto;border-left:2px solid var(--bd);padding-left:30px}
+.ti{position:relative;margin-bottom:20px;background:var(--card);padding:20px 24px;border-radius:18px;border:1px solid var(--bd);box-shadow:var(--sh)}
+.ti::before{content:"";position:absolute;left:-40px;top:26px;width:16px;height:16px;border-radius:50%;background:var(--g);border:3px solid var(--bg)}
+.ti small{color:var(--p1);font-weight:700}.ti h4{margin:2px 0}.ti .org{color:var(--muted);font-size:.93rem}.ti ul{margin:8px 0 0 20px;color:var(--muted);font-size:.93rem}
+.sk{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px 44px;padding:32px}
+.sk .r{display:flex;justify-content:space-between;font-weight:600;font-size:.95rem;margin-bottom:5px}
+.br{height:10px;background:rgba(127,127,160,.18);border-radius:10px;overflow:hidden}.br i{display:block;height:100%;width:0;background:var(--g);border-radius:10px;transition:width 1.2s}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{padding:28px;transition:.3s}.card:hover{transform:translateY(-8px);border-color:var(--p1)}
+.ico{font-size:1.8rem;width:54px;height:54px;border-radius:16px;background:rgba(99,102,241,.12);display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+.card h3{margin-bottom:6px}.card p{color:var(--muted);font-size:.95rem}
+.item{padding:24px 26px;margin-bottom:16px;border-left:5px solid var(--p1)}.item .m{font-size:.85rem;color:var(--muted)}.item p{color:var(--muted)}
+.mini{display:inline-block;font-size:.85rem;padding:7px 16px;border-radius:20px;border:1px solid var(--p1);background:transparent;color:var(--p1)!important;cursor:pointer;text-decoration:none;font-weight:600;font-family:inherit;margin:12px 8px 0 0}.mini:hover{background:var(--p1);color:#fff!important}
+.tb{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}.tb input,.tb select{padding:12px 16px;border:1px solid var(--bd);border-radius:14px;background:var(--card);color:var(--text);font-size:1rem;font-family:inherit}.tb input{flex:1;min-width:200px}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+.cp{background:linear-gradient(135deg,#3730a3,#0e7490);color:#fff;padding:36px;border-radius:26px}.cp h3{font-size:1.5rem}.cp p{opacity:.92;margin:6px 0 18px}
+.cp ul{list-style:none}.cp li{margin-bottom:11px}.cp a{display:flex;align-items:center;gap:14px;color:#fff!important;text-decoration:none;background:rgba(255,255,255,.12);padding:11px 15px;border-radius:16px;transition:.25s}.cp a:hover{background:rgba(255,255,255,.25);transform:translateX(5px)}
+.bg2{min-width:42px;height:42px;border-radius:12px;background:#fff;color:#3730a3;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem}
+.cp .l{font-weight:700;display:block;line-height:1.2}.cp .s{font-size:.85rem;opacity:.85;word-break:break-all}
+.fb{padding:32px}.fb h3{margin-bottom:14px}.fd{margin-bottom:14px}.fd label{display:block;font-weight:600;font-size:.93rem;margin-bottom:5px}
+.fd input,.fd select,.fd textarea{width:100%;padding:12px 14px;border:1px solid var(--bd);border-radius:14px;background:var(--bg);color:var(--text);font-size:1rem;font-family:inherit}.fd textarea{min-height:120px}.fb .btn{width:100%}.nt{font-size:.82rem;color:var(--muted);margin-top:8px}
+footer{margin-top:90px;background:#060914;color:#94a3b8;text-align:center;padding:34px 20px;position:relative;z-index:1}
+#top{position:fixed;right:22px;bottom:22px;width:48px;height:48px;border-radius:50%;background:var(--g);color:#fff;border:0;font-size:1.3rem;cursor:pointer;display:none;z-index:900}#top.show{display:block}
+.rv{opacity:0;transform:translateY(26px);transition:.6s}.rv.v{opacity:1;transform:none}
+@media(max-width:1180px){#mb{display:inline-block}.links{position:absolute;top:calc(100% + 8px);left:0;right:0;background:rgba(10,14,28,.97);border-radius:24px;flex-direction:column;padding:12px;display:none;border:1px solid rgba(255,255,255,.12)}.links.open{display:flex}}
+@media(max-width:900px){.about,.cg{grid-template-columns:1fr}.pb{position:static}}
+@media(prefers-reduced-motion:reduce){.aur{animation:none}.rv{opacity:1;transform:none;transition:none}}
+@media print{nav,#bar,#glow,.acts,#top,.tb,.cg,.tabs,.aur,.grid,.mini{display:none!important}body{background:#fff;color:#000}header{background:#fff;color:#000;padding:20px;margin:0}h1{-webkit-text-fill-color:#000}.rv{opacity:1!important;transform:none!important}}
 </style>
 </head>
-
 <body>
-<div id="progress"></div>
-<div id="root"></div>
-<button class="to-top" id="toTop">↑</button>
-
+<div id="bar"></div><div id="glow"></div><div id="root"></div><button id="top">↑</button>
 <script>
-/* =====================================================================
-   1) YOUR PERSONAL DATA: edit only this block (language-independent facts).
-      Any text field may be a plain string, or an object with one string
-      per language, e.g.  { en:"Teacher", de:"Lehrer", fr:"Enseignant" }
-   ===================================================================== */
-const SHOW_TODO = true;   // set to false once every section is filled in
-
-const PROFILE = {
-  name: "Shrawan Mehta",
-  email: "theshrawanmehta@gmail.com",
-  links: {                       // shown ONCE, in the Contact section
-    linkedin:  "https://www.linkedin.com/in/shrawanmehta",
-    youtube:   "https://www.youtube.com/@shrawanmehta",
-    facebook:  "https://www.facebook.com/drshrawanmehta",
-    instagram: "https://www.instagram.com/theshrawanmehta/",
-    website:   "https://www.shrawanmehta.com"
-  },
-  location: "",                  // e.g. "Karlsruhe, Germany"; hidden when empty
-  languages: "",                 // e.g. "English, German, Nepali, Hindi"; hidden when empty
-  stats: [                       // numbers only; labels are translated automatically
-    { n: 10,   suffix: "+" },
-    { n: 1000, suffix: "+" },
-    { n: 50,   suffix: "+" },
-    { n: 4,    suffix: ""  }
-  ],
-  skillLevels: [90, 90, 80, 90, 80, 75],   // % for the 6 skills, in order
-
-  /* ---- From your LinkedIn: paste your real entries here ---- */
-  experience: [
-    // { when:"2021 – present", title:"Your job title", org:"Company, City", points:["Achievement 1","Achievement 2"] }
-  ],
-  education: [
-    // { when:"2012 – 2016", title:"Degree / programme", org:"University, Country", points:[] }
-  ],
-  certifications: [
-    // { when:"2024", title:"Microsoft Azure AI Fundamentals", org:"Microsoft", points:[] }
-  ],
-
-  /* ---- Your published paper(s) ---- */
-  publications: [
-    // { title:"Paper title", authors:"S. Mehta, A. Author", venue:"Journal name", year:"2024",
-    //   doi:"10.xxxx/xxxxx", url:"", abstract:"Short summary.", file:"files/paper.pdf" }
-  ],
-
-  /* ---- PDF files shown in the Documents section ----
-     HOW TO ADD A PDF: create a folder called  files  next to this index.html,
-     copy your PDF into it (for example files/Shrawan_Mehta_CV.pdf) and put the
-     path below. Upload the whole folder (index.html + files + profile.jpg) to your hosting. */
-  docs: [
-    { key: "cv",    file: "" },     // e.g. "files/Shrawan_Mehta_CV.pdf"
-    { key: "paper", file: "" }      // e.g. "files/Published_Paper.pdf"
-  ]
+const SHOW_TODO=false;
+const PROFILE={
+ name:"Shrawan Mehta",email:"theshrawanmehta@gmail.com",
+ links:{linkedin:"https://www.linkedin.com/in/shrawanmehta",youtube:"https://www.youtube.com/@shrawanmehta",facebook:"https://www.facebook.com/drshrawanmehta",instagram:"https://www.instagram.com/theshrawanmehta/",website:"https://www.shrawanmehta.com"},
+ xLink:"https://x.com/shrawanmehta0",
+ location:"Germany",languages:"Nepali, English, German (C1)",
+ stats:[{n:3,s:"+"},{n:20,s:"+"},{n:5,s:"+"},{n:3,s:""}],
+ skillLevels:[90,90,80,90,80,75],
+ experience:[
+  {when:"Sep 2025 – Present",title:"PLM & SC Quality Manager",org:"Medentika, Germany",points:["Supplier qualification and auditing under ISO 13485, MDR and FDA requirements","Preparation, execution and follow-up of on-site and remote supplier audits","Supplier performance evaluation and derivation of quality improvement measures","Maintenance of supplier master data; Supply Chain Quality and Product Life Cycle Management"]},
+  {when:"Jun 2026 – Present",title:"Co-Founder",org:"Mehta Brand, Biratnagar, Nepal",points:[]},
+  {when:"Mar 2025 – Aug 2025",title:"Master Thesis",org:"Dräger, Lübeck",points:["Developed an approach to systematically monitor long-term analysis of product-related data to enhance preventive quality work"]},
+  {when:"Sep 2023 – Feb 2025",title:"Warranty and Product Quality Management",org:"Dräger, Lübeck",points:["Operational handling of logistical and technical complaints within the warranty process","Support in claim handling in Product Quality Management"]},
+  {when:"Sep 2024 – Feb 2025",title:"Master's Internship: Patient–ventilator interaction analysis with a neural network",org:"Fraunhofer IMTE, Lübeck",points:["Machine learning algorithm to analyse patient–ventilator interaction"]},
+  {when:"Feb 2023 – Aug 2023",title:"Bachelor Thesis: fast digitalization of analog NMR signals",org:"Technische Hochschule Lübeck",points:["Requirements and development of a fast data acquisition (DAQ) and storage system for benchtop NMR"]},
+  {when:"Jan 2023 – Aug 2023",title:"Event Specialist",org:"BUHL Personal GmbH, Lübeck",points:[]},
+  {when:"Oct 2022 – Dec 2022",title:"Medical Imaging Specialist (Intern)",org:"Hugo Rost & Co. GmbH, Kiel",points:["Database management"]},
+  {when:"Jul 2021 – Sep 2022",title:"Corona Tester",org:"cbaMED Lifecare",points:["Antigen and PCR testing"]}],
+ education:[
+  {when:"2023 – 2025",title:"Master's degree, Biomedical/Medical Engineering",org:"Universität zu Lübeck",points:[]},
+  {when:"2019 – 2023",title:"Bachelor's degree, Biomedical/Medical Engineering",org:"Technische Hochschule Lübeck",points:["Medical device law (MDR, IVDR), clinical affairs, ISO 13485, ISO 14971","Quality management: Kanban, Lean, Poka-Yoke, QMS","Medical imaging (CT, MRI, PET/SPECT, ultrasound), signal processing with MATLAB, Python and C"]},
+  {when:"2018 – 2019",title:"Associate of Science, Natural Sciences (Studienkolleg)",org:"Hamburg",points:["Physics, biology, chemistry, maths; German as a foreign language (C1)"]},
+  {when:"2013 – 2015",title:"+2 Science, Natural Science",org:"Shikshadeep Higher Secondary School",points:[]}],
+ certifications:[
+  {when:"Jan 2026",title:"Regulatory Affairs Manager",org:"oncampus GmbH",points:[]},
+  {when:"Apr 2025",title:"Business Process Management",org:"Udemy",points:[]},
+  {when:"Oct 2023",title:"Machine Learning in 10 Minuten",org:"LinkedIn",points:[]}],
+ publications:[{title:"Published research paper (SCP 2025)",authors:"S. Mehta",venue:"SCP",year:"2025",doi:"10.18416/SCP.2025.1923",url:"",abstract:"Eager to learn: research published with DOI 10.18416/SCP.2025.1923."}],
+ docs:[{key:"cv",file:""},{key:"paper",file:""}]
 };
-
-/* =====================================================================
-   2) TRANSLATIONS (10 languages). Positional arrays; see English first.
-   ===================================================================== */
-const T = {
+const T={
 en:{n:"English",
  nav:["Home","About","Journey","Skills","Expertise","Publications","Articles","Documents","Contact"],
  badge:"👋 Welcome to my personal website",
- tag:"Educator | AI Enthusiast | Technology Professional",
- typed:["Making AI simple and practical","Helping professionals master Microsoft Copilot","Guiding careers in the age of cloud and AI"],
- btn:["Connect With Me","Learn More","Save as CV (PDF)"],
+ tag:"PLM & SC Quality Manager | Educator | AI Enthusiast",
+ typed:["Making AI simple and practical","Helping professionals master Microsoft Copilot","Guiding careers in the age of cloud and AI","Quality, regulation and medical technology"],
+ btn:["Connect With Me","Learn More"],
  stats:["Years of Experience","People Trained","Articles & Tutorials","Core Focus Areas"],
- role:"AI & Technology Evangelist", chips2:["Careers","Education"],
- lbl:["Focus","Languages","Location"], focus:"AI, Cloud, Careers",
+ role:"PLM & SC Quality Manager at Medentika",chips:["AI","Copilot","Azure","Quality","MedTech","Careers"],
+ lbl:["Focus","Languages","Location"],focus:"AI, Cloud, Quality, Careers",
  sec:[["About Me","Passionate about empowering people through technology and education."],["My Journey","Experience, education and certifications."],["Skills","Strengths I use every day."],["Areas of Expertise","Key domains where I share knowledge and practical insights."],["Published Work","Research papers and formal publications."],["Articles","Knowledge sharing for today's technology-driven world."],["Documents","Download my CV, paper and other PDF files."],["Let's Connect","Collaborations, training, speaking or simple questions are all welcome."]],
- about:[["Who I Am","Welcome to my personal website. I am an educator, technology professional, and Artificial Intelligence enthusiast committed to helping students, professionals, and organizations leverage modern technologies to achieve greater productivity and innovation."],["What I Do","With strong interests in Artificial Intelligence, Microsoft Cloud Technologies, Digital Transformation, and Career Development, I regularly share insights, practical guidance, and industry trends that help readers stay ahead in a rapidly evolving technology landscape."],["My Mission","My mission is to bridge the gap between technology and people by making complex concepts easy to understand and apply in real-world scenarios."]],
+ about:[["Who I Am","Welcome to my personal website. I am an educator, technology professional, and Artificial Intelligence enthusiast committed to helping students, professionals, and organizations leverage modern technologies to achieve greater productivity and innovation."],["Bio","I hold a Master's degree in Biomedical Engineering from the Universität zu Lübeck and work as PLM & SC Quality Manager at Medentika in Germany. My background covers supplier quality, medical device regulation (ISO 13485, MDR, FDA), warranty and product quality at Dräger, and machine learning research at Fraunhofer IMTE. I am also co-founder of Mehta Brand in Nepal."],["What I Do","With strong interests in Artificial Intelligence, Microsoft Cloud Technologies, Digital Transformation, and Career Development, I regularly share insights, practical guidance, and industry trends that help readers stay ahead in a rapidly evolving technology landscape."],["My Mission","My mission is to bridge the gap between technology and people by making complex concepts easy to understand and apply in real-world scenarios."]],
  expectT:"What You Can Expect",
  expect:["Clear, jargon-free explanations of AI and cloud topics","Hands-on guidance for Microsoft Copilot and productivity workflows","Career advice on skills, certifications and personal branding","Regular updates on technology trends"],
  tabs:["Experience","Education","Certifications"],
- todo:["to be completed","Add your entry here","Organisation, location","Dates"],
  skills:["Artificial Intelligence","Microsoft Copilot","Cloud Computing / Azure","Teaching & Training","Career Coaching","Digital Transformation"],
  exp:[["Artificial Intelligence","Exploring AI fundamentals, machine learning concepts, generative AI, prompt engineering, and real-world applications transforming industries."],["Microsoft Copilot","Helping professionals maximize productivity through Microsoft Copilot, AI-driven workflows, and smart workplace solutions."],["Cloud Computing","Insights into Microsoft Azure, cloud architecture, digital transformation, automation, and enterprise technology strategies."],["Career Growth","Guidance for students and professionals on skill development, certifications, personal branding, and future-ready careers."]],
- pub:["No publications listed yet.","DOI","Read paper","Copy citation","Copied ✓","Title of your published paper","Authors, journal, year and a short abstract will appear here."],
- art:["Search articles…","All","No articles match your search.","Read more","Artificial Intelligence","Productivity","Careers"],
+ pubT:["DOI","Copy citation","Copied ✓"],
+ art:["Search articles…","All","No articles match your search.","Artificial Intelligence","Productivity","Careers","Follow my posts on X","Short thoughts, updates and tech insights"],
  arts:[["Getting Started with Artificial Intelligence","Learn the fundamentals of AI, machine learning, and generative technologies that are shaping the future of innovation."],["Microsoft Copilot for Productivity","Discover how Microsoft Copilot can automate daily tasks, improve collaboration, and increase workplace efficiency."],["Career Growth in the AI Era","Explore the essential skills, learning strategies, and certifications needed to succeed in an AI-powered professional environment."]],
- docs:["Download PDF","View","Close","Curriculum Vitae (CV)","Published Paper","PDF coming soon"],
+ docs:["Download PDF","View","Close","Curriculum Vitae (CV)","Published Paper","PDF coming soon","Save this website as PDF","Print or save the whole page as a CV-style PDF"],
  ct:["Get in Touch","Choose whichever channel suits you best.","Send Me a Message","Your Name","Your Email","Topic","Message","Send Message","This opens your email app with the message ready to send.","Please fill in your name, a valid email and a message.","Opening your email app...","How can I help you?"],
  topics:["General question","Training / workshop","Collaboration","Career guidance","Speaking invitation"],
- ui:["Toggle dark mode","Open menu","Language","Back to top","Skip to content"]},
-
+ music:["Music on","Music off"]},
 de:{n:"Deutsch",
  nav:["Start","Über mich","Werdegang","Fähigkeiten","Expertise","Publikationen","Artikel","Dokumente","Kontakt"],
  badge:"👋 Willkommen auf meiner persönlichen Website",
- tag:"Pädagoge | KI-Enthusiast | Technologieprofi",
- typed:["KI einfach und praxisnah machen","Fachkräften helfen, Microsoft Copilot zu meistern","Karrieren im Zeitalter von Cloud und KI begleiten"],
- btn:["Kontakt aufnehmen","Mehr erfahren","Als Lebenslauf speichern (PDF)"],
+ tag:"PLM & SC Quality Manager | Pädagoge | KI-Enthusiast",
+ typed:["KI einfach und praxisnah machen","Fachkräften helfen, Microsoft Copilot zu meistern","Karrieren im Zeitalter von Cloud und KI begleiten","Qualität, Regulatorik und Medizintechnik"],
+ btn:["Kontakt aufnehmen","Mehr erfahren"],
  stats:["Jahre Erfahrung","Geschulte Personen","Artikel & Tutorials","Kernthemen"],
- role:"KI- & Technologie-Evangelist", chips2:["Karriere","Bildung"],
- lbl:["Schwerpunkt","Sprachen","Standort"], focus:"KI, Cloud, Karriere",
+ role:"PLM & SC Quality Manager bei Medentika",chips:["KI","Copilot","Azure","Qualität","MedTech","Karriere"],
+ lbl:["Schwerpunkt","Sprachen","Standort"],focus:"KI, Cloud, Qualität, Karriere",
  sec:[["Über mich","Leidenschaftlich dabei, Menschen durch Technologie und Bildung zu stärken."],["Mein Werdegang","Erfahrung, Ausbildung und Zertifizierungen."],["Fähigkeiten","Stärken, die ich täglich einsetze."],["Fachgebiete","Kernbereiche, in denen ich Wissen und praktische Einblicke teile."],["Publikationen","Forschungsarbeiten und offizielle Veröffentlichungen."],["Artikel","Wissensaustausch für die heutige technologiegetriebene Welt."],["Dokumente","Lebenslauf, Publikation und weitere PDF-Dateien herunterladen."],["Lassen Sie uns vernetzen","Kooperationen, Schulungen, Vorträge oder einfache Fragen sind willkommen."]],
- about:[["Wer ich bin","Willkommen auf meiner persönlichen Website. Ich bin Pädagoge, Technologieprofi und KI-Enthusiast und möchte Studierenden, Fachkräften und Organisationen helfen, moderne Technologien für mehr Produktivität und Innovation zu nutzen."],["Was ich tue","Mit großem Interesse an Künstlicher Intelligenz, Microsoft-Cloud-Technologien, digitaler Transformation und Karriereentwicklung teile ich regelmäßig Erkenntnisse, praktische Tipps und Branchentrends, damit Leserinnen und Leser in einer sich schnell wandelnden Technologiewelt die Nase vorn behalten."],["Meine Mission","Meine Mission ist es, die Lücke zwischen Technologie und Menschen zu schließen, indem ich komplexe Konzepte verständlich mache und im Alltag anwendbar vermittle."]],
+ about:[["Wer ich bin","Willkommen auf meiner persönlichen Website. Ich bin Pädagoge, Technologieprofi und KI-Enthusiast und möchte Studierenden, Fachkräften und Organisationen helfen, moderne Technologien für mehr Produktivität und Innovation zu nutzen."],["Kurzbiografie","Ich habe einen Master in Biomedical Engineering der Universität zu Lübeck und arbeite als PLM & SC Quality Manager bei Medentika in Deutschland. Mein Hintergrund umfasst Lieferantenqualität, Medizinprodukteregulatorik (ISO 13485, MDR, FDA), Warranty und Product Quality bei Dräger sowie Machine-Learning-Forschung am Fraunhofer IMTE. Außerdem bin ich Mitgründer von Mehta Brand in Nepal."],["Was ich tue","Mit großem Interesse an Künstlicher Intelligenz, Microsoft-Cloud-Technologien, digitaler Transformation und Karriereentwicklung teile ich regelmäßig Erkenntnisse, praktische Tipps und Branchentrends."],["Meine Mission","Meine Mission ist es, die Lücke zwischen Technologie und Menschen zu schließen, indem ich komplexe Konzepte verständlich mache und im Alltag anwendbar vermittle."]],
  expectT:"Was Sie erwartet",
  expect:["Klare Erklärungen zu KI- und Cloud-Themen ohne Fachjargon","Praxisnahe Anleitungen zu Microsoft Copilot und produktiven Arbeitsabläufen","Karrieretipps zu Fähigkeiten, Zertifizierungen und Personal Branding","Regelmäßige Updates zu Technologietrends"],
  tabs:["Berufserfahrung","Ausbildung","Zertifizierungen"],
- todo:["noch auszufüllen","Eintrag hier ergänzen","Organisation, Ort","Zeitraum"],
  skills:["Künstliche Intelligenz","Microsoft Copilot","Cloud Computing / Azure","Lehre & Schulung","Karrierecoaching","Digitale Transformation"],
- exp:[["Künstliche Intelligenz","Grundlagen der KI, Konzepte des maschinellen Lernens, generative KI, Prompt Engineering und reale Anwendungen, die Branchen verändern."],["Microsoft Copilot","Fachkräften helfen, mit Microsoft Copilot, KI-gestützten Arbeitsabläufen und smarten Lösungen produktiver zu arbeiten."],["Cloud Computing","Einblicke in Microsoft Azure, Cloud-Architektur, digitale Transformation, Automatisierung und Unternehmensstrategien."],["Karriereentwicklung","Orientierung für Studierende und Berufstätige zu Kompetenzaufbau, Zertifizierungen, Personal Branding und zukunftsfähigen Karrieren."]],
- pub:["Noch keine Publikationen aufgeführt.","DOI","Publikation lesen","Zitat kopieren","Kopiert ✓","Titel Ihrer veröffentlichten Arbeit","Autoren, Zeitschrift, Jahr und eine kurze Zusammenfassung erscheinen hier."],
- art:["Artikel durchsuchen…","Alle","Keine Artikel gefunden.","Weiterlesen","Künstliche Intelligenz","Produktivität","Karriere"],
- arts:[["Erste Schritte mit Künstlicher Intelligenz","Lernen Sie die Grundlagen von KI, maschinellem Lernen und generativen Technologien kennen, die die Zukunft der Innovation prägen."],["Microsoft Copilot für mehr Produktivität","Entdecken Sie, wie Microsoft Copilot tägliche Aufgaben automatisiert, die Zusammenarbeit verbessert und die Effizienz am Arbeitsplatz steigert."],["Karriereentwicklung im KI-Zeitalter","Erfahren Sie, welche Fähigkeiten, Lernstrategien und Zertifizierungen für den Erfolg in einem KI-geprägten Berufsumfeld wichtig sind."]],
- docs:["PDF herunterladen","Ansehen","Schließen","Lebenslauf","Veröffentlichte Arbeit","PDF folgt in Kürze"],
- ct:["Kontakt aufnehmen","Wählen Sie den Kanal, der Ihnen am besten passt.","Nachricht senden","Ihr Name","Ihre E-Mail","Thema","Nachricht","Nachricht senden","Dies öffnet Ihre E-Mail-App mit der vorbereiteten Nachricht.","Bitte geben Sie Ihren Namen, eine gültige E-Mail-Adresse und eine Nachricht ein.","E-Mail-App wird geöffnet...","Wie kann ich helfen?"],
+ exp:[["Künstliche Intelligenz","Grundlagen der KI, maschinelles Lernen, generative KI, Prompt Engineering und reale Anwendungen."],["Microsoft Copilot","Fachkräften helfen, mit Microsoft Copilot und KI-gestützten Arbeitsabläufen produktiver zu arbeiten."],["Cloud Computing","Einblicke in Microsoft Azure, Cloud-Architektur, digitale Transformation und Automatisierung."],["Karriereentwicklung","Orientierung zu Kompetenzaufbau, Zertifizierungen, Personal Branding und zukunftsfähigen Karrieren."]],
+ pubT:["DOI","Zitat kopieren","Kopiert ✓"],
+ art:["Artikel durchsuchen…","Alle","Keine Artikel gefunden.","Künstliche Intelligenz","Produktivität","Karriere","Mir auf X folgen","Kurze Gedanken, Updates und Tech-Einblicke"],
+ arts:[["Erste Schritte mit Künstlicher Intelligenz","Lernen Sie die Grundlagen von KI, maschinellem Lernen und generativen Technologien kennen."],["Microsoft Copilot für mehr Produktivität","Entdecken Sie, wie Microsoft Copilot tägliche Aufgaben automatisiert und die Zusammenarbeit verbessert."],["Karriereentwicklung im KI-Zeitalter","Welche Fähigkeiten, Lernstrategien und Zertifizierungen im KI-geprägten Berufsumfeld wichtig sind."]],
+ docs:["PDF herunterladen","Ansehen","Schließen","Lebenslauf","Veröffentlichte Arbeit","PDF folgt in Kürze","Diese Website als PDF speichern","Die ganze Seite als Lebenslauf-PDF drucken oder speichern"],
+ ct:["Kontakt aufnehmen","Wählen Sie den Kanal, der Ihnen am besten passt.","Nachricht senden","Ihr Name","Ihre E-Mail","Thema","Nachricht","Nachricht senden","Dies öffnet Ihre E-Mail-App mit der vorbereiteten Nachricht.","Bitte Name, gültige E-Mail und Nachricht eingeben.","E-Mail-App wird geöffnet...","Wie kann ich helfen?"],
  topics:["Allgemeine Frage","Schulung / Workshop","Zusammenarbeit","Karriereberatung","Vortragseinladung"],
- ui:["Dunkelmodus umschalten","Menü öffnen","Sprache","Nach oben","Zum Inhalt springen"]},
-
-fr:{n:"Français",
- nav:["Accueil","À propos","Parcours","Compétences","Expertise","Publications","Articles","Documents","Contact"],
- badge:"👋 Bienvenue sur mon site personnel",
- tag:"Formateur | Passionné d'IA | Professionnel de la technologie",
- typed:["Rendre l'IA simple et pratique","Aider les professionnels à maîtriser Microsoft Copilot","Accompagner les carrières à l'ère du cloud et de l'IA"],
- btn:["Me contacter","En savoir plus","Enregistrer en CV (PDF)"],
- stats:["Années d'expérience","Personnes formées","Articles et tutoriels","Domaines clés"],
- role:"Évangéliste IA et technologie", chips2:["Carrières","Éducation"],
- lbl:["Focus","Langues","Lieu"], focus:"IA, Cloud, Carrières",
- sec:[["À propos de moi","Passionné par l'autonomisation des personnes grâce à la technologie et à l'éducation."],["Mon parcours","Expérience, formation et certifications."],["Compétences","Les atouts que j'utilise au quotidien."],["Domaines d'expertise","Les domaines clés où je partage connaissances et conseils pratiques."],["Publications","Articles de recherche et publications officielles."],["Articles","Partage de connaissances pour le monde technologique d'aujourd'hui."],["Documents","Téléchargez mon CV, mon article et d'autres fichiers PDF."],["Restons en contact","Collaborations, formations, interventions ou simples questions : tout est le bienvenu."]],
- about:[["Qui suis-je","Bienvenue sur mon site personnel. Je suis formateur, professionnel de la technologie et passionné d'intelligence artificielle, et j'aide étudiants, professionnels et organisations à tirer parti des technologies modernes pour gagner en productivité et en innovation."],["Ce que je fais","Très intéressé par l'intelligence artificielle, les technologies cloud de Microsoft, la transformation numérique et le développement de carrière, je partage régulièrement des analyses, des conseils pratiques et des tendances du secteur pour garder une longueur d'avance dans un paysage technologique en évolution rapide."],["Ma mission","Ma mission est de rapprocher la technologie et les personnes en rendant les concepts complexes faciles à comprendre et à appliquer concrètement."]],
- expectT:"À quoi vous attendre",
- expect:["Des explications claires de l'IA et du cloud, sans jargon","Des conseils pratiques sur Microsoft Copilot et la productivité","Des conseils de carrière : compétences, certifications et personal branding","Des actualités régulières sur les tendances technologiques"],
- tabs:["Expérience","Formation","Certifications"],
- todo:["à compléter","Ajoutez votre entrée ici","Organisation, lieu","Dates"],
- skills:["Intelligence artificielle","Microsoft Copilot","Cloud computing / Azure","Enseignement et formation","Coaching de carrière","Transformation numérique"],
- exp:[["Intelligence artificielle","Fondamentaux de l'IA, apprentissage automatique, IA générative, ingénierie des prompts et applications concrètes qui transforment les secteurs."],["Microsoft Copilot","Aider les professionnels à gagner en productivité avec Microsoft Copilot, les flux de travail pilotés par l'IA et les solutions intelligentes."],["Cloud computing","Éclairages sur Microsoft Azure, l'architecture cloud, la transformation numérique, l'automatisation et les stratégies technologiques d'entreprise."],["Évolution de carrière","Conseils aux étudiants et professionnels sur le développement des compétences, les certifications, la marque personnelle et les carrières d'avenir."]],
- pub:["Aucune publication pour l'instant.","DOI","Lire l'article","Copier la citation","Copié ✓","Titre de votre article publié","Les auteurs, la revue, l'année et un bref résumé apparaîtront ici."],
- art:["Rechercher des articles…","Tous","Aucun article ne correspond.","Lire la suite","Intelligence artificielle","Productivité","Carrières"],
- arts:[["Débuter avec l'intelligence artificielle","Découvrez les fondamentaux de l'IA, de l'apprentissage automatique et des technologies génératives qui façonnent l'avenir de l'innovation."],["Microsoft Copilot pour la productivité","Découvrez comment Microsoft Copilot peut automatiser les tâches quotidiennes, améliorer la collaboration et accroître l'efficacité au travail."],["Évoluer professionnellement à l'ère de l'IA","Explorez les compétences, stratégies d'apprentissage et certifications essentielles pour réussir dans un environnement professionnel porté par l'IA."]],
- docs:["Télécharger le PDF","Voir","Fermer","Curriculum vitae (CV)","Article publié","PDF bientôt disponible"],
- ct:["Me contacter","Choisissez le canal qui vous convient le mieux.","Envoyez-moi un message","Votre nom","Votre e-mail","Sujet","Message","Envoyer le message","Cela ouvre votre application de messagerie avec le message prêt à envoyer.","Veuillez renseigner votre nom, un e-mail valide et un message.","Ouverture de votre application de messagerie...","Comment puis-je vous aider ?"],
- topics:["Question générale","Formation / atelier","Collaboration","Conseils de carrière","Invitation à intervenir"],
- ui:["Basculer le mode sombre","Ouvrir le menu","Langue","Haut de page","Aller au contenu"]},
-
-es:{n:"Español",
- nav:["Inicio","Sobre mí","Trayectoria","Habilidades","Experiencia","Publicaciones","Artículos","Documentos","Contacto"],
- badge:"👋 Bienvenido a mi sitio web personal",
- tag:"Educador | Entusiasta de la IA | Profesional de la tecnología",
- typed:["Hacer la IA sencilla y práctica","Ayudar a los profesionales a dominar Microsoft Copilot","Guiar carreras en la era de la nube y la IA"],
- btn:["Contáctame","Saber más","Guardar como CV (PDF)"],
- stats:["Años de experiencia","Personas formadas","Artículos y tutoriales","Áreas clave"],
- role:"Evangelista de IA y tecnología", chips2:["Carreras","Educación"],
- lbl:["Enfoque","Idiomas","Ubicación"], focus:"IA, Nube, Carreras",
- sec:[["Sobre mí","Apasionado por empoderar a las personas mediante la tecnología y la educación."],["Mi trayectoria","Experiencia, educación y certificaciones."],["Habilidades","Fortalezas que uso cada día."],["Áreas de experiencia","Ámbitos clave en los que comparto conocimiento y perspectivas prácticas."],["Publicaciones","Artículos de investigación y publicaciones formales."],["Artículos","Intercambio de conocimiento para el mundo tecnológico actual."],["Documentos","Descarga mi CV, mi artículo y otros archivos PDF."],["Conectemos","Colaboraciones, formación, charlas o simples preguntas son bienvenidas."]],
- about:[["Quién soy","Bienvenido a mi sitio web personal. Soy educador, profesional de la tecnología y entusiasta de la inteligencia artificial, y ayudo a estudiantes, profesionales y organizaciones a aprovechar las tecnologías modernas para ser más productivos e innovadores."],["Qué hago","Con un gran interés en la inteligencia artificial, las tecnologías en la nube de Microsoft, la transformación digital y el desarrollo profesional, comparto con regularidad ideas, orientación práctica y tendencias del sector para mantenerse al día en un panorama tecnológico en constante cambio."],["Mi misión","Mi misión es acercar la tecnología a las personas, haciendo que los conceptos complejos sean fáciles de entender y de aplicar en situaciones reales."]],
- expectT:"Qué puedes esperar",
- expect:["Explicaciones claras y sin jerga sobre IA y la nube","Guías prácticas sobre Microsoft Copilot y flujos de trabajo","Consejos de carrera sobre habilidades, certificaciones y marca personal","Novedades periódicas sobre tendencias tecnológicas"],
- tabs:["Experiencia","Educación","Certificaciones"],
- todo:["pendiente de completar","Añade tu entrada aquí","Organización, ubicación","Fechas"],
- skills:["Inteligencia artificial","Microsoft Copilot","Computación en la nube / Azure","Enseñanza y formación","Coaching profesional","Transformación digital"],
- exp:[["Inteligencia artificial","Fundamentos de la IA, aprendizaje automático, IA generativa, ingeniería de prompts y aplicaciones reales que transforman industrias."],["Microsoft Copilot","Ayudar a los profesionales a maximizar su productividad con Microsoft Copilot, flujos de trabajo con IA y soluciones inteligentes."],["Computación en la nube","Perspectivas sobre Microsoft Azure, arquitectura en la nube, transformación digital, automatización y estrategias tecnológicas empresariales."],["Crecimiento profesional","Orientación para estudiantes y profesionales sobre desarrollo de habilidades, certificaciones, marca personal y carreras con futuro."]],
- pub:["Aún no hay publicaciones.","DOI","Leer artículo","Copiar cita","Copiado ✓","Título de tu artículo publicado","Aquí aparecerán los autores, la revista, el año y un breve resumen."],
- art:["Buscar artículos…","Todos","Ningún artículo coincide con la búsqueda.","Leer más","Inteligencia artificial","Productividad","Carreras"],
- arts:[["Primeros pasos con la inteligencia artificial","Aprende los fundamentos de la IA, el aprendizaje automático y las tecnologías generativas que están moldeando el futuro de la innovación."],["Microsoft Copilot para la productividad","Descubre cómo Microsoft Copilot puede automatizar tareas diarias, mejorar la colaboración y aumentar la eficiencia laboral."],["Crecimiento profesional en la era de la IA","Explora las habilidades, estrategias de aprendizaje y certificaciones esenciales para tener éxito en un entorno profesional impulsado por la IA."]],
- docs:["Descargar PDF","Ver","Cerrar","Curriculum vitae (CV)","Artículo publicado","PDF próximamente"],
- ct:["Ponte en contacto","Elige el canal que mejor te convenga.","Envíame un mensaje","Tu nombre","Tu correo electrónico","Asunto","Mensaje","Enviar mensaje","Se abrirá tu aplicación de correo con el mensaje listo para enviar.","Introduce tu nombre, un correo válido y un mensaje.","Abriendo tu aplicación de correo...","¿En qué puedo ayudarte?"],
- topics:["Pregunta general","Formación / taller","Colaboración","Orientación profesional","Invitación como ponente"],
- ui:["Alternar modo oscuro","Abrir menú","Idioma","Volver arriba","Saltar al contenido"]},
-
-it:{n:"Italiano",
- nav:["Home","Chi sono","Percorso","Competenze","Expertise","Pubblicazioni","Articoli","Documenti","Contatti"],
- badge:"👋 Benvenuto nel mio sito personale",
- tag:"Formatore | Appassionato di IA | Professionista della tecnologia",
- typed:["Rendere l'IA semplice e pratica","Aiutare i professionisti a padroneggiare Microsoft Copilot","Guidare le carriere nell'era del cloud e dell'IA"],
- btn:["Contattami","Scopri di più","Salva come CV (PDF)"],
- stats:["Anni di esperienza","Persone formate","Articoli e tutorial","Aree principali"],
- role:"Evangelista di IA e tecnologia", chips2:["Carriere","Formazione"],
- lbl:["Focus","Lingue","Sede"], focus:"IA, Cloud, Carriere",
- sec:[["Chi sono","Appassionato di valorizzare le persone attraverso tecnologia e formazione."],["Il mio percorso","Esperienza, formazione e certificazioni."],["Competenze","I punti di forza che uso ogni giorno."],["Aree di competenza","Ambiti chiave in cui condivido conoscenze e spunti pratici."],["Pubblicazioni","Articoli di ricerca e pubblicazioni formali."],["Articoli","Condivisione di conoscenze per il mondo tecnologico di oggi."],["Documenti","Scarica il mio CV, il mio articolo e altri file PDF."],["Mettiamoci in contatto","Collaborazioni, formazione, interventi o semplici domande sono tutti benvenuti."]],
- about:[["Chi sono","Benvenuto nel mio sito personale. Sono un formatore, professionista della tecnologia e appassionato di intelligenza artificiale, e aiuto studenti, professionisti e organizzazioni a sfruttare le tecnologie moderne per aumentare produttività e innovazione."],["Cosa faccio","Con un forte interesse per l'intelligenza artificiale, le tecnologie cloud di Microsoft, la trasformazione digitale e lo sviluppo di carriera, condivido regolarmente approfondimenti, consigli pratici e tendenze del settore per restare al passo in un panorama tecnologico in rapida evoluzione."],["La mia missione","La mia missione è colmare il divario tra tecnologia e persone, rendendo i concetti complessi facili da capire e da applicare nella realtà."]],
- expectT:"Cosa puoi aspettarti",
- expect:["Spiegazioni chiare e senza gergo su IA e cloud","Guide pratiche su Microsoft Copilot e flussi di lavoro","Consigli di carriera su competenze, certificazioni e personal branding","Aggiornamenti regolari sulle tendenze tecnologiche"],
- tabs:["Esperienza","Formazione","Certificazioni"],
- todo:["da completare","Aggiungi qui la tua voce","Organizzazione, sede","Date"],
- skills:["Intelligenza artificiale","Microsoft Copilot","Cloud computing / Azure","Insegnamento e formazione","Career coaching","Trasformazione digitale"],
- exp:[["Intelligenza artificiale","Fondamenti di IA, machine learning, IA generativa, prompt engineering e applicazioni reali che trasformano i settori."],["Microsoft Copilot","Aiutare i professionisti a massimizzare la produttività con Microsoft Copilot, flussi di lavoro basati su IA e soluzioni smart."],["Cloud computing","Approfondimenti su Microsoft Azure, architettura cloud, trasformazione digitale, automazione e strategie tecnologiche aziendali."],["Crescita professionale","Consigli per studenti e professionisti su sviluppo delle competenze, certificazioni, personal branding e carriere orientate al futuro."]],
- pub:["Nessuna pubblicazione al momento.","DOI","Leggi l'articolo","Copia citazione","Copiato ✓","Titolo del tuo articolo pubblicato","Qui compariranno autori, rivista, anno e un breve riassunto."],
- art:["Cerca articoli…","Tutti","Nessun articolo corrisponde alla ricerca.","Leggi di più","Intelligenza artificiale","Produttività","Carriere"],
- arts:[["Iniziare con l'intelligenza artificiale","Scopri i fondamenti di IA, machine learning e tecnologie generative che stanno plasmando il futuro dell'innovazione."],["Microsoft Copilot per la produttività","Scopri come Microsoft Copilot può automatizzare le attività quotidiane, migliorare la collaborazione e aumentare l'efficienza sul lavoro."],["Crescita professionale nell'era dell'IA","Esplora le competenze, le strategie di apprendimento e le certificazioni essenziali per avere successo in un ambiente professionale guidato dall'IA."]],
- docs:["Scarica PDF","Visualizza","Chiudi","Curriculum vitae (CV)","Articolo pubblicato","PDF in arrivo"],
- ct:["Contattami","Scegli il canale che preferisci.","Inviami un messaggio","Il tuo nome","La tua e-mail","Argomento","Messaggio","Invia messaggio","Si aprirà la tua app di posta con il messaggio pronto da inviare.","Inserisci nome, un'e-mail valida e un messaggio.","Apertura dell'app di posta...","Come posso aiutarti?"],
- topics:["Domanda generale","Formazione / workshop","Collaborazione","Orientamento professionale","Invito come relatore"],
- ui:["Attiva/disattiva modalità scura","Apri menu","Lingua","Torna su","Vai al contenuto"]},
-
-ne:{n:"नेपाली",
- nav:["गृहपृष्ठ","मेरो बारेमा","यात्रा","सीप","विशेषज्ञता","प्रकाशन","लेखहरू","कागजातहरू","सम्पर्क"],
- badge:"👋 मेरो व्यक्तिगत वेबसाइटमा स्वागत छ",
- tag:"शिक्षक | एआई उत्साही | प्रविधि पेशेवर",
- typed:["एआईलाई सरल र व्यावहारिक बनाउँदै","पेशेवरहरूलाई Microsoft Copilot मा दक्ष बनाउँदै","क्लाउड र एआईको युगमा करियरको मार्गदर्शन"],
- btn:["मसँग जोडिनुहोस्","थप जान्नुहोस्","सीभी (PDF) बचत गर्नुहोस्"],
- stats:["वर्षको अनुभव","तालिम पाएका व्यक्ति","लेख र ट्युटोरियल","मुख्य क्षेत्र"],
- role:"एआई तथा प्रविधि प्रवर्द्धक", chips2:["करियर","शिक्षा"],
- lbl:["केन्द्र","भाषाहरू","स्थान"], focus:"एआई, क्लाउड, करियर",
- sec:[["मेरो बारेमा","प्रविधि र शिक्षामार्फत मानिसहरूलाई सशक्त बनाउन समर्पित।"],["मेरो यात्रा","अनुभव, शिक्षा र प्रमाणपत्रहरू।"],["सीपहरू","म दैनिक रूपमा प्रयोग गर्ने क्षमताहरू।"],["विशेषज्ञताका क्षेत्र","ज्ञान र व्यावहारिक अन्तर्दृष्टि साझा गर्ने मुख्य क्षेत्रहरू।"],["प्रकाशित कार्य","अनुसन्धान पत्र र औपचारिक प्रकाशनहरू।"],["लेखहरू","आजको प्रविधि-संचालित संसारका लागि ज्ञान साझेदारी।"],["कागजातहरू","मेरो सीभी, प्रकाशित पत्र र अन्य PDF फाइलहरू डाउनलोड गर्नुहोस्।"],["जोडिऔं","सहकार्य, तालिम, वक्तव्य वा साधारण प्रश्न सबै स्वागतयोग्य छन्।"]],
- about:[["म को हुँ","मेरो व्यक्तिगत वेबसाइटमा स्वागत छ। म एक शिक्षक, प्रविधि पेशेवर र कृत्रिम बुद्धिमत्ताप्रति उत्साही व्यक्ति हुँ, जसले विद्यार्थी, पेशेवर र संस्थाहरूलाई आधुनिक प्रविधिको उपयोग गरेर उत्पादकता र नवप्रवर्तन बढाउन सहयोग गर्छु।"],["म के गर्छु","कृत्रिम बुद्धिमत्ता, Microsoft क्लाउड प्रविधि, डिजिटल रूपान्तरण र करियर विकासमा गहिरो रुचि राखेर म नियमित रूपमा जानकारी, व्यावहारिक मार्गदर्शन र उद्योगका प्रवृत्तिहरू साझा गर्छु, जसले पाठकहरूलाई छिटो परिवर्तन भइरहेको प्रविधिको संसारमा अगाडि रहन मद्दत गर्छ।"],["मेरो ध्येय","मेरो ध्येय जटिल अवधारणाहरूलाई सजिलै बुझ्न र वास्तविक जीवनमा लागू गर्न सकिने बनाएर प्रविधि र मानिसबीचको दूरी घटाउनु हो।"]],
- expectT:"तपाईंले के अपेक्षा गर्न सक्नुहुन्छ",
- expect:["एआई र क्लाउडबारे सरल, जटिल शब्दरहित व्याख्या","Microsoft Copilot र उत्पादकताका लागि व्यावहारिक मार्गदर्शन","सीप, प्रमाणपत्र र व्यक्तिगत ब्रान्डिङबारे करियर सल्लाह","प्रविधिका प्रवृत्तिबारे नियमित अद्यावधिक"],
- tabs:["अनुभव","शिक्षा","प्रमाणपत्र"],
- todo:["पूरा गर्न बाँकी","यहाँ आफ्नो विवरण थप्नुहोस्","संस्था, स्थान","मिति"],
- skills:["कृत्रिम बुद्धिमत्ता","Microsoft Copilot","क्लाउड कम्प्युटिङ / Azure","शिक्षण तथा तालिम","करियर कोचिङ","डिजिटल रूपान्तरण"],
- exp:[["कृत्रिम बुद्धिमत्ता","एआईका आधारभूत कुरा, मेसिन लर्निङ, जेनेरेटिभ एआई, प्रम्प्ट इन्जिनियरिङ र उद्योग बदल्ने वास्तविक प्रयोगहरूको अन्वेषण।"],["Microsoft Copilot","Microsoft Copilot, एआई-आधारित कार्यप्रवाह र स्मार्ट कार्यस्थल समाधानमार्फत पेशेवरहरूको उत्पादकता बढाउन सहयोग।"],["क्लाउड कम्प्युटिङ","Microsoft Azure, क्लाउड आर्किटेक्चर, डिजिटल रूपान्तरण, स्वचालन र उद्यम प्रविधि रणनीतिबारे अन्तर्दृष्टि।"],["करियर विकास","विद्यार्थी र पेशेवरहरूका लागि सीप विकास, प्रमाणपत्र, व्यक्तिगत ब्रान्डिङ र भविष्यउन्मुख करियरबारे मार्गदर्शन।"]],
- pub:["अहिलेसम्म कुनै प्रकाशन सूचीबद्ध छैन।","DOI","पत्र पढ्नुहोस्","उद्धरण प्रतिलिपि गर्नुहोस्","प्रतिलिपि भयो ✓","तपाईंको प्रकाशित पत्रको शीर्षक","लेखक, पत्रिका, वर्ष र छोटो सारांश यहाँ देखिनेछ।"],
- art:["लेख खोज्नुहोस्…","सबै","खोजसँग मेल खाने लेख भेटिएन।","थप पढ्नुहोस्","कृत्रिम बुद्धिमत्ता","उत्पादकता","करियर"],
- arts:[["कृत्रिम बुद्धिमत्ताबाट सुरु गर्ने तरिका","नवप्रवर्तनको भविष्य निर्माण गरिरहेका एआई, मेसिन लर्निङ र जेनेरेटिभ प्रविधिका आधारभूत कुरा सिक्नुहोस्।"],["उत्पादकताका लागि Microsoft Copilot","Microsoft Copilot ले दैनिक कामहरू कसरी स्वचालित गर्छ, सहकार्य सुधार्छ र कार्यस्थलको कार्यक्षमता बढाउँछ भन्ने थाहा पाउनुहोस्।"],["एआई युगमा करियर विकास","एआई-सञ्चालित पेशागत वातावरणमा सफल हुन आवश्यक सीप, सिकाइका रणनीति र प्रमाणपत्रहरू अन्वेषण गर्नुहोस्।"]],
- docs:["PDF डाउनलोड गर्नुहोस्","हेर्नुहोस्","बन्द गर्नुहोस्","सीभी (बायोडाटा)","प्रकाशित पत्र","PDF छिट्टै आउँदैछ"],
- ct:["सम्पर्कमा रहनुहोस्","तपाईंलाई उपयुक्त लाग्ने माध्यम छान्नुहोस्।","मलाई सन्देश पठाउनुहोस्","तपाईंको नाम","तपाईंको इमेल","विषय","सन्देश","सन्देश पठाउनुहोस्","यसले पठाउन तयार सन्देशसहित तपाईंको इमेल एप खोल्नेछ।","कृपया आफ्नो नाम, मान्य इमेल र सन्देश भर्नुहोस्।","तपाईंको इमेल एप खोलिँदैछ...","म कसरी सहयोग गर्न सक्छु?"],
- topics:["सामान्य प्रश्न","तालिम / कार्यशाला","सहकार्य","करियर मार्गदर्शन","वक्ताको रूपमा निमन्त्रणा"],
- ui:["डार्क मोड बदल्नुहोस्","मेनु खोल्नुहोस्","भाषा","माथि जानुहोस्","सामग्रीमा जानुहोस्"]},
-
-hi:{n:"हिन्दी",
- nav:["होम","परिचय","यात्रा","कौशल","विशेषज्ञता","प्रकाशन","लेख","दस्तावेज़","संपर्क"],
- badge:"👋 मेरी व्यक्तिगत वेबसाइट में आपका स्वागत है",
- tag:"शिक्षक | एआई उत्साही | प्रौद्योगिकी पेशेवर",
- typed:["एआई को सरल और व्यावहारिक बनाना","पेशेवरों को Microsoft Copilot में दक्ष बनाना","क्लाउड और एआई के युग में करियर का मार्गदर्शन"],
- btn:["मुझसे जुड़ें","और जानें","सीवी (PDF) के रूप में सहेजें"],
- stats:["वर्षों का अनुभव","प्रशिक्षित लोग","लेख और ट्यूटोरियल","मुख्य क्षेत्र"],
- role:"एआई और प्रौद्योगिकी प्रचारक", chips2:["करियर","शिक्षा"],
- lbl:["फोकस","भाषाएँ","स्थान"], focus:"एआई, क्लाउड, करियर",
- sec:[["मेरे बारे में","प्रौद्योगिकी और शिक्षा के माध्यम से लोगों को सशक्त बनाने के लिए समर्पित।"],["मेरी यात्रा","अनुभव, शिक्षा और प्रमाणपत्र।"],["कौशल","वे क्षमताएँ जिनका मैं रोज़ उपयोग करता हूँ।"],["विशेषज्ञता के क्षेत्र","मुख्य क्षेत्र जहाँ मैं ज्ञान और व्यावहारिक सुझाव साझा करता हूँ।"],["प्रकाशित कार्य","शोध पत्र और औपचारिक प्रकाशन।"],["लेख","आज की प्रौद्योगिकी-संचालित दुनिया के लिए ज्ञान साझा करना।"],["दस्तावेज़","मेरा सीवी, शोध पत्र और अन्य PDF फ़ाइलें डाउनलोड करें।"],["जुड़ें","सहयोग, प्रशिक्षण, व्याख्यान या साधारण प्रश्न, सभी का स्वागत है।"]],
- about:[["मैं कौन हूँ","मेरी व्यक्तिगत वेबसाइट में आपका स्वागत है। मैं एक शिक्षक, प्रौद्योगिकी पेशेवर और कृत्रिम बुद्धिमत्ता का उत्साही हूँ, जो विद्यार्थियों, पेशेवरों और संगठनों को आधुनिक तकनीकों का उपयोग करके अधिक उत्पादकता और नवाचार हासिल करने में मदद करता है।"],["मैं क्या करता हूँ","कृत्रिम बुद्धिमत्ता, Microsoft क्लाउड तकनीकों, डिजिटल परिवर्तन और करियर विकास में गहरी रुचि के साथ, मैं नियमित रूप से जानकारी, व्यावहारिक मार्गदर्शन और उद्योग के रुझान साझा करता हूँ, ताकि पाठक तेज़ी से बदलती तकनीकी दुनिया में आगे रह सकें।"],["मेरा मिशन","मेरा मिशन जटिल अवधारणाओं को आसानी से समझने और वास्तविक जीवन में लागू करने योग्य बनाकर तकनीक और लोगों के बीच की दूरी को कम करना है।"]],
- expectT:"आप क्या उम्मीद कर सकते हैं",
- expect:["एआई और क्लाउड की सरल, कठिन शब्दों से मुक्त व्याख्याएँ","Microsoft Copilot और उत्पादकता के लिए व्यावहारिक मार्गदर्शन","कौशल, प्रमाणपत्र और पर्सनल ब्रांडिंग पर करियर सलाह","तकनीकी रुझानों पर नियमित अपडेट"],
- tabs:["अनुभव","शिक्षा","प्रमाणपत्र"],
- todo:["पूरा किया जाना बाकी","यहाँ अपनी प्रविष्टि जोड़ें","संस्था, स्थान","तिथियाँ"],
- skills:["कृत्रिम बुद्धिमत्ता","Microsoft Copilot","क्लाउड कंप्यूटिंग / Azure","शिक्षण और प्रशिक्षण","करियर कोचिंग","डिजिटल परिवर्तन"],
- exp:[["कृत्रिम बुद्धिमत्ता","एआई की बुनियादी बातें, मशीन लर्निंग, जेनरेटिव एआई, प्रॉम्प्ट इंजीनियरिंग और उद्योगों को बदलते वास्तविक अनुप्रयोगों की पड़ताल।"],["Microsoft Copilot","Microsoft Copilot, एआई-संचालित कार्यप्रवाह और स्मार्ट कार्यस्थल समाधानों के ज़रिए पेशेवरों की उत्पादकता बढ़ाने में मदद।"],["क्लाउड कंप्यूटिंग","Microsoft Azure, क्लाउड आर्किटेक्चर, डिजिटल परिवर्तन, ऑटोमेशन और एंटरप्राइज़ तकनीकी रणनीतियों पर अंतर्दृष्टि।"],["करियर विकास","विद्यार्थियों और पेशेवरों के लिए कौशल विकास, प्रमाणपत्र, पर्सनल ब्रांडिंग और भविष्य के लिए तैयार करियर पर मार्गदर्शन।"]],
- pub:["अभी तक कोई प्रकाशन सूचीबद्ध नहीं है।","DOI","शोध पत्र पढ़ें","उद्धरण कॉपी करें","कॉपी हो गया ✓","आपके प्रकाशित शोध पत्र का शीर्षक","लेखक, पत्रिका, वर्ष और संक्षिप्त सारांश यहाँ दिखाई देंगे।"],
- art:["लेख खोजें…","सभी","आपकी खोज से कोई लेख मेल नहीं खाता।","और पढ़ें","कृत्रिम बुद्धिमत्ता","उत्पादकता","करियर"],
- arts:[["कृत्रिम बुद्धिमत्ता के साथ शुरुआत","नवाचार का भविष्य गढ़ रहे एआई, मशीन लर्निंग और जेनरेटिव तकनीकों की बुनियादी बातें सीखें।"],["उत्पादकता के लिए Microsoft Copilot","जानें कि Microsoft Copilot रोज़मर्रा के काम कैसे स्वचालित करता है, सहयोग बेहतर बनाता है और कार्यस्थल की दक्षता बढ़ाता है।"],["एआई युग में करियर विकास","एआई-संचालित पेशेवर माहौल में सफल होने के लिए ज़रूरी कौशल, सीखने की रणनीतियाँ और प्रमाणपत्र जानें।"]],
- docs:["PDF डाउनलोड करें","देखें","बंद करें","बायोडाटा (सीवी)","प्रकाशित शोध पत्र","PDF जल्द उपलब्ध होगा"],
- ct:["संपर्क करें","अपनी सुविधा का माध्यम चुनें।","मुझे संदेश भेजें","आपका नाम","आपका ईमेल","विषय","संदेश","संदेश भेजें","यह भेजने के लिए तैयार संदेश के साथ आपका ईमेल ऐप खोलेगा।","कृपया अपना नाम, मान्य ईमेल और संदेश भरें।","आपका ईमेल ऐप खुल रहा है...","मैं आपकी कैसे मदद कर सकता हूँ?"],
- topics:["सामान्य प्रश्न","प्रशिक्षण / कार्यशाला","सहयोग","करियर मार्गदर्शन","वक्ता के रूप में आमंत्रण"],
- ui:["डार्क मोड बदलें","मेनू खोलें","भाषा","ऊपर जाएँ","सामग्री पर जाएँ"]},
-
-zh:{n:"中文",
- nav:["首页","关于我","经历","技能","专长","出版物","文章","文档","联系"],
- badge:"👋 欢迎来到我的个人网站",
- tag:"教育者 | 人工智能爱好者 | 技术专业人士",
- typed:["让人工智能简单实用","帮助专业人士精通 Microsoft Copilot","在云与人工智能时代指导职业发展"],
- btn:["联系我","了解更多","保存为简历（PDF）"],
- stats:["年经验","受训人数","文章与教程","核心领域"],
- role:"人工智能与技术布道者", chips2:["职业发展","教育"],
- lbl:["重点","语言","所在地"], focus:"人工智能、云、职业发展",
- sec:[["关于我","热衷于通过技术与教育赋能他人。"],["我的经历","工作经验、教育背景与资质认证。"],["技能","我每天运用的优势。"],["专长领域","我分享知识与实用见解的核心领域。"],["已发表成果","研究论文与正式出版物。"],["文章","为当今技术驱动的世界分享知识。"],["文档","下载我的简历、论文及其他 PDF 文件。"],["保持联系","欢迎合作、培训、演讲邀请或任何简单的问题。"]],
- about:[["我是谁","欢迎来到我的个人网站。我是一名教育者、技术专业人士和人工智能爱好者，致力于帮助学生、职场人士和企业利用现代技术提高效率、推动创新。"],["我的工作","我对人工智能、微软云技术、数字化转型和职业发展有着浓厚兴趣，定期分享见解、实用指导和行业趋势，帮助读者在快速变化的技术环境中保持领先。"],["我的使命","我的使命是让复杂的概念通俗易懂并能应用于实际场景，从而拉近技术与人的距离。"]],
- expectT:"您可以期待",
- expect:["通俗易懂、没有术语堆砌的人工智能与云技术讲解","Microsoft Copilot 与高效工作流程的实操指南","关于技能、认证和个人品牌的职业建议","技术趋势的定期更新"],
- tabs:["工作经历","教育背景","资质认证"],
- todo:["待补充","在此添加您的内容","机构，地点","时间"],
- skills:["人工智能","Microsoft Copilot","云计算 / Azure","教学与培训","职业辅导","数字化转型"],
- exp:[["人工智能","探索人工智能基础、机器学习概念、生成式人工智能、提示工程，以及正在改变各行各业的实际应用。"],["Microsoft Copilot","借助 Microsoft Copilot、AI 驱动的工作流程和智能办公方案，帮助专业人士提升效率。"],["云计算","深入解读 Microsoft Azure、云架构、数字化转型、自动化和企业技术战略。"],["职业发展","为学生和职场人士提供技能提升、认证、个人品牌和面向未来的职业发展指导。"]],
- pub:["暂无出版物。","DOI","阅读论文","复制引用","已复制 ✓","您已发表论文的标题","作者、期刊、年份和简要摘要将显示在此处。"],
- art:["搜索文章…","全部","没有符合搜索条件的文章。","阅读更多","人工智能","生产力","职业发展"],
- arts:[["人工智能入门","了解人工智能、机器学习和生成式技术的基础知识，它们正在塑造创新的未来。"],["借助 Microsoft Copilot 提升效率","了解 Microsoft Copilot 如何自动化日常任务、改善协作并提高工作效率。"],["人工智能时代的职业发展","探索在 AI 驱动的职场中取得成功所需的核心技能、学习方法和认证。"]],
- docs:["下载 PDF","查看","关闭","个人简历（CV）","已发表论文","PDF 即将上线"],
- ct:["联系方式","请选择最适合您的联系渠道。","给我留言","您的姓名","您的邮箱","主题","留言","发送留言","点击后将打开您的邮件应用，并填好留言内容。","请填写姓名、有效邮箱和留言。","正在打开您的邮件应用...","我能为您做些什么？"],
- topics:["一般问题","培训 / 工作坊","合作","职业指导","演讲邀请"],
- ui:["切换深色模式","打开菜单","语言","回到顶部","跳到内容"]},
-
-ar:{n:"العربية", rtl:true,
- nav:["الرئيسية","نبذة عني","المسيرة","المهارات","الخبرات","المنشورات","المقالات","المستندات","تواصل"],
- badge:"👋 مرحبًا بك في موقعي الشخصي",
- tag:"معلّم | شغوف بالذكاء الاصطناعي | محترف في التكنولوجيا",
- typed:["جعل الذكاء الاصطناعي بسيطًا وعمليًا","مساعدة المهنيين على إتقان Microsoft Copilot","توجيه المسارات المهنية في عصر السحابة والذكاء الاصطناعي"],
- btn:["تواصل معي","اعرف المزيد","حفظ كسيرة ذاتية (PDF)"],
- stats:["سنوات الخبرة","أشخاص تم تدريبهم","مقالات ودروس","مجالات التركيز"],
- role:"داعية للذكاء الاصطناعي والتكنولوجيا", chips2:["المسارات المهنية","التعليم"],
- lbl:["التركيز","اللغات","الموقع"], focus:"الذكاء الاصطناعي، السحابة، المسارات المهنية",
- sec:[["نبذة عني","شغوف بتمكين الناس من خلال التكنولوجيا والتعليم."],["مسيرتي","الخبرة والتعليم والشهادات."],["المهارات","نقاط القوة التي أستخدمها يوميًا."],["مجالات الخبرة","المجالات الرئيسية التي أشارك فيها المعرفة والرؤى العملية."],["الأعمال المنشورة","أوراق بحثية ومنشورات رسمية."],["المقالات","مشاركة المعرفة لعالم اليوم المدفوع بالتكنولوجيا."],["المستندات","قم بتنزيل سيرتي الذاتية وبحثي وملفات PDF الأخرى."],["لنتواصل","نرحب بالتعاون والتدريب والمحاضرات أو الأسئلة البسيطة."]],
- about:[["من أنا","مرحبًا بكم في موقعي الشخصي. أنا معلّم ومحترف في التكنولوجيا وشغوف بالذكاء الاصطناعي، وأسعى إلى مساعدة الطلاب والمهنيين والمؤسسات على الاستفادة من التقنيات الحديثة لتحقيق إنتاجية وابتكار أكبر."],["ماذا أفعل","باهتمام كبير بالذكاء الاصطناعي وتقنيات مايكروسوفت السحابية والتحول الرقمي وتطوير المسار المهني، أشارك بانتظام رؤى وإرشادات عملية واتجاهات القطاع لمساعدة القراء على البقاء في المقدمة في عالم تقني سريع التغير."],["مهمتي","مهمتي هي سد الفجوة بين التكنولوجيا والناس من خلال تبسيط المفاهيم المعقدة وجعلها قابلة للتطبيق في الواقع."]],
- expectT:"ماذا تتوقع",
- expect:["شروحات واضحة للذكاء الاصطناعي والسحابة بلا مصطلحات معقدة","إرشادات عملية حول Microsoft Copilot وسير العمل الإنتاجي","نصائح مهنية حول المهارات والشهادات والعلامة الشخصية","تحديثات منتظمة حول اتجاهات التكنولوجيا"],
- tabs:["الخبرة","التعليم","الشهادات"],
- todo:["قيد الإكمال","أضف إدخالك هنا","المؤسسة، الموقع","التواريخ"],
- skills:["الذكاء الاصطناعي","Microsoft Copilot","الحوسبة السحابية / Azure","التعليم والتدريب","الإرشاد المهني","التحول الرقمي"],
- exp:[["الذكاء الاصطناعي","استكشاف أساسيات الذكاء الاصطناعي وتعلّم الآلة والذكاء الاصطناعي التوليدي وهندسة الأوامر والتطبيقات الواقعية التي تغيّر الصناعات."],["Microsoft Copilot","مساعدة المهنيين على رفع إنتاجيتهم عبر Microsoft Copilot وسير العمل المدعوم بالذكاء الاصطناعي وحلول بيئة العمل الذكية."],["الحوسبة السحابية","رؤى حول Microsoft Azure والبنية السحابية والتحول الرقمي والأتمتة واستراتيجيات التكنولوجيا للمؤسسات."],["التطور المهني","إرشادات للطلاب والمهنيين حول تطوير المهارات والشهادات والعلامة الشخصية والمسارات المهنية الجاهزة للمستقبل."]],
- pub:["لا توجد منشورات بعد.","DOI","قراءة البحث","نسخ الاستشهاد","تم النسخ ✓","عنوان بحثك المنشور","سيظهر هنا المؤلفون والمجلة والسنة وملخص قصير."],
- art:["ابحث في المقالات…","الكل","لا توجد مقالات مطابقة لبحثك.","اقرأ المزيد","الذكاء الاصطناعي","الإنتاجية","المسارات المهنية"],
- arts:[["البدء مع الذكاء الاصطناعي","تعرّف على أساسيات الذكاء الاصطناعي وتعلّم الآلة والتقنيات التوليدية التي تشكّل مستقبل الابتكار."],["Microsoft Copilot لرفع الإنتاجية","اكتشف كيف يمكن لـ Microsoft Copilot أتمتة المهام اليومية وتحسين التعاون ورفع كفاءة العمل."],["التطور المهني في عصر الذكاء الاصطناعي","استكشف المهارات واستراتيجيات التعلّم والشهادات اللازمة للنجاح في بيئة مهنية تعمل بالذكاء الاصطناعي."]],
- docs:["تنزيل PDF","عرض","إغلاق","السيرة الذاتية (CV)","البحث المنشور","ملف PDF قريبًا"],
- ct:["تواصل معي","اختر القناة التي تناسبك.","أرسل لي رسالة","اسمك","بريدك الإلكتروني","الموضوع","الرسالة","إرسال الرسالة","سيفتح هذا تطبيق البريد لديك مع الرسالة جاهزة للإرسال.","يرجى إدخال اسمك وبريد إلكتروني صالح ورسالة.","جارٍ فتح تطبيق البريد...","كيف يمكنني مساعدتك؟"],
- topics:["سؤال عام","تدريب / ورشة عمل","تعاون","إرشاد مهني","دعوة للتحدث"],
- ui:["تبديل الوضع الداكن","فتح القائمة","اللغة","العودة للأعلى","انتقل إلى المحتوى"]},
-
-pt:{n:"Português",
- nav:["Início","Sobre mim","Percurso","Competências","Especialização","Publicações","Artigos","Documentos","Contacto"],
- badge:"👋 Bem-vindo ao meu site pessoal",
- tag:"Educador | Entusiasta de IA | Profissional de tecnologia",
- typed:["Tornar a IA simples e prática","Ajudar profissionais a dominar o Microsoft Copilot","Orientar carreiras na era da nuvem e da IA"],
- btn:["Fale comigo","Saiba mais","Guardar como CV (PDF)"],
- stats:["Anos de experiência","Pessoas formadas","Artigos e tutoriais","Áreas principais"],
- role:"Evangelista de IA e tecnologia", chips2:["Carreiras","Educação"],
- lbl:["Foco","Idiomas","Localização"], focus:"IA, Nuvem, Carreiras",
- sec:[["Sobre mim","Apaixonado por capacitar pessoas através da tecnologia e da educação."],["O meu percurso","Experiência, formação e certificações."],["Competências","Pontos fortes que uso todos os dias."],["Áreas de especialização","Domínios-chave onde partilho conhecimento e ideias práticas."],["Trabalhos publicados","Artigos de investigação e publicações formais."],["Artigos","Partilha de conhecimento para o mundo tecnológico de hoje."],["Documentos","Descarregue o meu CV, o meu artigo e outros ficheiros PDF."],["Vamos ligar-nos","Colaborações, formação, palestras ou simples perguntas são bem-vindas."]],
- about:[["Quem sou","Bem-vindo ao meu site pessoal. Sou educador, profissional de tecnologia e entusiasta de inteligência artificial, e ajudo estudantes, profissionais e organizações a aproveitar as tecnologias modernas para alcançar mais produtividade e inovação."],["O que faço","Com grande interesse em inteligência artificial, tecnologias cloud da Microsoft, transformação digital e desenvolvimento de carreira, partilho regularmente ideias, orientações práticas e tendências do setor para manter os leitores à frente num cenário tecnológico em rápida mudança."],["A minha missão","A minha missão é aproximar a tecnologia das pessoas, tornando conceitos complexos fáceis de compreender e de aplicar na vida real."]],
- expectT:"O que pode esperar",
- expect:["Explicações claras e sem jargão sobre IA e cloud","Orientações práticas sobre Microsoft Copilot e fluxos de trabalho","Conselhos de carreira sobre competências, certificações e marca pessoal","Atualizações regulares sobre tendências tecnológicas"],
- tabs:["Experiência","Formação","Certificações"],
- todo:["por completar","Adicione aqui a sua entrada","Organização, localização","Datas"],
- skills:["Inteligência artificial","Microsoft Copilot","Computação em nuvem / Azure","Ensino e formação","Coaching de carreira","Transformação digital"],
- exp:[["Inteligência artificial","Fundamentos de IA, aprendizagem automática, IA generativa, engenharia de prompts e aplicações reais que transformam setores."],["Microsoft Copilot","Ajudar profissionais a maximizar a produtividade com o Microsoft Copilot, fluxos de trabalho com IA e soluções inteligentes."],["Computação em nuvem","Perspetivas sobre Microsoft Azure, arquitetura cloud, transformação digital, automatização e estratégias tecnológicas empresariais."],["Crescimento na carreira","Orientação para estudantes e profissionais sobre desenvolvimento de competências, certificações, marca pessoal e carreiras preparadas para o futuro."]],
- pub:["Ainda não há publicações.","DOI","Ler artigo","Copiar citação","Copiado ✓","Título do seu artigo publicado","Autores, revista, ano e um breve resumo aparecerão aqui."],
- art:["Pesquisar artigos…","Todos","Nenhum artigo corresponde à pesquisa.","Ler mais","Inteligência artificial","Produtividade","Carreiras"],
- arts:[["Primeiros passos na inteligência artificial","Conheça os fundamentos da IA, da aprendizagem automática e das tecnologias generativas que estão a moldar o futuro da inovação."],["Microsoft Copilot para a produtividade","Descubra como o Microsoft Copilot pode automatizar tarefas diárias, melhorar a colaboração e aumentar a eficiência no trabalho."],["Crescimento na carreira na era da IA","Explore as competências, estratégias de aprendizagem e certificações essenciais para ter sucesso num ambiente profissional movido a IA."]],
- docs:["Descarregar PDF","Ver","Fechar","Curriculum vitae (CV)","Artigo publicado","PDF em breve"],
- ct:["Entre em contacto","Escolha o canal que lhe for mais conveniente.","Envie-me uma mensagem","O seu nome","O seu e-mail","Assunto","Mensagem","Enviar mensagem","Isto abre a sua aplicação de e-mail com a mensagem pronta a enviar.","Indique o seu nome, um e-mail válido e uma mensagem.","A abrir a sua aplicação de e-mail...","Como posso ajudar?"],
- topics:["Pergunta geral","Formação / workshop","Colaboração","Orientação de carreira","Convite para palestra"],
- ui:["Alternar modo escuro","Abrir menu","Idioma","Voltar ao topo","Saltar para o conteúdo"]}
+ music:["Musik an","Musik aus"]}
 };
-
-/* =====================================================================
-   3) ENGINE (no need to edit below)
-   ===================================================================== */
-const $ = s => document.querySelector(s);
-const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let lang = 'en';
-try { const s = localStorage.getItem('lang'); if (s && T[s]) lang = s; } catch(e){}
-const tr = x => (x && typeof x === 'object' && !Array.isArray(x)) ? (x[lang] || x.en || '') : (x || '');
-const ids = ['home','about','journey','skills','expertise','publications','articles','documents','contact'];
-const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-let tabIdx = 0, artQ = '', artC = 0, firstRender = true, typeToken = 0;
-const L = PROFILE.links;
-
-$('#ldjson').textContent = JSON.stringify({"@context":"https://schema.org","@type":"Person",name:PROFILE.name,email:"mailto:"+PROFILE.email,url:L.website,sameAs:[L.linkedin,L.youtube,L.facebook,L.instagram]});
-
-function secHead(i, t){ return `<div class="section-title reveal"><h2>${esc(t.sec[i][0])}</h2><p>${esc(t.sec[i][1])}</p></div>`; }
-
-function journeyHTML(t){
-  const keys = ['experience','education','certifications'];
-  const list = PROFILE[keys[tabIdx]] || [];
-  const items = list.length ? list.map(i => `
-    <div class="t-item"><small>${esc(tr(i.when))}</small><h4>${esc(tr(i.title))}</h4><div class="org">${esc(tr(i.org))}</div>
-    ${(i.points||[]).length ? `<ul>${i.points.map(p=>`<li>${esc(tr(p))}</li>`).join('')}</ul>` : ''}</div>`).join('')
-    : (SHOW_TODO ? `<div class="t-item placeholder"><small>${esc(t.todo[3])}</small><span class="todo">${esc(t.todo[0])}</span><h4>${esc(t.todo[1])}</h4><div class="org">${esc(t.todo[2])}</div></div>` : '');
-  return `<div class="tabs" role="tablist">${t.tabs.map((n,i)=>`<button class="tab ${i===tabIdx?'on':''}" role="tab" aria-selected="${i===tabIdx}" data-tab="${i}">${esc(n)}</button>`).join('')}</div><div class="timeline">${items}</div>`;
-}
-
-function pubsHTML(t){
-  const list = PROFILE.publications;
-  if (!list.length) return SHOW_TODO ? `<div class="item placeholder"><h3>${esc(t.pub[5])}<span class="todo">${esc(t.todo[0])}</span></h3><p>${esc(t.pub[6])}</p></div>` : `<p class="empty">${esc(t.pub[0])}</p>`;
-  return list.map((p,i) => `<div class="item reveal"><div class="meta">${esc(tr(p.venue))} · ${esc(tr(p.year))}</div><h3>${esc(tr(p.title))}</h3><div class="meta">${esc(tr(p.authors))}</div><p>${esc(tr(p.abstract))}</p>
-    <div class="actions">${p.doi?`<a class="mini" target="_blank" rel="noopener noreferrer" href="https://doi.org/${esc(p.doi)}">${esc(t.pub[1])}</a>`:''}
-    ${p.url?`<a class="mini" target="_blank" rel="noopener noreferrer" href="${esc(p.url)}">${esc(t.pub[2])}</a>`:''}
-    ${p.file?`<a class="mini" href="${esc(p.file)}" download>${esc(t.docs[0])}</a>`:''}
-    <button class="mini" data-cite="${i}">${esc(t.pub[3])}</button></div></div>`).join('');
-}
-
-function docsHTML(t){
-  return `<div class="cards">${PROFILE.docs.map((d,i) => {
-    const name = d.key === 'cv' ? t.docs[3] : t.docs[4];
-    return d.file
-      ? `<div class="card reveal"><div class="ico">📄</div><h3>${esc(name)}</h3><div class="actions"><a class="mini" href="${esc(d.file)}" download>⬇ ${esc(t.docs[0])}</a><button class="mini" data-view="${i}">${esc(t.docs[1])}</button></div><div id="view${i}"></div></div>`
-      : (SHOW_TODO ? `<div class="card placeholder reveal"><div class="ico">📄</div><h3>${esc(name)}<span class="todo">${esc(t.todo[0])}</span></h3><p>${esc(t.docs[5])}</p></div>` : '');
-  }).join('')}</div>`;
-}
-
-function artList(t){
-  const catKeys = [4,5,6];
-  const out = t.arts.map((a,i)=>({c:i,t:a[0],x:a[1]})).filter(a => (artC===0 || a.c===artC-1) && (a.t+a.x).toLowerCase().includes(artQ.toLowerCase()));
-  return out.length ? out.map(a=>`<div class="item"><div class="meta">${esc(t.art[4+a.c])}</div><h3>${esc(a.t)}</h3><p>${esc(a.x)}</p></div>`).join('') : `<p class="empty">${esc(t.art[2])}</p>`;
-}
-
-function contactCards(){
-  const c = [['@','Email',PROFILE.email,'mailto:'+PROFILE.email],['in','LinkedIn','linkedin.com/in/shrawanmehta',L.linkedin],['▶','YouTube','youtube.com/@shrawanmehta',L.youtube],['f','Facebook','facebook.com/drshrawanmehta',L.facebook],['IG','Instagram','instagram.com/theshrawanmehta',L.instagram],['🌐','Website','www.shrawanmehta.com',L.website]];
-  return c.map(([b,l,s,u])=>`<li><a href="${u}" ${u.startsWith('http')?'target="_blank" rel="noopener noreferrer"':''}><span class="badge">${b}</span><span><span class="label">${l}</span><span class="sub">${esc(s)}</span></span></a></li>`).join('');
-}
-
-function render(){
-  const t = T[lang];
-  document.documentElement.lang = lang;
-  document.documentElement.dir = t.rtl ? 'rtl' : 'ltr';
-  document.title = PROFILE.name + ' | ' + t.tag.replace(/ \| /g,', ');
-  const facts = [[t.lbl[0], t.focus]];
-  if (PROFILE.languages) facts.push([t.lbl[1], PROFILE.languages]);
-  if (PROFILE.location) facts.push([t.lbl[2], PROFILE.location]);
-  const cats = [t.art[1], t.art[4], t.art[5], t.art[6]];
-
-  $('#root').innerHTML = `
-  <a class="skip" href="#about">${esc(t.ui[4])}</a>
-  <nav aria-label="Main">
-    <a href="#home" class="logo">Shrawan<span>Mehta</span></a>
-    <ul class="nav-links" id="navLinks">${ids.map((id,i)=>`<li><a href="#${id}" data-id="${id}" class="${i===0?'active':''}">${esc(t.nav[i])}</a></li>`).join('')}</ul>
-    <div class="nav-tools">
-      <select class="lang-sel" id="langSel" aria-label="${esc(t.ui[2])}">${Object.keys(T).map(k=>`<option value="${k}" ${k===lang?'selected':''}>${esc(T[k].n)}</option>`).join('')}</select>
-      <button class="icon-btn" id="themeBtn" aria-label="${esc(t.ui[0])}"></button>
-      <button class="icon-btn menu-btn" id="menuBtn" aria-label="${esc(t.ui[1])}" aria-expanded="false">☰</button>
-    </div>
-  </nav>
-
-  <header id="home">
-    <div class="orb a"></div><div class="orb b"></div><div class="orb c"></div><div class="grid-bg"></div>
-    <div class="hero-inner">
-      <span class="hero-badge">${esc(t.badge)}</span>
-      <h1>${esc(PROFILE.name)}</h1>
-      <p class="tagline">${esc(t.tag)}</p>
-      <p class="typed" id="typed" aria-live="polite"></p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn">${esc(t.btn[0])}</a>
-        <a href="#about" class="btn outline">${esc(t.btn[1])}</a>
-        <button class="btn outline" onclick="window.print()">⬇ ${esc(t.btn[2])}</button>
-      </div>
-    </div>
-  </header>
-
-  <div class="container" style="padding-top:0">
-    <div class="stats">${PROFILE.stats.map((s,i)=>`<div class="stat"><strong data-n="${s.n}" data-s="${esc(s.suffix)}">0${esc(s.suffix)}</strong><span>${esc(t.stats[i])}</span></div>`).join('')}</div>
-  </div>
-
-  <section class="container" id="about">
-    ${secHead(0,t)}
-    <div class="about">
-      <div class="profile-box reveal">
-        <div class="avatar"><img src="profile.jpg" alt="${esc(PROFILE.name)}" onerror="this.remove();document.querySelector('.avatar').textContent='SM';"></div>
-        <h3>${esc(PROFILE.name)}</h3><p class="role">${esc(t.role)}</p>
-        <div class="chips">${['AI','Copilot','Azure',...t.chips2].map(c=>`<span class="chip">${esc(c)}</span>`).join('')}</div>
-        <ul class="facts">${facts.map(([k,v])=>`<li><b>${esc(k)}</b><span>${esc(v)}</span></li>`).join('')}</ul>
-      </div>
-      <div class="about-content reveal">
-        ${t.about.map(([h,p])=>`<h3>${esc(h)}</h3><p>${esc(p)}</p>`).join('')}
-        <h3>${esc(t.expectT)}</h3><ul>${t.expect.map(e=>`<li>${esc(e)}</li>`).join('')}</ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="container" id="journey">${secHead(1,t)}<div id="journeyBody">${journeyHTML(t)}</div></section>
-
-  <section class="container" id="skills">${secHead(2,t)}
-    <div class="panel reveal"><div class="skills">${t.skills.map((s,i)=>`<div class="skill"><div class="row"><span>${esc(s)}</span><span>${PROFILE.skillLevels[i]}%</span></div><div class="bar" role="progressbar" aria-valuenow="${PROFILE.skillLevels[i]}" aria-valuemin="0" aria-valuemax="100"><i data-w="${PROFILE.skillLevels[i]}"></i></div></div>`).join('')}</div></div>
-  </section>
-
-  <section class="container" id="expertise">${secHead(3,t)}
-    <div class="cards">${t.exp.map(([h,p],i)=>`<div class="card reveal"><div class="ico">${['🤖','💼','☁️','🚀'][i]}</div><h3>${esc(h)}</h3><p>${esc(p)}</p></div>`).join('')}</div>
-  </section>
-
-  <section class="container" id="publications">${secHead(4,t)}<div id="pubBody">${pubsHTML(t)}</div></section>
-
-  <section class="container" id="articles">${secHead(5,t)}
-    <div class="toolbar reveal"><input type="search" id="artSearch" placeholder="${esc(t.art[0])}" aria-label="${esc(t.art[0])}" value="${esc(artQ)}">
-    <select id="artCat" aria-label="Category">${cats.map((c,i)=>`<option value="${i}" ${i===artC?'selected':''}>${esc(c)}</option>`).join('')}</select></div>
-    <div id="artBody">${artList(t)}</div>
-  </section>
-
-  <section class="container" id="documents">${secHead(6,t)}${docsHTML(t)}</section>
-
-  <section class="container" id="contact">${secHead(7,t)}
-    <div class="contact-grid">
-      <div class="contact-panel reveal"><h3>${esc(t.ct[0])}</h3><p>${esc(t.ct[1])}</p><ul class="contact-list">${contactCards()}</ul></div>
-      <div class="form-box reveal"><h3>${esc(t.ct[2])}</h3>
-        <form id="contactForm" novalidate>
-          <div class="field"><label for="fname">${esc(t.ct[3])}</label><input type="text" id="fname" autocomplete="name"></div>
-          <div class="field"><label for="femail">${esc(t.ct[4])}</label><input type="email" id="femail" autocomplete="email" dir="ltr"></div>
-          <div class="field"><label for="ftopic">${esc(t.ct[5])}</label><select id="ftopic">${t.topics.map(x=>`<option>${esc(x)}</option>`).join('')}</select></div>
-          <div class="field"><label for="fmsg">${esc(t.ct[6])}</label><textarea id="fmsg" placeholder="${esc(t.ct[11])}"></textarea></div>
-          <button type="submit" class="btn solid">${esc(t.ct[7])}</button>
-          <p class="form-note" id="formNote">${esc(t.ct[8])}</p>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-links">${ids.map((id,i)=>`<a href="#${id}">${esc(t.nav[i])}</a>`).join('')}</div>
-    <small>© ${new Date().getFullYear()} ${esc(PROFILE.name)} | ${esc(t.tag.replace(/ \| /g,' • '))}</small>
-  </footer>`;
-
-  bind(t);
-  setTheme(document.body.classList.contains('dark'));
-  startTyping(t);
-  reveal();
-  firstRender = false;
-}
-
-function bind(t){
-  $('#langSel').addEventListener('change', e => { lang = e.target.value; try{localStorage.setItem('lang',lang);}catch(_){} render(); window.scrollTo(0, scrollY); });
-  $('#themeBtn').addEventListener('click', () => setTheme(!document.body.classList.contains('dark')));
-  const nl = $('#navLinks'), mb = $('#menuBtn');
-  mb.addEventListener('click', () => { const o = nl.classList.toggle('open'); mb.setAttribute('aria-expanded', o); });
-  nl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nl.classList.remove('open'); mb.setAttribute('aria-expanded','false'); }));
-  $('#journeyBody').addEventListener('click', e => { const b = e.target.closest('[data-tab]'); if(!b) return; tabIdx = +b.dataset.tab; $('#journeyBody').innerHTML = journeyHTML(T[lang]); });
-  $('#pubBody').addEventListener('click', e => {
-    const b = e.target.closest('[data-cite]'); if(!b) return; const p = PROFILE.publications[b.dataset.cite];
-    const c = `${tr(p.authors)}. ${tr(p.title)}. ${tr(p.venue)}${p.year?', '+tr(p.year):''}.${p.doi?' https://doi.org/'+p.doi:''}`;
-    navigator.clipboard.writeText(c).then(()=>{ b.textContent = T[lang].pub[4]; setTimeout(()=>b.textContent=T[lang].pub[3],1500); }).catch(()=>{});
-  });
-  $('#documents').addEventListener('click', e => {
-    const b = e.target.closest('[data-view]'); if(!b) return; const i = b.dataset.view, box = $('#view'+i);
-    if (box.innerHTML){ box.innerHTML=''; b.textContent = T[lang].docs[1]; }
-    else { box.innerHTML = `<iframe class="viewer" src="${esc(PROFILE.docs[i].file)}" title="PDF"></iframe>`; b.textContent = T[lang].docs[2]; }
-  });
-  $('#artSearch').addEventListener('input', e => { artQ = e.target.value; $('#artBody').innerHTML = artList(T[lang]); });
-  $('#artCat').addEventListener('change', e => { artC = +e.target.value; $('#artBody').innerHTML = artList(T[lang]); });
-  $('#contactForm').addEventListener('submit', e => {
-    e.preventDefault(); const t = T[lang];
-    const n = $('#fname').value.trim(), m = $('#femail').value.trim(), tp = $('#ftopic').value, g = $('#fmsg').value.trim(), note = $('#formNote');
-    if (!n || !/^\S+@\S+\.\S+$/.test(m) || !g){ note.textContent = t.ct[9]; note.style.color = '#dc2626'; return; }
-    note.style.color = ''; note.textContent = t.ct[10];
-    location.href = 'mailto:' + PROFILE.email + '?subject=' + encodeURIComponent('Website: ' + tp) + '&body=' + encodeURIComponent(n + ' <' + m + '>\n\n' + g);
-  });
-}
-
-function setTheme(d){
-  document.body.classList.toggle('dark', d);
-  const b = $('#themeBtn'); if (b) b.textContent = d ? '☀️' : '🌙';
-  try{ localStorage.setItem('theme', d?'dark':'light'); }catch(e){}
-}
-(function initTheme(){
-  let s = null; try{ s = localStorage.getItem('theme'); }catch(e){}
-  document.body.classList.toggle('dark', s ? s === 'dark' : (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches));
-})();
-
-function startTyping(t){
-  const token = ++typeToken, el = $('#typed'); let p = 0, c = 0, del = false;
-  (function step(){
-    if (token !== typeToken) return;
-    const s = t.typed[p];
-    if (reduce){ el.textContent = s; return; }
-    el.textContent = s.slice(0, c);
-    if (!del && c < s.length){ c++; setTimeout(step, 55); }
-    else if (!del){ del = true; setTimeout(step, 1600); }
-    else if (c > 0){ c--; setTimeout(step, 25); }
-    else { del = false; p = (p+1) % t.typed.length; setTimeout(step, 300); }
-  })();
-}
-
-function countUp(el){
-  const target = +el.dataset.n, suf = el.dataset.s;
-  if (reduce){ el.textContent = target + suf; return; }
-  const t0 = performance.now();
-  (function f(t){ const k = Math.min((t-t0)/1400,1); el.textContent = Math.round(target*(1-Math.pow(1-k,3))) + suf; if (k<1) requestAnimationFrame(f); })(t0);
-}
-const io = new IntersectionObserver(es => es.forEach(e => {
-  if (!e.isIntersecting) return;
-  e.target.classList.add('visible');
-  e.target.querySelectorAll('[data-n]').forEach(countUp);
-  e.target.querySelectorAll('[data-w]').forEach(b => b.style.width = b.dataset.w + '%');
-  io.unobserve(e.target);
-}), { threshold: .12 });
-function reveal(){
-  document.querySelectorAll('.reveal,.stats').forEach(el => {
-    if (firstRender) io.observe(el);
-    else { el.classList.add('visible'); el.querySelectorAll('[data-n]').forEach(n => n.textContent = n.dataset.n + n.dataset.s); el.querySelectorAll('[data-w]').forEach(b => b.style.width = b.dataset.w + '%'); }
-  });
-  if (firstRender) document.querySelectorAll('.skills').forEach(el => io.observe(el));
-}
-
-addEventListener('scroll', () => {
-  const h = document.documentElement;
-  $('#progress').style.width = (scrollY / Math.max(1, h.scrollHeight - h.clientHeight) * 100) + '%';
-  const y = scrollY + 160; let cur = 'home';
-  ids.forEach(id => { const s = document.getElementById(id); if (s && s.offsetTop <= y) cur = id; });
-  document.querySelectorAll('#navLinks a').forEach(a => a.classList.toggle('active', a.dataset.id === cur));
-  $('#toTop').classList.toggle('show', scrollY > 500);
-}, { passive: true });
-$('#toTop').addEventListener('click', () => scrollTo({ top: 0, behavior: 'smooth' }));
-
+const $=s=>document.querySelector(s),esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let lang='en';try{const s=localStorage.getItem('lang');if(s&&T[s])lang=s}catch(e){}
+const ids=['home','about','journey','skills','expertise','publications','articles','documents','contact'],L=PROFILE.links;
+let tab=0,q='',cat=0,first=true,tk=0,music=null;
+const PHOTO="data:image/jpeg;base64,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";
+const sh=(i,t)=>`<div class="st rv"><h2>${esc(t.sec[i][0])}</h2><p>${esc(t.sec[i][1])}</p></div>`;
+function journey(t){const k=['experience','education','certifications'][tab],list=PROFILE[k];
+ return `<div class="tabs">${t.tabs.map((n,i)=>`<button class="tab ${i==tab?'on':''}" data-tab="${i}">${esc(n)}</button>`).join('')}</div><div class="tl">${list.map(i=>`<div class="ti"><small>${esc(i.when)}</small><h4>${esc(i.title)}</h4><div class="org">${esc(i.org)}</div>${i.points.length?`<ul>${i.points.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>`:''}</div>`).join('')}</div>`}
+function pubs(t){return PROFILE.publications.map((p,i)=>`<div class="item rv"><div class="m">${esc(p.venue)} · ${esc(p.year)}</div><h3>${esc(p.title)}</h3><div class="m">${esc(p.authors)}</div><p>${esc(p.abstract)}</p><a class="mini" target="_blank" rel="noopener noreferrer" href="https://doi.org/${esc(p.doi)}">${esc(t.pubT[0])}</a><button class="mini" data-cite="${i}">${esc(t.pubT[1])}</button></div>`).join('')}
+function arts(t){const o=t.arts.map((a,i)=>({c:i,t:a[0],x:a[1]})).filter(a=>(cat==0||a.c==cat-1)&&(a.t+a.x).toLowerCase().includes(q.toLowerCase()));
+ return o.length?o.map(a=>`<div class="item"><div class="m">${esc(t.art[3+a.c])}</div><h3>${esc(a.t)}</h3><p>${esc(a.x)}</p></div>`).join(''):`<p style="text-align:center;color:var(--muted)">${esc(t.art[2])}</p>`}
+function docs(t){return `<div class="cards">${PROFILE.docs.map((d,i)=>{const n=d.key=='cv'?t.docs[3]:t.docs[4];
+ return `<div class="card rv"><div class="ico">📄</div><h3>${esc(n)}</h3>${d.file?`<a class="mini" href="${esc(d.file)}" download>⬇ ${esc(t.docs[0])}</a><button class="mini" data-view="${i}">${esc(t.docs[1])}</button><div id="v${i}"></div>`:`<p>${esc(t.docs[5])}</p>`}</div>`}).join('')}
+ <div class="card rv"><div class="ico">🖨️</div><h3>${esc(t.docs[6])}</h3><p>${esc(t.docs[7])}</p><button class="mini" onclick="window.print()">⬇ PDF</button></div></div>`}
+function contact(){return [['@','Email',PROFILE.email,'mailto:'+PROFILE.email],['in','LinkedIn','linkedin.com/in/shrawanmehta',L.linkedin],['▶','YouTube','youtube.com/@shrawanmehta',L.youtube],['f','Facebook','facebook.com/drshrawanmehta',L.facebook],['IG','Instagram','instagram.com/theshrawanmehta',L.instagram],['🌐','Website','www.shrawanmehta.com',L.website]].map(([b,l,s,u])=>`<li><a href="${u}" ${u[0]=='h'?'target="_blank" rel="noopener noreferrer"':''}><span class="bg2">${b}</span><span><span class="l">${l}</span><span class="s">${esc(s)}</span></span></a></li>`).join('')}
+const av=`<img src="${PHOTO}" alt="${esc(PROFILE.name)}" onerror="this.parentNode.textContent='SM'">`;
+function render(){const t=T[lang];document.documentElement.lang=lang;
+ const facts=[[t.lbl[0],t.focus],[t.lbl[1],PROFILE.languages],[t.lbl[2],PROFILE.location]];
+ $('#root').innerHTML=`<nav><a href="#home" class="logo">Shrawan<span>Mehta</span></a><ul class="links" id="nl">${ids.map((id,i)=>`<li><a href="#${id}" data-id="${id}" class="${i?'':'on'}">${esc(t.nav[i])}</a></li>`).join('')}</ul>
+ <div class="tools"><button class="ib ${music?'live':''}" id="mus" title="${esc(music?t.music[1]:t.music[0])}">${music?'🔊':'🎵'}</button><select class="ib" id="ls">${Object.keys(T).map(k=>`<option value="${k}" ${k==lang?'selected':''}>${T[k].n}</option>`).join('')}</select><button class="ib" id="th"></button><button class="ib" id="mb">☰</button></div></nav>
+ <header id="home"><div class="aur"></div><div class="grid"></div><div class="hi"><div class="ph">${av}</div><span class="badge">${esc(t.badge)}</span><h1>${esc(PROFILE.name)}</h1><p class="tag">${esc(t.tag)}</p><p class="typed" id="typed"></p>
+ <div class="acts"><a href="#contact" class="btn">${esc(t.btn[0])}</a><a href="#about" class="btn o">${esc(t.btn[1])}</a></div></div></header>
+ <div class="wrap" style="padding-top:0"><div class="stats rv">${PROFILE.stats.map((s,i)=>`<div class="stat"><b data-n="${s.n}" data-s="${s.s}">0${s.s}</b><span>${esc(t.stats[i])}</span></div>`).join('')}</div></div>
+ <section class="wrap" id="about">${sh(0,t)}<div class="about"><div class="pb rv"><div class="ph">${av}</div><h3>${esc(PROFILE.name)}</h3><p class="role">${esc(t.role)}</p><div class="chips">${t.chips.map(c=>`<span class="chip">${esc(c)}</span>`).join('')}</div><ul class="facts">${facts.map(([k,v])=>`<li><b>${esc(k)}</b><span>${esc(v)}</span></li>`).join('')}</ul></div>
+ <div class="ac rv">${t.about.map(([h,p])=>`<h3>${esc(h)}</h3><p>${esc(p)}</p>`).join('')}<h3>${esc(t.expectT)}</h3><ul>${t.expect.map(e=>`<li>${esc(e)}</li>`).join('')}</ul></div></div></section>
+ <section class="wrap" id="journey">${sh(1,t)}<div id="jb">${journey(t)}</div></section>
+ <section class="wrap" id="skills">${sh(2,t)}<div class="panel sk rv">${t.skills.map((s,i)=>`<div><div class="r"><span>${esc(s)}</span><span>${PROFILE.skillLevels[i]}%</span></div><div class="br"><i data-w="${PROFILE.skillLevels[i]}"></i></div></div>`).join('')}</div></section>
+ <section class="wrap" id="expertise">${sh(3,t)}<div class="cards">${t.exp.map(([h,p],i)=>`<div class="card rv"><div class="ico">${['🤖','💼','☁️','🚀'][i]}</div><h3>${esc(h)}</h3><p>${esc(p)}</p></div>`).join('')}</div></section>
+ <section class="wrap" id="publications">${sh(4,t)}<div id="pb">${pubs(t)}</div></section>
+ <section class="wrap" id="articles">${sh(5,t)}<div class="tb"><input type="search" id="as" placeholder="${esc(t.art[0])}" value="${esc(q)}"><select id="ac">${[t.art[1],t.art[3],t.art[4],t.art[5]].map((c,i)=>`<option value="${i}" ${i==cat?'selected':''}>${esc(c)}</option>`).join('')}</select></div><div id="ab">${arts(t)}</div>
+ <div class="item rv" style="border-left-color:var(--p2)"><h3>𝕏 @shrawanmehta0</h3><p>${esc(t.art[7])}</p><a class="mini" target="_blank" rel="noopener noreferrer" href="${PROFILE.xLink}">${esc(t.art[6])} →</a></div></section>
+ <section class="wrap" id="documents">${sh(6,t)}${docs(t)}</section>
+ <section class="wrap" id="contact">${sh(7,t)}<div class="cg"><div class="cp rv"><h3>${esc(t.ct[0])}</h3><p>${esc(t.ct[1])}</p><ul>${contact()}</ul></div>
+ <div class="fb rv"><h3>${esc(t.ct[2])}</h3><form id="cf" novalidate><div class="fd"><label for="fn">${esc(t.ct[3])}</label><input id="fn" autocomplete="name"></div><div class="fd"><label for="fe">${esc(t.ct[4])}</label><input type="email" id="fe" autocomplete="email"></div><div class="fd"><label for="ft">${esc(t.ct[5])}</label><select id="ft">${t.topics.map(x=>`<option>${esc(x)}</option>`).join('')}</select></div><div class="fd"><label for="fm">${esc(t.ct[6])}</label><textarea id="fm" placeholder="${esc(t.ct[11])}"></textarea></div><button class="btn s" type="submit">${esc(t.ct[7])}</button><p class="nt" id="nt">${esc(t.ct[8])}</p></form></div></div></section>
+ <footer><small>© ${new Date().getFullYear()} ${esc(PROFILE.name)} | ${esc(t.tag.replace(/ \| /g,' • '))}</small></footer>`;
+ bind();theme(document.body.classList.contains('dark'));typing(t);reveal();first=false}
+function bind(){
+ $('#ls').onchange=e=>{lang=e.target.value;try{localStorage.setItem('lang',lang)}catch(_){}render()};
+ $('#th').onclick=()=>theme(!document.body.classList.contains('dark'));
+ $('#mb').onclick=()=>$('#nl').classList.toggle('open');
+ document.querySelectorAll('#nl a').forEach(a=>a.onclick=()=>$('#nl').classList.remove('open'));
+ $('#mus').onclick=toggleMusic;
+ $('#jb').onclick=e=>{const b=e.target.closest('[data-tab]');if(!b)return;tab=+b.dataset.tab;$('#jb').innerHTML=journey(T[lang])};
+ $('#pb').onclick=e=>{const b=e.target.closest('[data-cite]');if(!b)return;const p=PROFILE.publications[b.dataset.cite];navigator.clipboard.writeText(`${p.authors}. ${p.title}. ${p.venue}, ${p.year}. https://doi.org/${p.doi}`).then(()=>{b.textContent=T[lang].pubT[2];setTimeout(()=>b.textContent=T[lang].pubT[1],1500)}).catch(()=>{})};
+ $('#documents').onclick=e=>{const b=e.target.closest('[data-view]');if(!b)return;const i=b.dataset.view,x=$('#v'+i);if(x.innerHTML){x.innerHTML='';b.textContent=T[lang].docs[1]}else{x.innerHTML=`<iframe src="${esc(PROFILE.docs[i].file)}" title="PDF" style="width:100%;height:560px;border:1px solid var(--bd);border-radius:12px;margin-top:12px;background:#fff"></iframe>`;b.textContent=T[lang].docs[2]}};
+ $('#as').oninput=e=>{q=e.target.value;$('#ab').innerHTML=arts(T[lang])};
+ $('#ac').onchange=e=>{cat=+e.target.value;$('#ab').innerHTML=arts(T[lang])};
+ $('#cf').onsubmit=e=>{e.preventDefault();const t=T[lang],n=$('#fn').value.trim(),m=$('#fe').value.trim(),g=$('#fm').value.trim(),o=$('#nt');
+  if(!n||!/^\S+@\S+\.\S+$/.test(m)||!g){o.textContent=t.ct[9];o.style.color='#dc2626';return}
+  o.style.color='';o.textContent=t.ct[10];location.href='mailto:'+PROFILE.email+'?subject='+encodeURIComponent('Website: '+$('#ft').value)+'&body='+encodeURIComponent(n+' <'+m+'>\n\n'+g)}}
+function theme(d){document.body.classList.toggle('dark',d);const b=$('#th');if(b)b.textContent=d?'☀️':'🌙';try{localStorage.setItem('theme',d?'dark':'light')}catch(e){}}
+(function(){let s=null;try{s=localStorage.getItem('theme')}catch(e){}document.body.classList.toggle('dark',s?s=='dark':true)})();
+function typing(t){const k=++tk,el=$('#typed');let p=0,c=0,del=false;(function st(){if(k!==tk)return;const s=t.typed[p];el.textContent=s.slice(0,c);
+ if(!del&&c<s.length){c++;setTimeout(st,55)}else if(!del){del=true;setTimeout(st,1500)}else if(c>0){c--;setTimeout(st,25)}else{del=false;p=(p+1)%t.typed.length;setTimeout(st,300)}})()}
+/* Ambient music: generated live with the Web Audio API (no file needed). Off by default; browsers require a click. */
+function toggleMusic(){
+ if(music){music.stop();music=null;render();return}
+ const A=new (window.AudioContext||window.webkitAudioContext)(),m=A.createGain();m.gain.value=0;m.gain.linearRampToValueAtTime(.16,A.currentTime+3);m.connect(A.destination);
+ const lp=A.createBiquadFilter();lp.type='lowpass';lp.frequency.value=900;lp.connect(m);
+ const lfo=A.createOscillator(),lg=A.createGain();lfo.frequency.value=.07;lg.gain.value=300;lfo.connect(lg);lg.connect(lp.frequency);lfo.start();
+ const chords=[[110,164.8,220,329.6],[87.3,130.8,174.6,261.6],[98,146.8,196,293.7],[82.4,123.5,164.8,246.9]],oscs=[];
+ [0,1,2,3].forEach(i=>{['sine','triangle'].forEach((ty,j)=>{const o=A.createOscillator();o.type=ty;o.frequency.value=chords[0][i];o.detune.value=j?6:-6;const g=A.createGain();g.gain.value=.12;o.connect(g);g.connect(lp);o.start();oscs.push(o)})});
+ let ci=0;const iv=setInterval(()=>{ci=(ci+1)%chords.length;oscs.forEach((o,k)=>o.frequency.linearRampToValueAtTime(chords[ci][Math.floor(k/2)],A.currentTime+4))},9000);
+ music={stop(){clearInterval(iv);m.gain.linearRampToValueAtTime(0,A.currentTime+.8);setTimeout(()=>A.close(),900)}};render()}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('v');
+ e.target.querySelectorAll('[data-n]').forEach(el=>{const n=+el.dataset.n,t0=performance.now();(function f(t){const k=Math.min((t-t0)/1400,1);el.textContent=Math.round(n*(1-Math.pow(1-k,3)))+el.dataset.s;if(k<1)requestAnimationFrame(f)})(t0)});
+ e.target.querySelectorAll('[data-w]').forEach(b=>b.style.width=b.dataset.w+'%');io.unobserve(e.target)}),{threshold:.12});
+function reveal(){document.querySelectorAll('.rv').forEach(el=>{if(first)io.observe(el);else{el.classList.add('v');el.querySelectorAll('[data-n]').forEach(n=>n.textContent=n.dataset.n+n.dataset.s);el.querySelectorAll('[data-w]').forEach(b=>b.style.width=b.dataset.w+'%')}})}
+addEventListener('scroll',()=>{const h=document.documentElement;$('#bar').style.width=scrollY/Math.max(1,h.scrollHeight-h.clientHeight)*100+'%';
+ const y=scrollY+160;let c='home';ids.forEach(id=>{const s=document.getElementById(id);if(s&&s.offsetTop<=y)c=id});
+ document.querySelectorAll('#nl a').forEach(a=>a.classList.toggle('on',a.dataset.id===c));$('#top').classList.toggle('show',scrollY>500)},{passive:true});
+addEventListener('pointermove',e=>{const g=$('#glow');g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'});
+$('#top').onclick=()=>scrollTo({top:0,behavior:'smooth'});
 render();
 </script>
 </body>
