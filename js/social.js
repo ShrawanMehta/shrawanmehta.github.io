@@ -2,7 +2,7 @@
 (function(){
 const st='fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"';
 const S=[
-["Facebook","https://www.facebook.com/drshrawanmehta",'<svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor"><path d="M14 21v-7h2.400l.4-3H14V9.300c0-.9.3-1.500 1.600-1.500H17V5.100C16.700 5 15.900 5 15 5c-2.200 0-3.700 1.300-3.700 3.800V11H9v3h2.300v7z"/></svg>'],
+["Facebook","https://www.facebook.com/theshrawanmehta",'<svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor"><path d="M14 21v-7h2.400l.4-3H14V9.300c0-.9.3-1.500 1.600-1.500H17V5.100C16.700 5 15.900 5 15 5c-2.200 0-3.700 1.300-3.700 3.800V11H9v3h2.300v7z"/></svg>'],
 ["X","https://x.com/shrawanmehta0",'<svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>'],
 ["Instagram","https://www.instagram.com/theshrawanmehta/",`<svg viewBox="0 0 24 24" width="21" height="21" ${st}><rect x="3.500" y="3.500" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.200" cy="6.800" r=".6" fill="currentColor"/></svg>`],
 ["LinkedIn","https://www.linkedin.com/in/shrawanmehta",'<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><rect x="3.500" y="9" width="3.600" height="11.500"/><circle cx="5.300" cy="5.200" r="2"/><path d="M10 9h3.400v1.600c.6-1.100 1.900-1.900 3.600-1.900 3.200 0 4 2.100 4 4.800v6.900h-3.600v-6.100c0-1.500-.3-2.600-1.800-2.600s-2 1.100-2 2.600v6.100H10z"/></svg>'],
