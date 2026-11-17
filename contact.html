@@ -1,1 +1,160 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact - Shrawan Mehta</title><meta name="description" content="Contact Shrawan Mehta."><meta name="theme-color" content="#060914"><link rel="stylesheet" href="css/style.css"></head><body><section class="wrap top"><h2><span>Let's Connect</span></h2><p class="sub">Collaborations, training, speaking or simple questions are welcome.</p><div class="ct"><a href="mailto:theshrawanmehta@gmail.com" ><b>Email</b><br><small>theshrawanmehta@gmail.com</small></a><a href="https://www.linkedin.com/in/shrawanmehta" target=_blank rel=noopener><b>LinkedIn</b><br><small>linkedin.com/in/shrawanmehta</small></a><a href="https://www.youtube.com/@shrawanmehta" target=_blank rel=noopener><b>YouTube</b><br><small>youtube.com/@shrawanmehta</small></a><a href="https://www.facebook.com/drshrawanmehta" target=_blank rel=noopener><b>Facebook</b><br><small>facebook.com/drshrawanmehta</small></a><a href="https://www.instagram.com/theshrawanmehta/" target=_blank rel=noopener><b>Instagram</b><br><small>instagram.com/theshrawanmehta</small></a><a href="https://x.com/shrawanmehta0" target=_blank rel=noopener><b>X</b><br><small>x.com/shrawanmehta0</small></a></div></section><script src="js/script.js"></script><script src="js/social.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact - Shrawan Mehta</title>
+
+    <meta name="description" content="Contact Shrawan Mehta">
+    <meta name="theme-color" content="#060914">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .contact-form{
+            max-width:700px;
+            margin:40px auto;
+            display:flex;
+            flex-direction:column;
+            gap:18px;
+        }
+
+        .contact-form label{
+            display:block;
+            margin-bottom:6px;
+            font-weight:600;
+        }
+
+        .contact-form input,
+        .contact-form textarea{
+            width:100%;
+            padding:14px;
+            border-radius:10px;
+            border:1px solid rgba(255,255,255,.2);
+            background:#111827;
+            color:#fff;
+            font-size:1rem;
+        }
+
+        .contact-form textarea{
+            resize:vertical;
+        }
+
+        .btn{
+            padding:14px 24px;
+            border:none;
+            border-radius:10px;
+            background:#00d4ff;
+            color:#000;
+            font-weight:700;
+            cursor:pointer;
+        }
+
+        .btn:hover{
+            opacity:.9;
+        }
+
+        .contact-info{
+            margin-top:40px;
+            text-align:center;
+        }
+
+        .contact-info a{
+            color:#00d4ff;
+            text-decoration:none;
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="wrap top">
+
+    <h2><span>Let's Connect</span></h2>
+
+    <p class="sub">
+        Collaborations, consulting, corporate training, speaking engagements,
+        educational projects, and professional inquiries are welcome.
+    </p>
+
+    <form class="contact-form"
+          action="https://formsubmit.co/info@shrawanmehta.com"
+          method="POST">
+
+        <input type="hidden" name="_subject"
+               value="New Contact Request from ShrawanMehta.com">
+
+        <input type="hidden" name="_template" value="table">
+
+        <input type="hidden" name="_captcha" value="false">
+
+        <div>
+            <label for="name">Full Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required>
+        </div>
+
+        <div>
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required>
+        </div>
+
+        <div>
+            <label for="subject">Subject</label>
+            <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Enter subject"
+                required>
+        </div>
+
+        <div>
+            <label for="message">Message</label>
+            <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Write your message here..."
+                required></textarea>
+        </div>
+
+        <button type="submit" class="btn">
+            Send Message
+        </button>
+
+    </form>
+
+    <div class="contact-info">
+        <h3>Direct Contact</h3>
+
+        <p>
+            📧 Email:
+            <a href="mailto:info@shrawanmehta.com">
+                info@shrawanmehta.com
+            </a>
+        </p>
+
+        <p>
+            🌐 Website:
+            <a href="https://shrawanmehta.com" target="_blank">
+                shrawanmehta.com
+            </a>
+        </p>
+    </div>
+
+</section>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
